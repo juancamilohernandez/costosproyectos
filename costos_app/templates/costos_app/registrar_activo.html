@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="{{ request.LANGUAGE_CODE|default:'en-us' }}">
+<head>
+    <meta charset="UTF-8">
+    <title>Control de Propiedad, Planta y Equipo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    
+    <div class="d-flex justify-content-between align-items-center mb-4 bg-dark text-white p-3 rounded shadow">
+        <div>
+            <h2 class="h4 mb-0">Control de Activos Fijos (NIC 16) y Arrendamientos (NIIF 16)</h2>
+            <small class="text-muted">Cálculo automatizado de depreciaciones y desgloses de Leasing</small>
+        </div>
+        <a href="/dashboard/" class="btn btn-outline-light btn-sm">←Ir Dashboard General</a>
+    </div>
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-header bg-primary text-white fw-bold">📦 Registrar Alta de Activo</div>
+                <div class="card-body">
+                    <form method="POST">
+                        {% csrf_token %}
+                        
+                        <div class="mb-3">{{ form.nombre_activo.label_tag }}{{ form.nombre_activo }}</div>
+                        <div class="mb-3{{ form.tipo_activo.label_tag }}{{ form.tipo_activo }}</div>
+                        <div class="mb-3">{{ form.empleado_asignado.label_tag }}{{ form.empleado_asignado }}</div>
+                        <div class="mb-3">{{ form.valor_adquisicion.label_tag }}{{ form.valor_adquisicion }}</div>
+                        <div class="mb-3">{{ form.vida_util_meses.label_tag }}{{ form.vida_util_meses }}</div>
+                        <div class="mb-3">{{ form.fecha_adquisicion.label_tag }}{{ form.fecha_adquisicion }}</div>
+                        
+                        <div class="form-check form-switch mb-4 p-3 bg-light rounded border">
+                            {{ form.es_leasing }}
+                            <label class="form-check-label fw-bold text-secondary" for="id_es_leasing">¿Financiado con Leasing? (NIIF 16)</label>
+                        </div>
+                        
+                        <div id="seccion_leasing" style="display: none;" class="p-3 border-start border-primary border-4 bg-light mb-3">
+                            <div class="mb-3">{{ form.tasa_interes_mensual.label_tag }}{{ form.tasa_interes_mensual }}</div>
+                            <div class="mb-3">{{ form.canon_mensual.label_tag }}{{ form.canon_mensual }}</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 fw-bold">Activar e Incorporar Activo</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-secondary text-white fw-bold">📋 Inventario y Control de Amortización Mensual</div>
+                <div class="card-body p-0" style="overflow-x: auto;">
+                    <table class="table table-hover align-middle m-0" style="font-size: 0.9rem;">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Activo / Categoría</th>
+                                <th>Responsable Asignado</th>
+                                <th class="text-end">Costo Histórico</th>
+                                <th class="text-center">Depreciación Mensual (Costo)</th>
+                                <th>Tratamiento NIIF 16</th>
+                                <th class="text-end">Interés Mensual (Gasto)</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {% for a in activos %}
+                            <tr>
+                                <td>
+                                    <strong>{{ a.nombre_activo }}</strong><br>
+                                    <small class="text-muted">{{ a.get_tipo_activo_display }}</small>
+                                </td>
+                                <td>
+                                    {% if a.empleado_asignado %}
+                                        <span class="badge bg-dark">{{ a.empleado_asignado.nombre }}</span>
+                                    {% else %}
+                                        <span class="badge bg-light text-muted border">📦 En Bodega / Disponible</span>
+                                    {% endif %}
+                                </td>
+                                <td class="text-end fw-bold">${{ a.valor_adquisicion|floatformat:2 }}</td>
+                                <td class="text-center text-danger fw-bold">-${{ a.depreciacion_mensual|floatformat:2 }}</td>
+                                <td>
+                                    {% if a.es_leasing %}
+                                        <span class="badge bg-warning text-dark">Leasing Financiero</span><br>
+                                        <small class="text-muted">Canon: ${{ a.canon_mensual|floatformat:0 }}</small>
+                                    {% else %}
+                                        <span class="badge bg-success">Compra Directa</span>
+                                    {% endif %}
+                                </td>
+                                <td class="text-end text-muted fw-bold">
+                                    {% if a.es_leasing %}
+                                        ${{ a.gasto_interes_leasing_estimado|floatformat:2 }}
+                                    {% else %}
+                                        $0.00
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="6" class="text-center text-muted p-4">No hay activos registrados en el inventario.</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const switchLeasing = document.getElementById('id_es_leasing');
+    const seccionLeasing = document.getElementById('seccion_leasing');
+
+    function toggleLeasing() {
+        if (switchLeasing.checked) {
+            seccionLeasing.style.display = 'block';
+        } else {
+            seccionLeasing.style.display = 'none';
+        }
+    }
+
+    switchLeasing.addEventListener('change', toggleLeasing);
+    window.addEventListener('DOMContentLoaded', toggleLeasing);
+</script>
+</body>
+</html>

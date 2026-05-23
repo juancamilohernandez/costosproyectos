@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="{{ request.LANGUAGE_CODE|default:'en-us' }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP Costos - Iniciar Sesión</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card shadow-lg border-0 rounded-3">
+                <div class="card-body p-5">
+                    
+                    <div class="text-center mb-4">
+                        <h3 class="fw-bold text-primary">SISTEMA DE COSTOS</h3>
+                        <p class="text-muted small">Ingeniería Financiera & Control Legal</p>
+                    </div>
+
+                    {% if form.errors %}
+                        <div class="alert alert-danger small py-2" role="alert">
+                            Usuario o contraseña incorrectos. Por favor, verifica e intenta de nuevo.
+                        </div>
+                    {% endif %}
+
+                    <form method="POST" novalidate>
+                        {% csrf_token %}
+                        
+                        <div class="mb-3">
+                            <label for="id_username" class="form-label small fw-bold text-secondary">Usuario</label>
+                            <input type="text" name="username" id="id_username" class="form-control py-2" placeholder="Ej: admin" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="id_password" class="form-label small fw-bold text-secondary">Contraseña</label>
+                            <input type="password" name="password" id="id_password" class="form-control py-2" placeholder="••••••••" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 py-2 fw-bold shadow-sm">
+                            Ingresar al Sistema
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+            <div class="text-center mt-3 text-white-50 small">
+                &copy; 2026 Desarrollado por Juan Camilo • FinTech Solutions
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

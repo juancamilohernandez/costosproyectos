@@ -1,0 +1,11 @@
+# 🔒 Filtro de Seguridad - ERP FinTech
+.env
+
+# Archivos de configuración del entorno virtual de Python
+env/
+venv/
+__pycache__/
+*.pyc
+
+# Base de datos local de desarrollo (por si acaso)
+db.sqlite3
