@@ -42,15 +42,15 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware', 
-    
-    # 🔥 ACTIVADO: El motor nativo de Django para gestionar los idiomas en el navegador
-    'django.middleware.locale.LocaleMiddleware', 
-
+    'django.contrib.sessions.middleware.SessionMiddleware',  # 1. Abre sesión primero
     'django.middleware.common.CommonMiddleware', 
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',  # 2. Identifica al usuario después
     'django.contrib.messages.middleware.MessageMiddleware',
+    
+    # 🔥 ORDEN SAGRADO ACTIVADO: El motor de idiomas corre sabiendo ya quién se logueó
+    'django.middleware.locale.LocaleMiddleware', 
+
     'django.middleware.clickjacking.XFrameOptionsMiddleware', 
 ]
 
@@ -59,13 +59,14 @@ ROOT_URLCONF = 'costosproyectos.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')], # Habilitado por si manejas carpetas raíz
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n', # Agregado para habilitar etiquetas de idioma nativas
             ],
         },
     },
@@ -92,27 +93,27 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
 
-# Idioma por defecto (Cámbialo a 'es' si quieres ver tu Admin en español al inicio, u a 'da' para Danés)
-LANGUAGE_CODE = 'en'
+# Idioma por defecto al arrancar el servidor
+LANGUAGE_CODE = 'es'
 
 # ¡CRITICAL! Activa el motor de traducción local
 USE_I18N = True
 TIME_ZONE = 'UTC'
 USE_TZ = True
 
-# Formato corregido estándar para los idiomas disponibles
+# Lista oficial de tus 11 idiomas limpios y testeados en Python 3.12
 LANGUAGES = [
-    ('en', _('English')), 
     ('es', _('Spanish')),
+    ('en', _('English')),
     ('fi', _('Finnish')),
     ('et', _('Estonian')),
     ('lt', _('Lithuanian')),
     ('lv', _('Latvian')),
     ('da', _('Danish')),
-    ('de', _('German')),
-    ('de-ch', _('Swiss German')),
-    ('fr-ch', _('Swiss French')),
-    ('it-ch', _('Swiss Italian')),
+    ('de', _('German')),  
+    ('no', _('Norwegian')),
+    ('sv', _('Swedish')),
+    ('pl', _('Polish')),
 ]
 
 # 🚀 LE DECIMOS A DJANGO DÓNDE BUSCAR LOS ARCHIVOS .PO y .MO LOCALES
@@ -125,9 +126,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Configuración de Autenticación de Django
+# Configuración de Autenticación de Django (Ajustada para i18n)
 LOGIN_URL = 'login'  
-LOGIN_REDIRECT_URL = '/dashboard/' 
+LOGIN_REDIRECT_URL = 'dashboard_financiero' # Usamos el name de la URL en vez de texto plano estático
 
 # Configuración de Email SMTP
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -137,11 +138,13 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = env('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 
-# Configuración Tema Unfold Elegante
 UNFOLD = {
     "SITE_TITLE": "ERP ABC Finanzas",
     "SITE_HEADER": "ABC Control de Costos",
     "SITE_SUBHEADER": "Panel de Control Contable y Presupuestal",
     "SHOW_HISTORY": True, 
     "SHOW_SIDEBAR_FILTER": True, 
+    
+    # ❌ APAGADO TOTAL: Con esto obligamos a Unfold a saltarse la línea que fallaba con gettext.
+    "SHOW_LANGUAGES": False, 
 }

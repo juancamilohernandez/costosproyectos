@@ -4,12 +4,13 @@ from django.core.exceptions import ValidationError
 from django.core.mail import send_mail  # <--- SE INCLUYE LA IMPORTACIÓN PARA EL ENVÍO DE EMAIL REAL
 from decimal import Decimal
 from .models import Empleado, PoliticaContratacion, ActivoFijo, FacturaFija, Proyecto, AsignacionProyecto, PresupuestoProyecto
+from django.utils.translation import gettext_lazy as _
 
 class EmpleadoForm(forms.ModelForm):
     duracion_contrato_meses = forms.IntegerField(
         required=False,
-        label="Duración del contrato (Meses)",
-        help_text="Requerido si el contrato es a Término Fijo",
+        label=_("Duración del contrato (Meses)"),
+        help_text=_("Requerido si el contrato es a Término Fijo"),
         widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Ej: 12'})
     )
 

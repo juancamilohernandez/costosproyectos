@@ -48,22 +48,27 @@ def traducir_archivo_po(ruta_origen, ruta_destino, idioma_destino):
 def main():
     RUTA_BASE_ES = 'locale/es/LC_MESSAGES/django.po'
     
+    # 🛑 FILTRO DE SEGURIDAD: Idiomas que YA existen y NO se deben tocar ni duplicar
+    IDIOMAS_EXISTENTES = ['es', 'en', 'fi', 'et', 'lt', 'lv', 'da']
+    
+    # 🎯 IDIOMAS RESTANTES Y NUEVOS (Mapeo Django_Locale: Google_Code)
+    # Nota: Usamos guiones bajos para los locales de Django (de_CH, fr_CH, it_CH)
     IDIOMAS_MAPA = {
-        'es': 'es',
-        'fi': 'fi',
-        'et': 'et',
-        'lt': 'lt',
-        'lv': 'lv',
-        'da': 'da',
-        'de': 'de',
-        'de-ch': 'de',
-        'fr-ch': 'fr',
-        'it-ch': 'it',
+        'de': 'de',        # Alemán estándar
+        'de_CH': 'de',     # Alemán Suizo (Google usa 'de')
+        'fr_CH': 'fr',     # Francés Suizo (Google usa 'fr')
+        'it_CH': 'it',     # Italiano Suizo (Google usa 'it')
+        'no': 'no',        # Noruego
+        'sv': 'sv',        # Sueco
+        'pl': 'pl',        # Polaco
     }
     
     for django_locale, google_code in IDIOMAS_MAPA.items():
-        if django_locale == 'es':
+        # Doble verificación de seguridad antes de procesar
+        if django_locale in IDIOMAS_EXISTENTES:
+            print(f"🛡️  [IGNORADO] El idioma '{django_locale}' ya existe. Saltando para evitar duplicados.")
             continue
+            
         ruta_salida = f'locale/{django_locale}/LC_MESSAGES/django.po'
         traducir_archivo_po(RUTA_BASE_ES, ruta_salida, google_code)
 

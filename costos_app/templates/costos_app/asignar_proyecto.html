@@ -1,16 +1,21 @@
-<!DOCTYPE html>
+{% load i18n %}<!DOCTYPE html>
 <html lang="{{ request.LANGUAGE_CODE|default:'en-us' }}">
 <head>
     <meta charset="UTF-8">
-    <title>Asignación de Costos ABC - Proyectos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans "Asignación de Costos ABC - Proyectos" %}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
 <div class="container mt-5">
     
     <div class="d-flex justify-content-between align-items-center mb-4 bg-dark text-white p-3 rounded shadow">
-        <h2>Dashboard de Proyectos & Costo ABC</h2>
-        <a href="/dashboard/" class="btn btn-outline-light btn-sm">← Dashboard General</a>
+        <div>
+            <h2 class="h4 mb-0">{% trans "Dashboard de Proyectos & Costo ABC" %}</h2>
+        </div>
+        <a href="{% url 'dashboard_financiero' %}" class="btn btn-outline-light btn-sm fw-bold">
+            ← {% trans "Ir Dashboard General" %}
+        </a>
     </div>
 
     {% if messages %}
@@ -24,23 +29,31 @@
     <div class="row">
         <div class="col-md-4">
             <div class="card shadow-sm mb-4">
-                <div class="card-header bg-primary text-white fw-bold">🔨 Registrar Nuevo Proyecto / Startup</div>
+                <div class="card-header bg-primary text-white fw-bold">
+                    🔨 {% trans "Registrar Nuevo Proyecto / Startup" %}
+                </div>
                 <div class="card-body">
-                    <form method="POST">
+                    <form method="POST" novalidate>
                         {% csrf_token %}
                         {{ proyecto_form.as_p }}
-                        <button type="submit" name="btn_proyecto" class="btn btn-primary w-100 fw-bold">Guardar Proyecto</button>
+                        <button type="submit" name="btn_proyecto" class="btn btn-primary w-100 fw-bold">
+                            {% trans "Guardar Proyecto" %}
+                        </button>
                     </form>
                 </div>
             </div>
 
-            <div class="card shadow-sm">
-                <div class="card-header bg-success text-white fw-bold">⏱️ Distribuir Horas (Costo ABC)</div>
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-success text-white fw-bold">
+                    ⏱️ {% trans "Distribuir Horas (Costo ABC)" %}
+                </div>
                 <div class="card-body">
-                    <form method="POST">
+                    <form method="POST" novalidate>
                         {% csrf_token %}
                         {{ asignacion_form.as_p }}
-                        <button type="submit" name="btn_asignacion" class="btn btn-success w-100 fw-bold">Prorratear Horas</button>
+                        <button type="submit" name="btn_asignacion" class="btn btn-success w-100 fw-bold">
+                            {% trans "Prorratear Horas" %}
+                        </button>
                     </form>
                 </div>
             </div>
@@ -48,68 +61,82 @@
 
         <div class="col-md-8">
             <div class="card shadow-sm mb-4">
-                <div class="card-header bg-dark text-white fw-bold">📊 Prorrateo y Costo Real Total por Proyecto (NIIF Incluido)</div>
+                <div class="card-header bg-dark text-white fw-bold">
+                    📊 {% trans "Prorrateo y Costo Real Total por Proyecto (NIIF Incluido)" %}
+                </div>
                 <div class="card-body p-0">
-                    <table class="table table-hover align-middle m-0">
-                        <thead class="table-secondary">
-                            <tr>
-                                <th>Nombre del Proyecto</th>
-                                <th>Descripción</th>
-                                <th class="text-center">Total Horas Invertidas</th>
-                                <th class="text-end">Costo Real Acumulado</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for p in proyectos_prorrateados %}
-                            <tr>
-                                <td><span class="badge bg-primary fs-6">{{ p.nombre }}</span></td>
-                                <td><small class="text-muted">{{ p.descripcion|default:"Sin descripción" }}</small></td>
-                                <td class="text-center fw-bold">{{ p.horas_totales }} hrs</td>
-                                <td class="text-end fw-bold text-success fs-5">${{ p.costo_total_real|floatformat:2 }}</td>
-                            </tr>
-                            {% empty %}
-                            <tr>
-                                <td colspan="4" class="text-center text-muted p-4">No hay proyectos registrados en el sistema.</td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle m-0">
+                            <thead class="table-secondary">
+                                <tr>
+                                    <th>{% trans "Nombre del Proyecto" %}</th>
+                                    <th>{% trans "Descripción" %}</th>
+                                    <th class="text-center">{% trans "Total Horas Invertidas" %}</th>
+                                    <th class="text-end">{% trans "Costo Real Acumulado" %}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for p in proyectos_prorrateados %}
+                                <tr>
+                                    <td><span class="badge bg-primary fs-6">{{ p.nombre }}</span></td>
+                                    <td><small class="text-muted">{{ p.descripcion|default:"Sin descripción" }}</small></td>
+                                    <td class="text-center fw-bold">{{ p.horas_totales }} {% trans "hrs" %}</td>
+                                    <td class="text-end fw-bold text-success fs-5">${{ p.costo_total_real|floatformat:2 }}</td>
+                                </tr>
+                                {% empty %}
+                                <tr>
+                                    <td colspan="4" class="text-center text-muted p-4">
+                                        {% trans "No hay proyectos registrados en el sistema." %}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
             <div class="card shadow-sm">
-                <div class="card-header bg-secondary text-white fw-bold">⏱️ Historial de Horas Imputadas por Empleado</div>
-                <div class="card-body p-0" style="max-height: 250px; overflow-y: auto;">
-                    <table class="table table-sm table-hover m-0">
-                        <thead class="table-light">
-                            <tr>
-                                <th>Empleado</th>
-                                <th>Proyecto Target</th>
-                                <th>Horas</th>
-                                <th>Mes</th>
-                                <th>Costo Imputado</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for a in asignaciones %}
-                            <tr>
-                                <td><strong>{{ a.empleado.nombre }}</strong></td>
-                                <td><span class="badge bg-light text-dark border">{{ a.proyecto.nombre }}</span></td>
-                                <td>{{ a.horas_dedicadas }} hrs</td>
-                                <td>{{ a.mes_ano }}</td>
-                                <td class="fw-bold text-muted">${{ a.costo_imputado_al_proyecto|floatformat:2 }}</td>
-                            </tr>
-                            {% empty %}
-                            <tr>
-                                <td colspan="5" class="text-center text-muted p-3">No hay registros de horas.</td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
+                <div class="card-header bg-secondary text-white fw-bold">
+                    ⏱️ {% trans "Historial de Horas Imputadas por Empleado" %}
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+                        <table class="table table-sm table-hover m-0 align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>{% trans "Empleado" %}</th>
+                                    <th>{% trans "Proyecto Target" %}</th>
+                                    <th>{% trans "Horas" %}</th>
+                                    <th>{% trans "Mes" %}</th>
+                                    <th>{% trans "Costo Imputado" %}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for a in asignaciones %}
+                                <tr>
+                                    <td><strong>{{ a.empleado.nombre }}</strong></td>
+                                    <td><span class="badge bg-light text-dark border">{{ a.proyecto.nombre }}</span></td>
+                                    <td>{{ a.horas_dedicadas }} {% trans "hrs" %}</td>
+                                    <td>{{ a.mes_ano }}</td>
+                                    <td class="fw-bold text-muted">${{ a.costo_imputado_al_proyecto|floatformat:2 }}</td>
+                                </tr>
+                                {% empty %}
+                                <tr>
+                                    <td colspan="5" class="text-center text-muted p-3">
+                                        {% trans "No hay registros de horas." %}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

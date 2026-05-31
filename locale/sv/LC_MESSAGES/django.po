@@ -1,40 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
 msgid ""
 msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-28 19:43+0000\n"
+"POT-Creation-Date: 2026-05-28 19:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: costos_app/forms.py:12
-#, fuzzy
-#| msgid "Duración Máxima (Meses)"
 msgid "Duración del contrato (Meses)"
-msgstr "Maksimal varighed (Måneder)"
+msgstr "Maximal varaktighet (månader)"
 
 #: costos_app/forms.py:13
 msgid "Requerido si el contrato es a Término Fijo"
-msgstr "Påkrævet, hvis der er tale om en tidsbegrænset ansættelse"
+msgstr "Krävs om det rör sig om en tidsbegränsad anställning"
 
 #: costos_app/models.py:10
 msgid "Nombre del País"
-msgstr "Landenavn"
+msgstr "Landets namn"
 
 #: costos_app/models.py:11
 msgid "Código ISO (2 letras)"
-msgstr ""
-"ISO-kode (International Organisation for Standardisering - 2 bogstaver)"
+msgstr "ISO-kod (2 bokstäver)"
 
 #: costos_app/models.py:12
 msgid "Tasa Patronal Estándar (%)"
-msgstr "Standard arbejdsgiverbidrag til social sikring (%)"
+msgstr "Standard arbetsgivaravgift (%)"
 
 #: costos_app/models.py:13
 msgid "Tasa Patronal Temporal (%)"
-msgstr "Midlertidigt arbejdsgiverbidrag til social sikring (%)"
+msgstr "Tillfällig arbetsgivaravgift (%)"
 
 #: costos_app/models.py:14
 msgid "Salario Mínimo"
-msgstr "Mindsteløn"
+msgstr "Minsta lagstadgade lön"
 
 #: costos_app/models.py:17 costos_app/models.py:50 costos_app/models.py:108
 #: costos_app/models.py:124
@@ -43,103 +53,102 @@ msgstr "Land"
 
 #: costos_app/models.py:18
 msgid "Países"
-msgstr "Lande"
+msgstr "Länder"
 
 #: costos_app/models.py:27
 msgid "Costo (Mano de Obra Directa / Operación)"
-msgstr "Omkostninger (Direkte lønomkostninger / Drift)"
+msgstr "Kostnad (Direkt arbetskraft / Drift)"
 
 #: costos_app/models.py:28
 msgid "Gasto (Administrativo / Ventas)"
-msgstr "Udgifter (Administration / Salg)"
+msgstr "Kostnad (Administration / Försäljning)"
 
 #: costos_app/models.py:30
 msgid "Nombre del Cargo"
-msgstr "Stillingsbetegnelse"
+msgstr "Befattningstitel"
 
 #: costos_app/models.py:31 costos_app/models.py:88
 #: costos_app/templates/costos_app/asignar_proyecto.html:73
 msgid "Descripción"
-msgstr "Beskrivelse"
+msgstr "Beskrivning"
 
 #: costos_app/models.py:32
 msgid "Tipo Contable"
-msgstr "Regnskabsmæssig klassifikation"
+msgstr "Kontotyp"
 
 #: costos_app/models.py:35 costos_app/models.py:51
 msgid "Rol / Cargo"
-msgstr "Rolle / Stilling"
+msgstr "Roll / Befattning"
 
 #: costos_app/models.py:36
 msgid "Roles / Cargos"
-msgstr "Roller / Stillinger"
+msgstr "Roller / Befattningar"
 
 #: costos_app/models.py:45 costos_app/models.py:127
 msgid "Término Indefinido"
-msgstr "Fastansættelse / Funktionærkontrakt"
+msgstr "Tillsvidareanställning"
 
 #: costos_app/models.py:46 costos_app/models.py:128
 msgid "Término Fijo / Obra"
-msgstr "Tidsbegrænset ansættelse / Projektkontrakt"
+msgstr "Tidsbegränsad anställning / Projektavtal"
 
 #: costos_app/models.py:49
 msgid "Nombre Completo"
-msgstr "Fulde navn"
+msgstr "Fullständigt namn"
 
 #: costos_app/models.py:52
 msgid "Salario Bruto Mensual"
-msgstr "Månedlig bruttoløn"
+msgstr "Mnatlig bruttolön"
 
 #: costos_app/models.py:53 costos_app/models.py:131
 msgid "Tipo de Contrato"
-msgstr "Kontrakttype"
+msgstr "Anställningsform"
 
 #: costos_app/models.py:54
 msgid "Fecha de Ingreso"
-msgstr "Ansættelsesdato"
+msgstr "Anställningsdatum"
 
 #: costos_app/models.py:55
 msgid "Costo Seguridad Social Mes"
-msgstr "Månedlige sociale sikringsomkostninger"
+msgstr "Sociala avgifter per månad"
 
 #: costos_app/models.py:56
 msgid "Provisión Prestaciones Mes"
-msgstr "Månedlig hensættelse til medarbejderforpligtelser"
+msgstr "Avsättning för förmåner per månad"
 
 #: costos_app/models.py:58
 msgid "Correo Corporativo"
-msgstr "Virksomheds-e-mailadresse"
+msgstr "Företags-e-post"
 
 #: costos_app/models.py:61
 msgid "Correo oficial para notificaciones del ERP"
-msgstr ""
-"Officiel e-mailadresse til ERP-notifikationer (Enterprise Resource Planning)"
+msgstr "Officiell e-postadress för ERP-aviseringar"
 
 #: costos_app/models.py:65
 #: costos_app/templates/costos_app/asignar_proyecto.html:108
 msgid "Empleado"
-msgstr "Medarbejder"
+msgstr "Anställd"
 
 #: costos_app/models.py:66
 msgid "Empleados"
-msgstr "Medarbejdere"
+msgstr "Anställda"
 
 #: costos_app/models.py:87
 #: costos_app/templates/costos_app/asignar_proyecto.html:72
 msgid "Nombre del Proyecto"
-msgstr "Projektnavn"
+msgstr "Projektnamn"
 
 #: costos_app/models.py:89
 msgid "Fecha de Inicio"
-msgstr "Startdato"
+msgstr "Startdatum"
 
 #: costos_app/models.py:91
 msgid "kWh Estimados Mes"
-msgstr "Estimeret kilowatt-timer (kWh) pr. måned"
+msgstr "Beräknad kWh per månad"
 
 #: costos_app/models.py:95
 msgid "Consumo proyectado de energía al mes en kWh"
-msgstr "Forventet månedligt energiforbrug i kilowatt-timer (kWh)"
+msgstr "Prognostiserad månatlig energiförbrukning i kWh"
 
 #: costos_app/models.py:99 costos_app/models.py:218 costos_app/models.py:282
 msgid "Proyecto"
@@ -147,13 +156,13 @@ msgstr "Projekt"
 
 #: costos_app/models.py:100
 msgid "Proyectos"
-msgstr "Projekter"
+msgstr "Projekt (Flertall)"
 
 #: costos_app/models.py:109
 #: costos_app/templates/costos_app/asignar_proyecto.html:111
 #: costos_app/templates/costos_app/registrar_factura.html:56
 msgid "Mes"
-msgstr "Måned"
+msgstr "Månad"
 
 #: costos_app/models.py:110
 msgid "Año"
@@ -161,11 +170,11 @@ msgstr "År"
 
 #: costos_app/models.py:111
 msgid "Total kWh Consumidos Real"
-msgstr "Faktisk samlet forbrug i kilowatt-timer (kWh)"
+msgstr "Faktisk total förbrukning (kWh)"
 
 #: costos_app/models.py:112
 msgid "Costo Total Recibo"
-msgstr "Samlede omkostninger på elregning"
+msgstr "Totalt fakturabelopp"
 
 #: costos_app/models.py:115
 msgid "Registro de Energía"
@@ -173,135 +182,130 @@ msgstr "Energiregistrering"
 
 #: costos_app/models.py:116
 msgid "Registros de Energía"
-msgstr "Energiregistreringer"
+msgstr "Energiregistreringar"
 
 #: costos_app/models.py:134
 msgid "El tipo de contrato al que se le aplicará esta norma legal"
-msgstr "Den kontrakttype, som denne lovbestemmelse gælder for"
+msgstr "Den anställningsform som denna lagbestämmelse gäller för"
 
 #: costos_app/models.py:137
 msgid "Duración Máxima (Meses)"
-msgstr "Maksimal varighed (Måneder)"
+msgstr "Maximal varaktighet (månader)"
 
 #: costos_app/models.py:140
 msgid "Duración máxima permitida por ley. Dejar vacío si no aplica."
-msgstr "Lovbestemt maksimal varighed. Efterlad tom, hvis det ikke er relevant."
+msgstr "Lagstadgad maximal varaktighet. Lämna tomt om det inte tillämpas."
 
 #: costos_app/models.py:143
 msgid "Periodo Prueba Máximo (Meses)"
-msgstr "Maksimal prøvetid (Måneder)"
+msgstr "Maximal prövotid (måneder)"
 
 #: costos_app/models.py:145
 msgid "Meses máximos de prueba permitidos por la legislación local."
 msgstr ""
-"Maksimalt antal prøvetidsmåneder tilladt i henhold til lokal lovgivning."
+"Maximalt antal provanställningsmånader tillåtna enligt lokal lagstiftning."
 
 #: costos_app/models.py:148
 msgid "Porcentaje Máximo Nómina (%)"
-msgstr "Maksimal procentdel af den samlede lønsum (%)"
+msgstr "Maximal andel av arbetsstyrkan (%)"
 
 #: costos_app/models.py:153
 msgid "Límite de empleados con este contrato."
-msgstr "Maksimumsgrænse for antal medarbejdere på denne kontrakt."
+msgstr "Gräns för antal anställda med denna anställningsform."
 
 #: costos_app/models.py:156
 msgid "Observación Legal"
-msgstr "Juridisk bemærkning / Overensstemmelsesnotater"
+msgstr "Juridisk anmärkning"
 
 #: costos_app/models.py:159
 msgid ""
 "Notas o textos legales adicionales sobre las condiciones de despido o "
 "preaviso."
 msgstr ""
-"Yderligere juridiske noter vedrørende opsigelsesbetingelser eller "
-"lovbestemte varsler."
+"Ytterligare juridiska anmärkningar om uppsägningsvillkor eller "
+"uppsägningstider."
 
 #: costos_app/models.py:163
 msgid "Política de Contratación"
-msgstr "Ansættelsespolitik"
+msgstr "Anställningspolicy"
 
 #: costos_app/models.py:164
 msgid "Políticas de Contratación"
-msgstr "Ansættelsesretningslinjer"
+msgstr "Anställningspolicyer"
 
 #: costos_app/models.py:173
 msgid "Colaborador"
-msgstr "Medarbejder / Bidragyder"
+msgstr "Medarbetare"
 
 #: costos_app/models.py:174
 msgid "Unidad de Negocio / Proyecto"
-msgstr "Forretningsenhed / Strategisk projekt"
+msgstr "Affärsenhet / Projekt"
 
 #: costos_app/models.py:175
 msgid "Horas Dedicadas en el Mes"
-msgstr "Arbejdstimer lagt i måneden"
+msgstr "Arbetade timmar under månaden"
 
 #: costos_app/models.py:176
 msgid "Periodo Contable (Mes/Año)"
-msgstr "Regnskabsperiode (Måned/År)"
+msgstr "Redovisningsperiod (Månad/År)"
 
 #: costos_app/models.py:183
 msgid "Responsable del Proyecto"
-msgstr "Projektansvarlig"
+msgstr "Projektansvarig"
 
 #: costos_app/models.py:184
 msgid "El líder, director de TI o responsable principal de la ejecución"
-msgstr ""
-"Teamlederen, IT-direktøren (CIO) eller den hovedansvarlige for projektets "
-"eksekvering"
+msgstr "Teamledare, IT-direktör eller huvudansvarig för genomförandet"
 
 #: costos_app/models.py:192
 msgid "Jefe Inmediato"
-msgstr "Direkte leder"
+msgstr "Närmaste chef"
 
 #: costos_app/models.py:193
 msgid "Jefe directo del área o supervisor inmediato de la asignación"
-msgstr "Direkte afdelingsleder eller den nærmeste supervisor for tildelingen"
+msgstr "Närmaste avdelningschef eller direkt arbetsledare för tilldelningen"
 
 #: costos_app/models.py:195
 msgid "Costo Imputado al Proyecto"
-msgstr "Omkostninger allokeret til projektet"
+msgstr "Kostnad tilldelad projektet"
 
 #: costos_app/models.py:198
 msgid "Asignación de Proyecto"
-msgstr "Projektallokering"
+msgstr "Projekttilldelning"
 
 #: costos_app/models.py:199
 msgid "Asignaciones a Proyectos"
-msgstr "Projektallokeringer"
+msgstr "Projekttilldelningar"
 
 #: costos_app/models.py:208
 msgid "Costo Operativo (AWS, GitHub, Licencias core)"
-msgstr ""
-"Driftsomkostninger (Amazon Web Services (AWS) cloud-infrastruktur, GitHub "
-"Enterprise, Core-systemlicenser)"
+msgstr "Driftskostnad (AWS, GitHub, kärnlicenser)"
 
 #: costos_app/models.py:209
 msgid "Gasto Administrativo (Papelería, Arriendos)"
-msgstr "Administrative udgifter (Kontorartikler, Huslejeomkostninger)"
+msgstr "Administrationskostnad (Kontorsmaterial, Hyra)"
 
 #: costos_app/models.py:219
 msgid ""
 "Seleccione el proyecto si este costo/gasto es imputable directamente a él"
-msgstr ""
-"Vælg projektet, hvis denne omkostning/udgift kan henføres direkte til det"
+msgstr "Välj projektet om denna kostnad kan hänföras direkt till det"
 
 #: costos_app/models.py:221
 msgid "Proveedor o Concepto"
-msgstr "Leverandør eller Bogføringskoncept"
+msgstr "Leverantör eller koncept"
 
 #: costos_app/models.py:221
 msgid "Ej: AWS Server, Claro Internet"
-msgstr "f.eks. AWS Cloud-infrastrukturserver, Internetudbyder"
+msgstr "T.ex.: AWS Server, Telia Internet"
 
 #: costos_app/models.py:222
 #: costos_app/templates/costos_app/registrar_factura.html:58
 msgid "Monto"
-msgstr "Beløb"
+msgstr "Belopp"
 
 #: costos_app/models.py:223
 msgid "Mes/Año"
-msgstr "Måned/År"
+msgstr "Månad/År"
 
 #: costos_app/models.py:223
 msgid "Formato: AAAA-MM"
@@ -309,126 +313,123 @@ msgstr "Format: ÅÅÅÅ-MM"
 
 #: costos_app/models.py:224
 msgid "Clasificación"
-msgstr "Klassifikation til bogføring"
+msgstr "Klassificering"
 
 #: costos_app/models.py:225
 msgid "Fecha de Registro"
-msgstr "Systemregistreringsdato"
+msgstr "Registreringsdatum"
 
 #: costos_app/models.py:228
 msgid "Factura Fija"
-msgstr "Fast faktura / Tilbagevendende faktura"
+msgstr "Fast faktura"
 
 #: costos_app/models.py:229
 msgid "Facturas y Costos Fijos"
-msgstr "Fakturaer og faste tilbagevendende omkostninger"
+msgstr "Fasta fakturor och fasta kostnader"
 
 #: costos_app/models.py:238
 msgid "Equipo de Cómputo y Tecnología (Computadores, Servidores)"
-msgstr "Computerhardware og IT-udstyr (Arbejdsstationer, Produktionsservere)"
+msgstr "IT-utrustning och teknologi (Datorer, Servrar)"
 
 #: costos_app/models.py:239
 msgid "Muebles y Enseres (Escritorios, Sillas)"
-msgstr "Kontorinventar (Ergonomiske skriveborde, Kontorstole)"
+msgstr "Möbler och inventarie (Skrivbord, Stolar)"
 
 #: costos_app/models.py:240
 msgid "Equipos de Comunicación (Teléfonos corporativos)"
-msgstr "Kommunikationsudstyr (Firmatelefoner)"
+msgstr "Kommunikationsutrustning (Tjänstetelefoner)"
 
 #: costos_app/models.py:249
 msgid "Empleado Asignado"
-msgstr "Tildelt medarbejder"
+msgstr "Tilldelad anställd"
 
 #: costos_app/models.py:250
 msgid "Empleado que tiene en su poder el activo para operar"
-msgstr "Medarbejderen, som har fået overdraget aktivet til rådighed"
+msgstr "Anställd som har tillgången i sin besittning för drift"
 
 #: costos_app/models.py:252
 msgid "Nombre del Activo"
-msgstr "Aktivets navn"
+msgstr "Tillgångens namn"
 
 #: costos_app/models.py:252
 msgid "Ej: MacBook Pro, Silla Ergonómica"
-msgstr "f.eks. Apple MacBook Pro, Ergonomisk kontorstol"
+msgstr "T.ex.: MacBook Pro, ergonomisk stol"
 
 #: costos_app/models.py:253
 msgid "Tipo de Activo"
-msgstr "Anlægsklasse"
+msgstr "Typ av tillgång"
 
 #: costos_app/models.py:254
 msgid "Valor de Adquisición"
-msgstr "Anskaffelsesværdi"
+msgstr "Anskaffningsvärde"
 
 #: costos_app/models.py:254
 msgid "Valor histórico de compra"
-msgstr "Historisk købspris"
+msgstr "Historiskt inköpspris"
 
 #: costos_app/models.py:255
 msgid "Vida Útil (Meses)"
-msgstr "Brugstid (Måneder)"
+msgstr "Livslängd (månader)"
 
 #: costos_app/models.py:255
 msgid "Vida útil estimada en meses"
-msgstr "Estimeret økonomisk brugstid i måneder"
+msgstr "Beräknad livslängd i månader"
 
 #: costos_app/models.py:256
 msgid "Fecha de Adquisición"
-msgstr "Anskaffelsesdato"
+msgstr "Anskaffningsdatum"
 
 #: costos_app/models.py:256
 msgid "Fecha en la que se compró o inició el contrato"
-msgstr "Dato for køb eller start på leasingkontrakt"
+msgstr "Datum när den köptes eller leasingavtalet började"
 
 #: costos_app/models.py:258
 msgid "¿Es financiado mediante Leasing? (NIIF 16)"
-msgstr ""
-"Er det finansieret via leasing? (Overensstemmende med IFRS 16 / "
-"International Financial Reporting Standards - Leasingkontrakter)"
+msgstr "Är den finansierad via leasing? (IFRS 16)"
 
 #: costos_app/models.py:259
 msgid "Tasa Interés Mensual"
-msgstr "Månedlig rentesats"
+msgstr "Månadsränta"
 
 #: costos_app/models.py:259
 msgid "Tasa de interés mensual del leasing"
-msgstr "Den kontraktlige månedlige rentesats for leasingaftalen"
+msgstr "Månadsränta för leasingavtalet"
 
 #: costos_app/models.py:260
 msgid "Canon Mensual"
-msgstr "Månedlig leasingydelse"
+msgstr "Månadsavgift"
 
 #: costos_app/models.py:260
 msgid "El pago mensual fijo al banco"
-msgstr "Den faste månedlige betalingsforpligtelse til pengeinstituttet"
+msgstr "Fast månadsbetalning till banken"
 
 #: costos_app/models.py:263
 msgid "Activo Fijo"
-msgstr "Anlægsaktiv"
+msgstr "Anläggningstillgång"
 
 #: costos_app/models.py:264
 msgid "Propiedad, Planta y Equipo"
-msgstr ""
-"Materielle anlægsaktiver (Grunde, bygninger, tekniske anlæg og maskiner)"
+msgstr "Materiella anläggningstillgångar"
 
 #: costos_app/models.py:283
 msgid "Proyecto al que se le asigna este techo financiero"
-msgstr "Strategisk projekt, som dette finansielle loft tildeles"
+msgstr "Projekt som detta budgettak har tilldelats"
 
 #: costos_app/models.py:285
 msgid "Límite de Costos Directos"
-msgstr "Budgetgrænse for direkte omkostninger"
+msgstr "Gräns för direkta kostnader"
 
 #: costos_app/models.py:286
 msgid "Límite de Gastos Indirectos"
-msgstr "Budgetgrænse for indirekte udgifter"
+msgstr "Gräns för indirekta kostnader"
 
 #: costos_app/models.py:287
 msgid "Fecha de Aprobación"
-msgstr "Dato for budgetgodkendelse"
+msgstr "Godkännandedatum"
 
 #: costos_app/models.py:288
 msgid "Actualizado en"
-msgstr "Sidst opdateret den"
+msgstr "Uppdaterad den"
 
 #: costos_app/models.py:291
 msgid "Presupuesto de Proyecto"
@@ -436,546 +437,517 @@ msgstr "Projektbudget"
 
 #: costos_app/models.py:292
 msgid "Presupuestos de Proyectos"
-msgstr "Projektbudgetter"
+msgstr "Projektbudgetar"
 
 #: costos_app/models.py:317
 msgid ""
 "🚨 ¡PRESUPUESTO ABSURDO! El costo real mínimo actual de este proyecto es "
 "mayor al techo asignado."
 msgstr ""
-"🚨 ABSURDT BUDGET! De nuværende minimale faktiske omkostninger for dette "
-"projekt overstiger det tildelte finansielle loft."
+"🚨 ABSURD BUDGET! Den aktuella faktiska minimikostnaden för detta projekt är "
+"högre än det tilldelade taket."
 
 #: costos_app/models.py:324 costosproyectos/settings.py:107
 msgid "English"
-msgstr "Engelsk"
+msgstr "Engelska"
 
 #: costos_app/models.py:325
 msgid "Español"
-msgstr "Spansk"
+msgstr "Spanska"
 
 #: costos_app/models.py:326
 msgid "Eesti (Estonia)"
-msgstr "Estisk (Estland)"
+msgstr "Estniska"
 
 #: costos_app/models.py:327
 msgid "Suomi (Finlandia)"
-msgstr "Finsk (Finland)"
+msgstr "Finska"
 
 #: costos_app/models.py:328
 msgid "Lietuvių (Lituania)"
-msgstr "Litauisk (Litauen)"
+msgstr "Litauiska"
 
 #: costos_app/models.py:329
 msgid "Dansk (Danés)"
-msgstr "Dansk (Danmark)"
+msgstr "Danska"
 
 #: costos_app/models.py:332 costos_app/templates/costos_app/login.html:67
 msgid "Usuario"
-msgstr "Brugernavn"
+msgstr "Användare"
 
 #: costos_app/models.py:334
 msgid "Idioma Preferido"
-msgstr "Foretrukket sprog"
+msgstr "Föredraget språk"
 
 #: costos_app/models.py:338
 msgid "Seleccione el idioma nativo para la interfaz del ERP"
-msgstr ""
-"Vælg det primære sprog til ERP-systemets brugerflade (Enterprise Resource "
-"Planning)"
+msgstr "Välj modersmål för ERP-gränssnittet"
 
 #: costos_app/models.py:342
 msgid "Perfil de Usuario"
-msgstr "Brugerprofil"
+msgstr "Användarprofil"
 
 #: costos_app/models.py:343
 msgid "Perfiles de Usuarios"
-msgstr "Brugerprofiler"
+msgstr "Användarprofiler"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:6
 msgid "Asignación de Costos ABC - Proyectos"
-msgstr ""
-"Aktivitetsbaseret omkostningsstyring (ABC-model - Activity-Based Costing) "
-"for projekter"
+msgstr "Projekttilldelning"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:14
 msgid "Dashboard de Proyectos & Costo ABC"
-msgstr ""
-"Business Intelligence Dashboard for Projekt- & Aktivitetsbaserede "
-"Omkostninger (ABC)"
+msgstr "Projekt- och ABC-kalkylpanel"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:17
 #: costos_app/templates/costos_app/registrar_activo.html:18
 #: costos_app/templates/costos_app/registrar_empleado.html:20
 msgid "Ir Dashboard General"
-msgstr "Gå til hoved-dashboard"
+msgstr "Till huvudpanelen"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:33
 msgid "Registrar Nuevo Proyecto / Startup"
-msgstr "Registrer nyt strategisk projekt / startup-forretningsenhed"
+msgstr "Registrera nytt projekt / Startup"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:40
 msgid "Guardar Proyecto"
-msgstr "Gem projekt i databasen"
+msgstr "Projekt"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:48
 msgid "Distribuir Horas (Costo ABC)"
-msgstr "Fordel arbejdstimer (Aktivitetsbaseret omkostningsberegning - ABC)"
+msgstr "Fördela timmar (ABC-metoden)"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:55
 #: costos_app/templates/costos_app/dashboard.html:21
 msgid "Prorratear Horas"
-msgstr "Fordel timer forholdsmæssigt (Pro-rata-allokering)"
+msgstr "Fördela timmar"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:65
 msgid "Prorrateo y Costo Real Total por Proyecto (NIIF Incluido)"
 msgstr ""
-"Forholdsmæssig fordeling & Faktiske samlede omkostninger pr. projekt "
-"(Overensstemmende med IFRS / International Financial Reporting Standards)"
+"Kostnadsfördelning och total verklig kostnad per projekt (Inklusive IFRS)"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:74
 msgid "Total Horas Invertidas"
-msgstr "Samlede brugte arbejdstimer"
+msgstr "Totala investerade timmar"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:75
 msgid "Costo Real Acumulado"
-msgstr "Akkumulerede faktiske finansielle omkostninger"
+msgstr "Ackumulerad verklig kostnad"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:83
 #: costos_app/templates/costos_app/asignar_proyecto.html:120
 #: costos_app/templates/costos_app/dashboard.html:106
 msgid "hrs"
-msgstr "t."
+msgstr "tim"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:89
 msgid "No hay proyectos registrados en el sistema."
-msgstr "Ingen projekter registreret i systemet."
+msgstr "Det finns inga registrerade projekt i systemet."
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:101
 msgid "Historial de Horas Imputadas por Empleado"
-msgstr "Historisk log over allokerede arbejdstimer pr. medarbejder"
+msgstr "Historik över allokerade timmar per anställd"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:109
 msgid "Proyecto Target"
-msgstr "Målprojekt for allokeringen"
+msgstr "Projekt"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:110
 #: costos_app/templates/costos_app/dashboard.html:87
 msgid "Horas"
-msgstr "Arbejdstimer"
+msgstr "Timmar"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:112
 msgid "Costo Imputado"
-msgstr "Allokerede finansielle omkostninger"
+msgstr "Allokerad kostnad"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:127
 msgid "No hay registros de horas."
-msgstr "Ingen tidsregistreringer fundet i logtabellerne."
+msgstr "Det finns inga registrerade timmar."
 
 #: costos_app/templates/costos_app/dashboard.html:6
 msgid "Consolidado Financiero Avanzado - ERP"
-msgstr ""
-"Avanceret finansiel konsolidering - ERP-system (Enterprise Resource Planning)"
+msgstr "Avancerad finansiell konsolidering - ERP"
 
 #: costos_app/templates/costos_app/dashboard.html:15
 msgid "Sistema de Gestión Contable ABC"
-msgstr ""
-"Styringssystem til aktivitetsbaseret regnskab (Activity-Based Costing - ABC)"
+msgstr "ABC-kostnadskalkylsystem"
 
 #: costos_app/templates/costos_app/dashboard.html:16
 msgid "Enfoque de Costos NIC 16 / NIIF 16 Completo"
-msgstr ""
-"Umfattende regnskabstilgang i henhold til IAS 16 (Materielle anlægsaktiver) "
-"& IFRS 16 (Leasingkontrakter)"
+msgstr "Fullständigt kostnadsfokus enligt IAS 16 / IFRS 16"
 
 #: costos_app/templates/costos_app/dashboard.html:20
 msgid "Gestionar Personal"
-msgstr "Personaleadministration & HR-operationer"
+msgstr "Hantera personal"
 
 #: costos_app/templates/costos_app/dashboard.html:22
 msgid "Registrar Facturas"
-msgstr "Registrer kreditorfakturaer"
+msgstr "Registrera fakturor"
 
 #: costos_app/templates/costos_app/dashboard.html:23
 msgid "Control de Activos"
-msgstr "Aktivstyring og anlægsbogholderi"
+msgstr "Typ av tillgång"
 
 #: costos_app/templates/costos_app/dashboard.html:27
 msgid "Panel Admin"
-msgstr "Systemadministratorpanel"
+msgstr "Adminpanel"
 
 #: costos_app/templates/costos_app/dashboard.html:36
 msgid "Cerrar Sesión"
-msgstr "Log af / Afslut session"
+msgstr "Logga ut"
 
 #: costos_app/templates/costos_app/dashboard.html:45
 msgid "Costo Operativo Total"
-msgstr "Samlede driftsomkostninger (OpEx)"
+msgstr "Total driftskostnad"
 
 #: costos_app/templates/costos_app/dashboard.html:48
 msgid "MOD"
-msgstr "Direkte lønomkostninger (Mano de Obra Directa)"
+msgstr "Direkt arbetskraft"
 
 #: costos_app/templates/costos_app/dashboard.html:48
 msgid "Fac"
-msgstr "Fakturerede driftsomkostninger"
+msgstr "Fakt."
 
 #: costos_app/templates/costos_app/dashboard.html:48
 msgid "Depr"
-msgstr "Afskrivningsomkostninger for anlægsaktiver"
+msgstr "Avskr."
 
 #: costos_app/templates/costos_app/dashboard.html:55
 msgid "Absorbido por Proyectos"
-msgstr "Omkostninger absorberet af projektenheder"
+msgstr "Absorberad av projekt"
 
 #: costos_app/templates/costos_app/dashboard.html:57
 msgid "Justificado en proyectos activos"
-msgstr "Verificeret og allokeret til aktive forretningsenheder"
+msgstr "Allokerad till aktiva projekt"
 
 #: costos_app/templates/costos_app/dashboard.html:63
 msgid "Capacidad No Asignada"
-msgstr "Ikke-allokeret ledig virksomhedskapacitet"
+msgstr "Oallokerad kapacitet"
 
 #: costos_app/templates/costos_app/dashboard.html:65
 msgid "Costo latente fuera de proyectos"
-msgstr "Latente strukturdomkostninger uden for aktive projekter"
+msgstr "Latent kostnad utanför projekt"
 
 #: costos_app/templates/costos_app/dashboard.html:71
 msgid "Estructura Fija Total"
-msgstr "Samlede faste virksomhedsstrukturkonti"
+msgstr "Total fast struktur"
 
 #: costos_app/templates/costos_app/dashboard.html:73
 msgid "Admin, soporte y depreciación fija"
-msgstr "Generel administration, back-office support og faste afskrivninger"
+msgstr "Administration, support och fast avskrivning"
 
 #: costos_app/templates/costos_app/dashboard.html:81
 msgid "Desglose de Absorción de Costos por Unidad de Negocio (ABC + NIC 16)"
-msgstr ""
-"Analytisk fordeling af omkostningsabsorption pr. forretningsenhed via "
-"aktivitetsbaseret regnskab (ABC) & IAS 16"
+msgstr "Specifikation av kostnadsabsorption per affärsenhet (ABC + IAS 16)"
 
 #: costos_app/templates/costos_app/dashboard.html:86
 msgid "Unidad / Proyecto Estratégico"
-msgstr "Strategisk forretningsområde / Operativt kerneprojekt"
+msgstr "Enhet / Strategiskt projekt"
 
 #: costos_app/templates/costos_app/dashboard.html:88
 msgid "Costo Real Total"
-msgstr "Faktiske samlede omkostninger"
+msgstr "Total verklig kostnad"
 
 #: costos_app/templates/costos_app/dashboard.html:89
 msgid "Presupuesto Techo"
-msgstr "Maksimalt godkendt budgetloft"
+msgstr "Budgettak"
 
 #: costos_app/templates/costos_app/dashboard.html:90
 msgid "Nivel de Consumo Presupuestal"
-msgstr "Budgetudnyttelsesgrad (Burn-rate)"
+msgstr "Budgetförbrukningsnivå"
 
 #: costos_app/templates/costos_app/dashboard.html:91
 msgid "Participación Global"
-msgstr "Global fordelingsandel"
+msgstr "Global andel"
 
 #: costos_app/templates/costos_app/dashboard.html:99
 msgid "Sin descripción"
-msgstr "Ingen beskrivelse tilgængelig"
+msgstr "Ingen beskrivning"
 
 #: costos_app/templates/costos_app/dashboard.html:102
 msgid "Nómina"
-msgstr "Lønafregning / Lønbogholderi"
+msgstr "Löner"
 
 #: costos_app/templates/costos_app/dashboard.html:102
 msgid "Activos"
-msgstr "Aktiverede anlægskonti"
+msgstr "Anläggningstillgångar"
 
 #: costos_app/templates/costos_app/dashboard.html:114
 msgid "Sin Presupuesto"
-msgstr "Intet budgetloft tildelt"
+msgstr "Ingen budget"
 
 #: costos_app/templates/costos_app/dashboard.html:145
 msgid "No hay proyectos para evaluar absorción de costos."
-msgstr "Ingen aktive projekter til vurdering af omkostningsabsorption fundet."
+msgstr "Det finns inga projekt att utvärdera kostnadsabsorption för."
 
 #: costos_app/templates/costos_app/login.html:7
 msgid "ERP Costos - Iniciar Sesión"
-msgstr "Konto-ERP platform - Log ind på sikker portal"
+msgstr "Kostnads-ERP - Logga in"
 
 #: costos_app/templates/costos_app/login.html:53
 msgid "SISTEMA DE COSTOS"
-msgstr "STRATEGISKT SYSTEM TIL VIRKSOMHEDS-OMKOSTNINGSSTYRING"
+msgstr "KOSTNADSSYSTEM"
 
 #: costos_app/templates/costos_app/login.html:54
 msgid "Ingeniería Financiera & Control Legal"
-msgstr "Kvantitativ finansiel planlægning & Regulatorisk compliance-kontrol"
+msgstr "Finansiell analys och juridisk kontroll"
 
 #: costos_app/templates/costos_app/login.html:59
 msgid ""
 "Usuario o contraseña incorrectos. Por favor, verifica e intenta de nuevo."
 msgstr ""
-"Forkert brugernavn o adgangskode. Kontroller venligst dine loginoplysninger "
-"og prøv igen."
+"Felaktigt användarnamn eller lösenord. Vänligen kontrollera uppgifterna och "
+"försök igen."
 
 #: costos_app/templates/costos_app/login.html:68
 msgid "Ej: admin"
-msgstr "f.eks. system_root_admin"
+msgstr "Ex: admin"
 
 #: costos_app/templates/costos_app/login.html:72
 msgid "Contraseña"
-msgstr "Kryptografisk adgangskode"
+msgstr "Lösenord"
 
 #: costos_app/templates/costos_app/login.html:77
 msgid "Ingresar al Sistema"
-msgstr "Godkend og start systemsession"
+msgstr "Logga in i systemet"
 
 #: costos_app/templates/costos_app/login.html:85
 msgid "Desarrollado por Juan Camilo"
-msgstr "Arkitektonisk designet & udviklet af Juan Camilo"
+msgstr "Utvecklat av Juan Camilo"
 
 #: costos_app/templates/costos_app/registrar_activo.html:6
 msgid "Control de Propiedad, Planta y Equipo"
 msgstr ""
-"Hovedbogskontrol for materielle anlægsaktiver (Property, Plant, and "
-"Equipment - PP&E)"
+"Kontroll av materiella anläggningstillgångar (Fastigheter, maskiner och "
+"inventarier)"
 
 #: costos_app/templates/costos_app/registrar_activo.html:14
 msgid "Control de Activos Fijos (NIC 16) y Arrendamientos (NIIF 16)"
-msgstr ""
-"Anlægsbogføring efter IAS 16 & Leasingkontrakter efter IFRS 16 standarder"
+msgstr "Kontroll av anläggningstillgångar (IAS 16) och leasingavtal (IFRS 16)"
 
 #: costos_app/templates/costos_app/registrar_activo.html:15
 msgid "Cálculo automatizado de depreciaciones y desgloses de Leasing"
-msgstr ""
-"Automatiseret anlægsafskrivning & beregning af kontraktlige leasing-"
-"afbetalingsplaner"
+msgstr "Automatiserad beräkning av avskrivningar och leasingspecifikationer"
 
 #: costos_app/templates/costos_app/registrar_activo.html:34
 msgid "Registrar Alta de Activo"
-msgstr "Aktiver anlægsaktiv og optag i virksomhedsbalancen"
+msgstr "Registrera anskaffning av tillgång"
 
 #: costos_app/templates/costos_app/registrar_activo.html:50
 msgid "¿Financiado con Leasing? (NIIF 16)"
-msgstr "Finansiering via leasingkontrakt? (Overensstemmende med IFRS 16)"
+msgstr "Är den finansierad via leasing? (IFRS 16)"
 
 #: costos_app/templates/costos_app/registrar_activo.html:60
 msgid "Activar e Incorporar Activo"
-msgstr "Bogfør anlægsaktiv og start den operative afskrivningscyklus"
+msgstr "Aktivera och lägg till tillgång"
 
 #: costos_app/templates/costos_app/registrar_activo.html:70
 msgid "Inventario y Control de Amortización Mensual"
-msgstr ""
-"Fysisk aktivkartotek og månedlig kontrol af regnskabsmæssig afskrivning"
+msgstr "Lagerinventering och månatlig avskrivningskontroll"
 
 #: costos_app/templates/costos_app/registrar_activo.html:76
 msgid "Activo / Categoría"
-msgstr "Anlægsaktiv / Regnskabskategori"
+msgstr "Tillgång / Kategori"
 
 #: costos_app/templates/costos_app/registrar_activo.html:77
 msgid "Responsable Asignado"
-msgstr "Tildelt aktiv-ansvarlig"
+msgstr "Ansvarig tilldelad medarbetare"
 
 #: costos_app/templates/costos_app/registrar_activo.html:78
 msgid "Costo Histórico"
-msgstr "Historiske anskaffelsesomkostninger"
+msgstr "Anskaffningsvärde (Historisk kostnad)"
 
 #: costos_app/templates/costos_app/registrar_activo.html:79
 msgid "Depreciación Mensual (Costo)"
-msgstr "Månedlig afskrivning (Direkte driftsomkostning i resultatopgørelsen)"
+msgstr "Månatlig avskrivning (Kostnad)"
 
 #: costos_app/templates/costos_app/registrar_activo.html:80
 msgid "Tratamiento NIIF 16"
-msgstr "Regnskabsmæssig metode efter IFRS 16 standarder"
+msgstr "Redovisning enligt IFRS 16"
 
 #: costos_app/templates/costos_app/registrar_activo.html:81
 msgid "Interés Mensual (Gasto)"
-msgstr ""
-"Månedlig renteudgift fra leasing (Finansiel udgift i resultatopgørelsen)"
+msgstr "Månatlig räntekostnad"
 
 #: costos_app/templates/costos_app/registrar_activo.html:97
 msgid "En Bodega / Disponible"
-msgstr "På virksomhedslager / Status: Operationelt tilgængelig"
+msgstr "I lager / Tillgänglig"
 
 #: costos_app/templates/costos_app/registrar_activo.html:105
 msgid "Leasing Financiero"
-msgstr "Finansiel leasingaftale"
+msgstr "Finansiell leasing"
 
 #: costos_app/templates/costos_app/registrar_activo.html:106
 msgid "Canon:"
-msgstr "Fast leasingafgift:"
+msgstr "Leasingavgift (Månadsbetalning):"
 
 #: costos_app/templates/costos_app/registrar_activo.html:108
 msgid "Compra Directa"
-msgstr "Direkte kontantkøb / Kontanttransaktion"
+msgstr "Direktköp"
 
 #: costos_app/templates/costos_app/registrar_activo.html:122
 msgid "No hay activos registrados en el inventario."
-msgstr "Ingen registreringer fundet i anlægskartoteket."
+msgstr "Det finns inga registrerade tillgångar i inventariet."
 
 #: costos_app/templates/costos_app/registrar_empleado.html:6
 msgid "Simulador de Costos - Registro de Empleados"
-msgstr ""
-"Personaleomkostningssimulator - Dataregistrering til medarbejder-onboarding"
+msgstr "Kostnadssimulator - Personalregistrering"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:14
 msgid "Usuario activo:"
-msgstr "Aktiv systembruger-identitet:"
+msgstr "Aktiv användare:"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:29
 msgid "Contratación Internacional"
-msgstr "Grænseoverskridende international rekruttering"
+msgstr "Internationell rekrytering"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:30
 msgid "Ingeniería de Costos & Parámetros Legales"
-msgstr ""
-"Kvantitativ personaleomkostningsberegning & International lovbestemt "
-"parametermatrix"
+msgstr "Kostnadsteknik och juridiska parametrar"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:69
 msgid "Calcular y Guardar en Postgres"
-msgstr "Kør finansielle algoritmer og gem poster i PostgreSQL-databasen"
+msgstr "Beräkna och spara i Postgres"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:80
 msgid "Últimos Registros Calculados"
-msgstr "Senest beregnede resultater af personaleomkostningsanalyser"
+msgstr "Senaste beräknade poster"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:81
 msgid "Visualización de costo total de nómina (Moneda Local)"
-msgstr ""
-"Detaljeret resultatopgørelsesvisning af de samlede arbejdsgiveromkostninger "
-"(I lokal rapporteringsvaluta)"
+msgstr "Visning av total lönekostnad (Lokal valuta)"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:88
 msgid "Nombre"
-msgstr "Fulde navn"
+msgstr "Namn"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:89
 msgid "Contrato"
-msgstr "Ansættelseskontrakt-klassifikation"
+msgstr "Anställningsavtal"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:90
 msgid "Salario Bruto"
-msgstr "Bruttogrundløn"
+msgstr "Bruttolön"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:91
 msgid "Seg. Social"
-msgstr "Lovpligtige arbejdsgiverbidrag til syge- & pensionsforsikring"
+msgstr "Sociala avgifter (Arbetsgivaravgifter)"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:92
 msgid "Provisión NIIF"
-msgstr "Hensættelser til fratrædelsesgodtgørelse efter IFRS standarder"
+msgstr "Avsättningar enligt IFRS"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:93
 msgid "Costo Total Real"
-msgstr ""
-"Samlede faktiske personaleomkostninger for arbejdsgiveren (Fully Burdened "
-"Labor Cost)"
+msgstr "Total verklig kostnad"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:108
 msgid "No hay empleados registrados."
-msgstr "Ingen personalefiler fundet i databasetabellerne."
+msgstr "Det finns inga registrerade anställda."
 
 #: costos_app/templates/costos_app/registrar_factura.html:6
 msgid "Registro de Facturas y Costos Fijos"
-msgstr ""
-"Registreringscenter - Kreditorfakturaer & Tilbagevendende faste indirekte "
-"omkostninger"
+msgstr "Fasta fakturor och fasta kostnader"
 
 #: costos_app/templates/costos_app/registrar_factura.html:13
 msgid "Control de Facturas y Costos Fijos (Distribución por Áreas)"
-msgstr "Fakturakontrol & Afdelingsspecifik omkostningsstedfordeling"
+msgstr "Faktura- och fasta kostnadskontroll (Fördelning per avdelning)"
 
 #: costos_app/templates/costos_app/registrar_factura.html:15
 msgid "Ir al Dashboard"
-msgstr "Gå tilbage til det operative hoved-dashboard"
+msgstr "Till huvudpanelen"
 
 #: costos_app/templates/costos_app/registrar_factura.html:31
 msgid "Ingresar Documento / Factura"
-msgstr "Registrer ny leverandørfaktura"
+msgstr "Registrera dokument / Faktura"
 
 #: costos_app/templates/costos_app/registrar_factura.html:38
 msgid "Registrar Concepto"
-msgstr "Gem bogføringslinje / Omkostningskoncept"
+msgstr "Registrera post"
 
 #: costos_app/templates/costos_app/registrar_factura.html:48
 msgid "Historial de Egresos Fijos"
-msgstr "Historisk revisionsspor over faste strukturelle pengestrømme"
+msgstr "Historik över fasta utgifter"
 
 #: costos_app/templates/costos_app/registrar_factura.html:55
 msgid "Concepto / Proveedor"
-msgstr "Udgiftsklassifikationslinje / Handelsleverandør"
+msgstr "Beskrivning / Leverantör"
 
 #: costos_app/templates/costos_app/registrar_factura.html:57
 msgid "Clasificación Contable"
-msgstr "Finanskonto-klassifikation"
+msgstr "Kostnadsklassificering"
 
 #: costos_app/templates/costos_app/registrar_factura.html:68
 msgid "Costo Operativo (Producción)"
-msgstr ""
-"Operationelle produktionsomkostninger (Produktionsafhængige omkostninger - "
-"COGS / Direct Production Cost)"
+msgstr "Driftskostnad (Produktion)"
 
 #: costos_app/templates/costos_app/registrar_factura.html:70
 msgid "Gasto Administrativo"
-msgstr ""
-"Generelle administrations- og salgsomkostninger (Resultatopgørelsesudgift - "
-"G&A)"
+msgstr "Administrationskostnad"
 
 #: costos_app/templates/costos_app/registrar_factura.html:78
 msgid "No hay facturas fijos registrados."
-msgstr "Ingen faste kreditorfakturaer fundet i tabellerne."
+msgstr "Det finns inga registrerade fasta fakturor."
 
 #: costosproyectos/settings.py:106
 msgid "Spanish"
-msgstr "Spansk"
+msgstr "Spanska"
 
 #: costosproyectos/settings.py:108
 msgid "Finnish"
-msgstr "Finsk"
+msgstr "Finska"
 
 #: costosproyectos/settings.py:109
 msgid "Estonian"
-msgstr "Estisk"
+msgstr "Estniska"
 
 #: costosproyectos/settings.py:110
 msgid "Lithuanian"
-msgstr "Litauisk"
+msgstr "Litauiska"
 
 #: costosproyectos/settings.py:111
 msgid "Latvian"
-msgstr "Lettisk"
+msgstr "Lettiska"
 
 #: costosproyectos/settings.py:112
 msgid "Danish"
-msgstr "Dansk"
+msgstr "Danska"
 
 #: costosproyectos/settings.py:113
 msgid "German"
-msgstr "Tysk"
+msgstr "Tyska"
 
 #: costosproyectos/settings.py:114
 msgid "Norwegian"
-msgstr "Norsk"
+msgstr ""
 
 #: costosproyectos/settings.py:115
 msgid "Swedish"
-msgstr "Svensk"
+msgstr ""
 
 #: costosproyectos/settings.py:116
+#, fuzzy
+#| msgid "English"
 msgid "Polish"
-msgstr "Polsk"
+msgstr "Engelska"
 
 #: env/lib/python3.12/site-packages/django/contrib/messages/apps.py:15
 msgid "Messages"
-msgstr ""
+msgstr "meddelanden"
 
 #: env/lib/python3.12/site-packages/django/contrib/sitemaps/apps.py:8
 msgid "Site Maps"
-msgstr ""
+msgstr "Webbplatskartor"
 
 #: env/lib/python3.12/site-packages/django/contrib/staticfiles/apps.py:9
 msgid "Static Files"
-msgstr ""
+msgstr "Statiska filer"
 
 #: env/lib/python3.12/site-packages/django/contrib/syndication/apps.py:7
 msgid "Syndication"
-msgstr ""
+msgstr "Syndikering"
 
 #. Translators: String used to replace omitted page numbers in elided page
 #. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
@@ -985,84 +957,88 @@ msgstr ""
 
 #: env/lib/python3.12/site-packages/django/core/paginator.py:50
 msgid "That page number is not an integer"
-msgstr ""
+msgstr "Det sidnumret är inte ett heltal"
 
 #: env/lib/python3.12/site-packages/django/core/paginator.py:52
 msgid "That page number is less than 1"
-msgstr ""
+msgstr "Sidantalet är mindre än 1"
 
 #: env/lib/python3.12/site-packages/django/core/paginator.py:54
 msgid "That page contains no results"
-msgstr ""
+msgstr "Den sidan innehåller inga resultat"
 
 #: env/lib/python3.12/site-packages/django/core/validators.py:22
 msgid "Enter a valid value."
-msgstr ""
+msgstr "Ange ett giltigt värde."
 
 #: env/lib/python3.12/site-packages/django/core/validators.py:104
 #: env/lib/python3.12/site-packages/django/forms/fields.py:752
 msgid "Enter a valid URL."
-msgstr ""
+msgstr "Ange en giltig URL."
 
 #: env/lib/python3.12/site-packages/django/core/validators.py:165
 msgid "Enter a valid integer."
-msgstr ""
+msgstr "Ange ett giltigt heltal."
 
 #: env/lib/python3.12/site-packages/django/core/validators.py:176
 msgid "Enter a valid email address."
-msgstr ""
+msgstr "Ange en giltig e-postadress."
 
 #. Translators: "letters" means latin letters: a-z and A-Z.
 #: env/lib/python3.12/site-packages/django/core/validators.py:259
 msgid ""
 "Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
 msgstr ""
+"Ange en giltig \"snigel\" som består av bokstäver, siffror, understreck "
+"eller bindestreck."
 
 #: env/lib/python3.12/site-packages/django/core/validators.py:267
 msgid ""
 "Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
 "hyphens."
 msgstr ""
+"Ange en giltig \"snigel\" som består av Unicode-bokstäver, siffror, "
+"understreck eller bindestreck."
 
 #: env/lib/python3.12/site-packages/django/core/validators.py:279
 #: env/lib/python3.12/site-packages/django/core/validators.py:287
 #: env/lib/python3.12/site-packages/django/core/validators.py:316
 msgid "Enter a valid IPv4 address."
-msgstr ""
+msgstr "Ange en giltig IPv4-adress."
 
 #: env/lib/python3.12/site-packages/django/core/validators.py:296
 #: env/lib/python3.12/site-packages/django/core/validators.py:317
 msgid "Enter a valid IPv6 address."
-msgstr ""
+msgstr "Ange en giltig IPv6-adress."
 
 #: env/lib/python3.12/site-packages/django/core/validators.py:308
 #: env/lib/python3.12/site-packages/django/core/validators.py:315
 msgid "Enter a valid IPv4 or IPv6 address."
-msgstr ""
+msgstr "Ange en giltig IPv4- eller IPv6-adress."
 
 #: env/lib/python3.12/site-packages/django/core/validators.py:351
 msgid "Enter only digits separated by commas."
-msgstr ""
+msgstr "Ange endast siffror separerade med kommatecken."
 
 #: env/lib/python3.12/site-packages/django/core/validators.py:357
 #, python-format
 msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
-msgstr ""
+msgstr "Se till att detta värde är %(limit_value)s (det är %(show_value)s)."
 
 #: env/lib/python3.12/site-packages/django/core/validators.py:392
 #, python-format
 msgid "Ensure this value is less than or equal to %(limit_value)s."
-msgstr ""
+msgstr "Se till att detta värde är mindre än eller lika med %(limit_value)s."
 
 #: env/lib/python3.12/site-packages/django/core/validators.py:401
 #, python-format
 msgid "Ensure this value is greater than or equal to %(limit_value)s."
-msgstr ""
+msgstr "Se till att detta värde är större än eller lika med %(limit_value)s."
 
 #: env/lib/python3.12/site-packages/django/core/validators.py:410
 #, python-format
 msgid "Ensure this value is a multiple of step size %(limit_value)s."
-msgstr ""
+msgstr "Se till att detta värde är en multipel av stegstorlek %(limit_value)s."
 
 #: env/lib/python3.12/site-packages/django/core/validators.py:420
 #, python-format
@@ -1090,7 +1066,7 @@ msgstr[1] ""
 #: env/lib/python3.12/site-packages/django/forms/fields.py:347
 #: env/lib/python3.12/site-packages/django/forms/fields.py:386
 msgid "Enter a number."
-msgstr ""
+msgstr "Ange ett nummer."
 
 #: env/lib/python3.12/site-packages/django/core/validators.py:463
 #, python-format
@@ -1121,44 +1097,46 @@ msgid ""
 "File extension “%(extension)s” is not allowed. Allowed extensions are: "
 "%(allowed_extensions)s."
 msgstr ""
+"Filtillägget \"%(extension)s\" är inte tillåtet. Tillåtna tillägg är: "
+"%(allowed_extensions)s."
 
 #: env/lib/python3.12/site-packages/django/core/validators.py:605
 msgid "Null characters are not allowed."
-msgstr ""
+msgstr "Nulltecken är inte tillåtna."
 
 #: env/lib/python3.12/site-packages/django/db/models/base.py:1423
 #: env/lib/python3.12/site-packages/django/forms/models.py:893
 #: env/lib/python3.12/site-packages/unfold/contrib/inlines/admin.py:111
 msgid "and"
-msgstr ""
+msgstr "och"
 
 #: env/lib/python3.12/site-packages/django/db/models/base.py:1425
 #, python-format
 msgid "%(model_name)s with this %(field_labels)s already exists."
-msgstr ""
+msgstr "%(model_name)s med detta %(field_labels)s finns redan."
 
 #: env/lib/python3.12/site-packages/django/db/models/constraints.py:17
 #, python-format
 msgid "Constraint “%(name)s” is violated."
-msgstr ""
+msgstr "Begränsningen \"%(name)s\" har överträtts."
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:128
 #, python-format
 msgid "Value %(value)r is not a valid choice."
-msgstr ""
+msgstr "Värdet %(value)r är inte ett giltigt val."
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:129
 msgid "This field cannot be null."
-msgstr ""
+msgstr "Det här fältet kan inte vara null."
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:130
 msgid "This field cannot be blank."
-msgstr ""
+msgstr "Detta fält får inte vara tomt."
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:131
 #, python-format
 msgid "%(model_name)s with this %(field_label)s already exists."
-msgstr ""
+msgstr "%(model_name)s med denna %(field_label)s finns redan."
 
 #. Translators: The 'lookup_type' is one of 'date', 'year' or
 #. 'month'. Eg: "Title must be unique for pub_date year"
@@ -1167,38 +1145,39 @@ msgstr ""
 msgid ""
 "%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
 msgstr ""
+"%(field_label)s måste vara unika för %(date_field_label)s %(lookup_type)s."
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:173
 #, python-format
 msgid "Field of type: %(field_type)s"
-msgstr ""
+msgstr "Typfält: %(field_type)s"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1094
 #, python-format
 msgid "“%(value)s” value must be either True or False."
-msgstr ""
+msgstr "\"%(value)s\"-värdet måste vara antingen True eller False."
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1095
 #, python-format
 msgid "“%(value)s” value must be either True, False, or None."
-msgstr ""
+msgstr "\"%(value)s\"-värdet måste vara antingen True, False eller None."
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1097
 msgid "Boolean (Either True or False)"
-msgstr ""
+msgstr "Boolean (antingen sant eller falskt)"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1147
 #, python-format
 msgid "String (up to %(max_length)s)"
-msgstr ""
+msgstr "Sträng (upp till %(max_length)s)"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1149
 msgid "String (unlimited)"
-msgstr ""
+msgstr "Sträng (obegränsad)"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1253
 msgid "Comma-separated integers"
-msgstr ""
+msgstr "Kommaseparerade heltal"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1354
 #, python-format
@@ -1206,6 +1185,8 @@ msgid ""
 "“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
 "format."
 msgstr ""
+"\"%(value)s\"-värdet har ett ogiltigt datumformat. Det måste vara i formatet "
+"ÅÅÅÅ-MM-DD."
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1358
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1493
@@ -1214,10 +1195,12 @@ msgid ""
 "“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
 "date."
 msgstr ""
+"Värdet \"%(value)s\" har rätt format (ÅÅÅÅ-MM-DD) men det är ett ogiltigt "
+"datum."
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1362
 msgid "Date (without time)"
-msgstr ""
+msgstr "Datum (utan tid)"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1489
 #, python-format
@@ -1225,6 +1208,8 @@ msgid ""
 "“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
 "uuuuuu]][TZ] format."
 msgstr ""
+"\"%(value)s\"-värdet har ett ogiltigt format. Det måste vara i formatet ÅÅÅÅ-"
+"MM-DD TT:MM[:ss[.uuuuuu]][TZ]."
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1497
 #, python-format
@@ -1232,19 +1217,21 @@ msgid ""
 "“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
 "[TZ]) but it is an invalid date/time."
 msgstr ""
+"\"%(value)s\"-värdet har rätt format (ÅÅÅÅ-MM-DD TT:MM[:ss[.uuuuuu]][TZ]) "
+"men det är ett ogiltigt datum/tid."
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1502
 msgid "Date (with time)"
-msgstr ""
+msgstr "Datum (med tid)"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1626
 #, python-format
 msgid "“%(value)s” value must be a decimal number."
-msgstr ""
+msgstr "\"%(value)s\"-värdet måste vara ett decimaltal."
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1628
 msgid "Decimal number"
-msgstr ""
+msgstr "Decimaltal"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1789
 #, python-format
@@ -1252,83 +1239,85 @@ msgid ""
 "“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
 "uuuuuu] format."
 msgstr ""
+"\"%(value)s\"-värdet har ett ogiltigt format. Det måste vara i formatet [DD] "
+"[[HH:]MM:]ss[.uuuuuu]."
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1793
 msgid "Duration"
-msgstr ""
+msgstr "Varaktighet"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1845
 msgid "Email address"
-msgstr ""
+msgstr "E-postadress"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1870
 msgid "File path"
-msgstr ""
+msgstr "Filsökväg"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1948
 #, python-format
 msgid "“%(value)s” value must be a float."
-msgstr ""
+msgstr "\"%(value)s\"-värdet måste vara ett flytande värde."
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1950
 msgid "Floating point number"
-msgstr ""
+msgstr "Flyttalsnummer"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1990
 #, python-format
 msgid "“%(value)s” value must be an integer."
-msgstr ""
+msgstr "\"%(value)s\"-värdet måste vara ett heltal."
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1992
 msgid "Integer"
-msgstr ""
+msgstr "Heltal"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2088
 msgid "Big (8 byte) integer"
-msgstr ""
+msgstr "Stort (8 byte) heltal"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2105
 msgid "Small integer"
-msgstr ""
+msgstr "Litet heltal"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2113
 msgid "IPv4 address"
-msgstr ""
+msgstr "IPv4-adress"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2144
 msgid "IP address"
-msgstr ""
+msgstr "IP-adress"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2237
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2238
 #, python-format
 msgid "“%(value)s” value must be either None, True or False."
-msgstr ""
+msgstr "\"%(value)s\"-värdet måste vara antingen None, True eller False."
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2240
 msgid "Boolean (Either True, False or None)"
-msgstr ""
+msgstr "Boolean (antingen sant, falskt eller inget)"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2291
 msgid "Positive big integer"
-msgstr ""
+msgstr "Positivt stort heltal"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2306
 msgid "Positive integer"
-msgstr ""
+msgstr "Positivt heltal"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2321
 msgid "Positive small integer"
-msgstr ""
+msgstr "Positivt litet heltal"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2337
 #, python-format
 msgid "Slug (up to %(max_length)s)"
-msgstr ""
+msgstr "Snigel (upp till %(max_length)s)"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2373
 msgid "Text"
-msgstr ""
+msgstr "text"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2448
 #, python-format
@@ -1336,6 +1325,8 @@ msgid ""
 "“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
 "format."
 msgstr ""
+"\"%(value)s\"-värdet har ett ogiltigt format. Det måste vara i formatet TT:"
+"MM[:ss[.uuuuuu]]."
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2452
 #, python-format
@@ -1343,6 +1334,8 @@ msgid ""
 "“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
 "invalid time."
 msgstr ""
+"\"%(value)s\"-värdet har rätt format (TT:MM[:ss[.uuuuuu]]) men det är en "
+"ogiltig tid."
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2456
 #: env/lib/python3.12/site-packages/unfold/contrib/filters/forms.py:291
@@ -1350,67 +1343,67 @@ msgstr ""
 #: env/lib/python3.12/site-packages/unfold/widgets.py:590
 #: env/lib/python3.12/site-packages/unfold/widgets.py:635
 msgid "Time"
-msgstr ""
+msgstr "tid"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2564
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2588
 msgid "Raw binary data"
-msgstr ""
+msgstr "Rå binär data"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2653
 #, python-format
 msgid "“%(value)s” is not a valid UUID."
-msgstr ""
+msgstr "\"%(value)s\" är inte ett giltigt UUID."
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2655
 msgid "Universally unique identifier"
-msgstr ""
+msgstr "Universellt unik identifierare"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/files.py:232
 msgid "File"
-msgstr ""
+msgstr "Fil"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/files.py:393
 msgid "Image"
-msgstr ""
+msgstr "Bild"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/json.py:26
 msgid "A JSON object"
-msgstr ""
+msgstr "Ett JSON-objekt"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/json.py:28
 msgid "Value must be valid JSON."
-msgstr ""
+msgstr "Värdet måste vara giltigt JSON."
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/related.py:919
 #, python-format
 msgid "%(model)s instance with %(field)s %(value)r does not exist."
-msgstr ""
+msgstr "%(model)s instans med %(field)s %(value)r finns inte."
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/related.py:921
 msgid "Foreign Key (type determined by related field)"
-msgstr ""
+msgstr "Utländsk nyckel (typ bestäms av relaterat fält)"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/related.py:1212
 msgid "One-to-one relationship"
-msgstr ""
+msgstr "En-till-en relation"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/related.py:1269
 #, python-format
 msgid "%(from)s-%(to)s relationship"
-msgstr ""
+msgstr "%(from)s-%(to)s relationship"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/related.py:1271
 #, python-format
 msgid "%(from)s-%(to)s relationships"
-msgstr ""
+msgstr "%(from)s-%(to)s relationships"
 
 #: env/lib/python3.12/site-packages/django/db/models/fields/related.py:1319
 msgid "Many-to-many relationship"
-msgstr ""
+msgstr "Många-till-många relation"
 
 #. Translators: If found as last label character, these punctuation
 #. characters will prevent the default label_suffix to be appended to the label
@@ -1420,46 +1413,46 @@ msgstr ""
 
 #: env/lib/python3.12/site-packages/django/forms/fields.py:91
 msgid "This field is required."
-msgstr ""
+msgstr "Detta fält är obligatoriskt."
 
 #: env/lib/python3.12/site-packages/django/forms/fields.py:298
 msgid "Enter a whole number."
-msgstr ""
+msgstr "Ange ett heltal."
 
 #: env/lib/python3.12/site-packages/django/forms/fields.py:467
 #: env/lib/python3.12/site-packages/django/forms/fields.py:1241
 msgid "Enter a valid date."
-msgstr ""
+msgstr "Ange ett giltigt datum."
 
 #: env/lib/python3.12/site-packages/django/forms/fields.py:490
 #: env/lib/python3.12/site-packages/django/forms/fields.py:1242
 msgid "Enter a valid time."
-msgstr ""
+msgstr "Ange en giltig tid."
 
 #: env/lib/python3.12/site-packages/django/forms/fields.py:517
 msgid "Enter a valid date/time."
-msgstr ""
+msgstr "Ange ett giltigt datum/tid."
 
 #: env/lib/python3.12/site-packages/django/forms/fields.py:551
 msgid "Enter a valid duration."
-msgstr ""
+msgstr "Ange en giltig varaktighet."
 
 #: env/lib/python3.12/site-packages/django/forms/fields.py:552
 #, python-brace-format
 msgid "The number of days must be between {min_days} and {max_days}."
-msgstr ""
+msgstr "Antalet dagar måste vara mellan {min_days} och {max_days}."
 
 #: env/lib/python3.12/site-packages/django/forms/fields.py:621
 msgid "No file was submitted. Check the encoding type on the form."
-msgstr ""
+msgstr "Ingen fil skickades in. Kontrollera kodningstypen på formuläret."
 
 #: env/lib/python3.12/site-packages/django/forms/fields.py:622
 msgid "No file was submitted."
-msgstr ""
+msgstr "Ingen fil skickades in."
 
 #: env/lib/python3.12/site-packages/django/forms/fields.py:623
 msgid "The submitted file is empty."
-msgstr ""
+msgstr "Den skickade filen är tom."
 
 #: env/lib/python3.12/site-packages/django/forms/fields.py:625
 #, python-format
@@ -1472,12 +1465,16 @@ msgstr[1] ""
 #: env/lib/python3.12/site-packages/django/forms/fields.py:630
 msgid "Please either submit a file or check the clear checkbox, not both."
 msgstr ""
+"Vänligen antingen skicka in en fil eller markera den avmarkerade kryssrutan, "
+"inte båda."
 
 #: env/lib/python3.12/site-packages/django/forms/fields.py:694
 msgid ""
 "Upload a valid image. The file you uploaded was either not an image or a "
 "corrupted image."
 msgstr ""
+"Ladda upp till giltig bild. Filen du laddade upp var antingen inte en bild "
+"eller en skadad bild."
 
 #: env/lib/python3.12/site-packages/django/forms/fields.py:857
 #: env/lib/python3.12/site-packages/django/forms/fields.py:949
@@ -1485,24 +1482,25 @@ msgstr ""
 #, python-format
 msgid "Select a valid choice. %(value)s is not one of the available choices."
 msgstr ""
+"Välj ett giltigt val. %(value)s är inte ett av de tillgängliga alternativen."
 
 #: env/lib/python3.12/site-packages/django/forms/fields.py:951
 #: env/lib/python3.12/site-packages/django/forms/fields.py:1070
 #: env/lib/python3.12/site-packages/django/forms/models.py:1564
 msgid "Enter a list of values."
-msgstr ""
+msgstr "Ange en lista med värden."
 
 #: env/lib/python3.12/site-packages/django/forms/fields.py:1071
 msgid "Enter a complete value."
-msgstr ""
+msgstr "Ange ett fullständigt värde."
 
 #: env/lib/python3.12/site-packages/django/forms/fields.py:1310
 msgid "Enter a valid UUID."
-msgstr ""
+msgstr "Ange ett giltigt UUID."
 
 #: env/lib/python3.12/site-packages/django/forms/fields.py:1340
 msgid "Enter a valid JSON."
-msgstr ""
+msgstr "Ange en giltig JSON."
 
 #. Translators: This is the default suffix added to form field labels
 #: env/lib/python3.12/site-packages/django/forms/forms.py:98
@@ -1513,7 +1511,7 @@ msgstr ""
 #: env/lib/python3.12/site-packages/django/forms/forms.py:328
 #, python-format
 msgid "(Hidden field %(name)s) %(error)s"
-msgstr ""
+msgstr "(Hidden field %(name)s) %(error)s"
 
 #: env/lib/python3.12/site-packages/django/forms/formsets.py:63
 #, python-format
@@ -1521,6 +1519,8 @@ msgid ""
 "ManagementForm data is missing or has been tampered with. Missing fields: "
 "%(field_names)s. You may need to file a bug report if the issue persists."
 msgstr ""
+"ManagementForm-data saknas eller har manipulerats. Saknade fält: "
+"%(field_names)s. Du kan behöva lämna in en felrapport om problemet kvarstår."
 
 #: env/lib/python3.12/site-packages/django/forms/formsets.py:67
 #, python-format
@@ -1539,23 +1539,23 @@ msgstr[1] ""
 #: env/lib/python3.12/site-packages/django/forms/formsets.py:484
 #: env/lib/python3.12/site-packages/django/forms/formsets.py:491
 msgid "Order"
-msgstr ""
+msgstr "beställa"
 
 #: env/lib/python3.12/site-packages/django/forms/formsets.py:499
 #: env/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_preview.html:26
 #: env/lib/python3.12/site-packages/unfold/templates/admin/submit_line.html:62
 msgid "Delete"
-msgstr ""
+msgstr "Radera"
 
 #: env/lib/python3.12/site-packages/django/forms/models.py:886
 #, python-format
 msgid "Please correct the duplicate data for %(field)s."
-msgstr ""
+msgstr "Vänligen korrigera dubblettdata för %(field)s."
 
 #: env/lib/python3.12/site-packages/django/forms/models.py:891
 #, python-format
 msgid "Please correct the duplicate data for %(field)s, which must be unique."
-msgstr ""
+msgstr "Vänligen korrigera dubblettdata för %(field)s, som måste vara unikt."
 
 #: env/lib/python3.12/site-packages/django/forms/models.py:898
 #, python-format
@@ -1563,23 +1563,25 @@ msgid ""
 "Please correct the duplicate data for %(field_name)s which must be unique "
 "for the %(lookup)s in %(date_field)s."
 msgstr ""
+"Vänligen korrigera dubblettdata för %(field_name)s som måste vara unika för "
+"%(lookup)s i %(date_field)s."
 
 #: env/lib/python3.12/site-packages/django/forms/models.py:907
 msgid "Please correct the duplicate values below."
-msgstr ""
+msgstr "Vänligen korrigera dubblettvärdena nedan."
 
 #: env/lib/python3.12/site-packages/django/forms/models.py:1338
 msgid "The inline value did not match the parent instance."
-msgstr ""
+msgstr "Det infogade värdet matchade inte den överordnade instansen."
 
 #: env/lib/python3.12/site-packages/django/forms/models.py:1429
 msgid "Select a valid choice. That choice is not one of the available choices."
-msgstr ""
+msgstr "Välj ett giltigt val. Det valet är inte ett av de tillgängliga valen."
 
 #: env/lib/python3.12/site-packages/django/forms/models.py:1568
 #, python-format
 msgid "“%(pk)s” is not a valid value."
-msgstr ""
+msgstr "\"%(pk)s\" är inte ett giltigt värde."
 
 #: env/lib/python3.12/site-packages/django/forms/utils.py:226
 #, python-format
@@ -1587,40 +1589,42 @@ msgid ""
 "%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
 "may be ambiguous or it may not exist."
 msgstr ""
+"%(datetime)s kunde inte tolkas i tidszon %(current_timezone)s; det kan vara "
+"tvetydigt eller så finns det inte."
 
 #: env/lib/python3.12/site-packages/django/forms/widgets.py:463
 msgid "Clear"
-msgstr ""
+msgstr "Rensa"
 
 #: env/lib/python3.12/site-packages/django/forms/widgets.py:464
 msgid "Currently"
-msgstr ""
+msgstr "För närvarande"
 
 #: env/lib/python3.12/site-packages/django/forms/widgets.py:465
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/app_list_default.html:42
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/edit_inline/inline_links.html:7
 msgid "Change"
-msgstr ""
+msgstr "ändra"
 
 #: env/lib/python3.12/site-packages/django/forms/widgets.py:794
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/boolean.html:4
 msgid "Unknown"
-msgstr ""
+msgstr "okänd"
 
 #: env/lib/python3.12/site-packages/django/forms/widgets.py:795
 #: env/lib/python3.12/site-packages/unfold/contrib/filters/admin/choice_filters.py:103
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: env/lib/python3.12/site-packages/django/forms/widgets.py:796
 #: env/lib/python3.12/site-packages/unfold/contrib/filters/admin/choice_filters.py:104
 msgid "No"
-msgstr ""
+msgstr "Inga"
 
 #. Translators: Please do not add spaces around commas.
 #: env/lib/python3.12/site-packages/django/template/defaultfilters.py:861
 msgid "yes,no,maybe"
-msgstr ""
+msgstr "ja, nej, kanske"
 
 #: env/lib/python3.12/site-packages/django/template/defaultfilters.py:891
 #: env/lib/python3.12/site-packages/django/template/defaultfilters.py:908
@@ -1633,337 +1637,337 @@ msgstr[1] ""
 #: env/lib/python3.12/site-packages/django/template/defaultfilters.py:910
 #, python-format
 msgid "%s KB"
-msgstr ""
+msgstr "%s KB"
 
 #: env/lib/python3.12/site-packages/django/template/defaultfilters.py:912
 #, python-format
 msgid "%s MB"
-msgstr ""
+msgstr "%s MB"
 
 #: env/lib/python3.12/site-packages/django/template/defaultfilters.py:914
 #, python-format
 msgid "%s GB"
-msgstr ""
+msgstr "%s GB"
 
 #: env/lib/python3.12/site-packages/django/template/defaultfilters.py:916
 #, python-format
 msgid "%s TB"
-msgstr ""
+msgstr "%s TB"
 
 #: env/lib/python3.12/site-packages/django/template/defaultfilters.py:918
 #, python-format
 msgid "%s PB"
-msgstr ""
+msgstr "%s PB"
 
 #: env/lib/python3.12/site-packages/django/utils/dateformat.py:73
 msgid "p.m."
-msgstr ""
+msgstr "kl."
 
 #: env/lib/python3.12/site-packages/django/utils/dateformat.py:74
 msgid "a.m."
-msgstr ""
+msgstr "A.M."
 
 #: env/lib/python3.12/site-packages/django/utils/dateformat.py:79
 msgid "PM"
-msgstr ""
+msgstr "P.M"
 
 #: env/lib/python3.12/site-packages/django/utils/dateformat.py:80
 msgid "AM"
-msgstr ""
+msgstr "A.M"
 
 #: env/lib/python3.12/site-packages/django/utils/dateformat.py:152
 msgid "midnight"
-msgstr ""
+msgstr "midnatt"
 
 #: env/lib/python3.12/site-packages/django/utils/dateformat.py:154
 msgid "noon"
-msgstr ""
+msgstr "middag"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:7
 msgid "Monday"
-msgstr ""
+msgstr "måndag"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:8
 msgid "Tuesday"
-msgstr ""
+msgstr "tisdag"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:9
 msgid "Wednesday"
-msgstr ""
+msgstr "onsdag"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:10
 msgid "Thursday"
-msgstr ""
+msgstr "torsdag"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:11
 msgid "Friday"
-msgstr ""
+msgstr "fredag"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:12
 msgid "Saturday"
-msgstr ""
+msgstr "lördag"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:13
 msgid "Sunday"
-msgstr ""
+msgstr "söndag"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:16
 msgid "Mon"
-msgstr ""
+msgstr "mån"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:17
 msgid "Tue"
-msgstr ""
+msgstr "tis"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:18
 msgid "Wed"
-msgstr ""
+msgstr "onsdag"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:19
 msgid "Thu"
-msgstr ""
+msgstr "tors"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:20
 msgid "Fri"
-msgstr ""
+msgstr "fre"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:21
 msgid "Sat"
-msgstr ""
+msgstr "lö"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:22
 msgid "Sun"
-msgstr ""
+msgstr "Sol"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:25
 msgid "January"
-msgstr ""
+msgstr "januari"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:26
 msgid "February"
-msgstr ""
+msgstr "februari"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:27
 msgid "March"
-msgstr ""
+msgstr "mars"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:28
 msgid "April"
-msgstr ""
+msgstr "april"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:29
 msgid "May"
-msgstr ""
+msgstr "maj"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:30
 msgid "June"
-msgstr ""
+msgstr "juni"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:31
 msgid "July"
-msgstr ""
+msgstr "juni"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:32
 msgid "August"
-msgstr ""
+msgstr "augusti"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:33
 msgid "September"
-msgstr ""
+msgstr "september"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:34
 msgid "October"
-msgstr ""
+msgstr "oktober"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:35
 msgid "November"
-msgstr ""
+msgstr "november"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:36
 msgid "December"
-msgstr ""
+msgstr "december"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:39
 msgid "jan"
-msgstr ""
+msgstr "jan"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:40
 msgid "feb"
-msgstr ""
+msgstr "feb"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:41
 msgid "mar"
-msgstr ""
+msgstr "hav"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:42
 msgid "apr"
-msgstr ""
+msgstr "apr"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:43
 msgid "may"
-msgstr ""
+msgstr "maj"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:44
 msgid "jun"
-msgstr ""
+msgstr "jun"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:45
 msgid "jul"
-msgstr ""
+msgstr "jul"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:46
 msgid "aug"
-msgstr ""
+msgstr "aug"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:47
 msgid "sep"
-msgstr ""
+msgstr "sep"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:48
 msgid "oct"
-msgstr ""
+msgstr "okt"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:49
 msgid "nov"
-msgstr ""
+msgstr "nov"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:50
 msgid "dec"
-msgstr ""
+msgstr "dec"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:53
 msgctxt "abbrev. month"
 msgid "Jan."
-msgstr ""
+msgstr "Jan."
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:54
 msgctxt "abbrev. month"
 msgid "Feb."
-msgstr ""
+msgstr "feb."
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:55
 msgctxt "abbrev. month"
 msgid "March"
-msgstr ""
+msgstr "mars"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:56
 msgctxt "abbrev. month"
 msgid "April"
-msgstr ""
+msgstr "april"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:57
 msgctxt "abbrev. month"
 msgid "May"
-msgstr ""
+msgstr "maj"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:58
 msgctxt "abbrev. month"
 msgid "June"
-msgstr ""
+msgstr "juni"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:59
 msgctxt "abbrev. month"
 msgid "July"
-msgstr ""
+msgstr "juni"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:60
 msgctxt "abbrev. month"
 msgid "Aug."
-msgstr ""
+msgstr "aug."
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:61
 msgctxt "abbrev. month"
 msgid "Sept."
-msgstr ""
+msgstr "Sept."
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:62
 msgctxt "abbrev. month"
 msgid "Oct."
-msgstr ""
+msgstr "okt."
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:63
 msgctxt "abbrev. month"
 msgid "Nov."
-msgstr ""
+msgstr "nov."
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:64
 msgctxt "abbrev. month"
 msgid "Dec."
-msgstr ""
+msgstr "dec."
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:67
 msgctxt "alt. month"
 msgid "January"
-msgstr ""
+msgstr "januari"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:68
 msgctxt "alt. month"
 msgid "February"
-msgstr ""
+msgstr "februari"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:69
 msgctxt "alt. month"
 msgid "March"
-msgstr ""
+msgstr "mars"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:70
 msgctxt "alt. month"
 msgid "April"
-msgstr ""
+msgstr "april"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:71
 msgctxt "alt. month"
 msgid "May"
-msgstr ""
+msgstr "maj"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:72
 msgctxt "alt. month"
 msgid "June"
-msgstr ""
+msgstr "juni"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:73
 msgctxt "alt. month"
 msgid "July"
-msgstr ""
+msgstr "juni"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:74
 msgctxt "alt. month"
 msgid "August"
-msgstr ""
+msgstr "augusti"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:75
 msgctxt "alt. month"
 msgid "September"
-msgstr ""
+msgstr "september"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:76
 msgctxt "alt. month"
 msgid "October"
-msgstr ""
+msgstr "oktober"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:77
 msgctxt "alt. month"
 msgid "November"
-msgstr ""
+msgstr "november"
 
 #: env/lib/python3.12/site-packages/django/utils/dates.py:78
 msgctxt "alt. month"
 msgid "December"
-msgstr ""
+msgstr "december"
 
 #: env/lib/python3.12/site-packages/django/utils/ipv6.py:8
 msgid "This is not a valid IPv6 address."
-msgstr ""
+msgstr "Detta är inte en giltig IPv6-adress."
 
 #: env/lib/python3.12/site-packages/django/utils/text.py:137
 #, python-format
 msgctxt "String to return when truncating text"
 msgid "%(truncated_text)s…"
-msgstr ""
+msgstr "%(truncated_text)s..."
 
 #: env/lib/python3.12/site-packages/django/utils/text.py:322
 msgid "or"
-msgstr ""
+msgstr "eller"
 
 #. Translators: This string is used as a separator between list elements
 #: env/lib/python3.12/site-packages/django/utils/text.py:341
@@ -2015,11 +2019,11 @@ msgstr[1] ""
 
 #: env/lib/python3.12/site-packages/django/views/csrf.py:111
 msgid "Forbidden"
-msgstr ""
+msgstr "Förbjuden"
 
 #: env/lib/python3.12/site-packages/django/views/csrf.py:112
 msgid "CSRF verification failed. Request aborted."
-msgstr ""
+msgstr "CSRF-verifiering misslyckades. Begäran avbröts."
 
 #: env/lib/python3.12/site-packages/django/views/csrf.py:116
 msgid ""
@@ -2028,6 +2032,10 @@ msgid ""
 "required for security reasons, to ensure that your browser is not being "
 "hijacked by third parties."
 msgstr ""
+"Du ser det här meddelandet eftersom denna HTTPS-webbplats kräver att en "
+"\"Referer header\" skickas av din webbläsare, men ingen har skickats. Denna "
+"rubrik krävs av säkerhetsskäl, för att säkerställa att din webbläsare inte "
+"kapas av tredje part."
 
 #: env/lib/python3.12/site-packages/django/views/csrf.py:122
 msgid ""
@@ -2035,6 +2043,9 @@ msgid ""
 "enable them, at least for this site, or for HTTPS connections, or for “same-"
 "origin” requests."
 msgstr ""
+"Om du har konfigurerat din webbläsare för att inaktivera \"Referer\"-"
+"rubriker, vänligen aktivera dem igen, åtminstone för den här webbplatsen, "
+"eller för HTTPS-anslutningar, eller för \"samma ursprung\"-förfrågningar."
 
 #: env/lib/python3.12/site-packages/django/views/csrf.py:127
 msgid ""
@@ -2044,6 +2055,11 @@ msgid ""
 "If you’re concerned about privacy, use alternatives like <a "
 "rel=\"noreferrer\" …> for links to third-party sites."
 msgstr ""
+"Om du använder taggen <meta name=\"referrer\" content=\"no-referrer\"> eller "
+"inkluderar rubriken \"Referrer-Policy: no-referrer\", vänligen ta bort dem. "
+"CSRF-skyddet kräver att rubriken \"Referer\" utför strikt referenskontroll. "
+"Om du är orolig för integritet, använd alternativ som <a rel=\"noreferrer\" …"
+"> för länkar till tredje parts webbplatser."
 
 #: env/lib/python3.12/site-packages/django/views/csrf.py:136
 msgid ""
@@ -2051,44 +2067,50 @@ msgid ""
 "submitting forms. This cookie is required for security reasons, to ensure "
 "that your browser is not being hijacked by third parties."
 msgstr ""
+"Du ser detta meddelande eftersom den här webbplatsen kräver en CSRF-cookie "
+"när du skickar in formulär. Denna cookie krävs av säkerhetsskäl, för att "
+"säkerställa att din webbläsare inte kapas av tredje part."
 
 #: env/lib/python3.12/site-packages/django/views/csrf.py:142
 msgid ""
 "If you have configured your browser to disable cookies, please re-enable "
 "them, at least for this site, or for “same-origin” requests."
 msgstr ""
+"Om du har konfigurerat din webbläsare för att inaktivera cookies, vänligen "
+"återaktivera dem, åtminstone för den här webbplatsen, eller för \"samma "
+"ursprung\"-förfrågningar."
 
 #: env/lib/python3.12/site-packages/django/views/csrf.py:148
 msgid "More information is available with DEBUG=True."
-msgstr ""
+msgstr "Mer information finns med DEBUG=True."
 
 #: env/lib/python3.12/site-packages/django/views/generic/dates.py:44
 msgid "No year specified"
-msgstr ""
+msgstr "Inget år angivet"
 
 #: env/lib/python3.12/site-packages/django/views/generic/dates.py:64
 #: env/lib/python3.12/site-packages/django/views/generic/dates.py:115
 #: env/lib/python3.12/site-packages/django/views/generic/dates.py:214
 msgid "Date out of range"
-msgstr ""
+msgstr "Datum utanför intervallet"
 
 #: env/lib/python3.12/site-packages/django/views/generic/dates.py:94
 msgid "No month specified"
-msgstr ""
+msgstr "Ingen månad angiven"
 
 #: env/lib/python3.12/site-packages/django/views/generic/dates.py:147
 msgid "No day specified"
-msgstr ""
+msgstr "Ingen dag angiven"
 
 #: env/lib/python3.12/site-packages/django/views/generic/dates.py:194
 msgid "No week specified"
-msgstr ""
+msgstr "Ingen vecka angiven"
 
 #: env/lib/python3.12/site-packages/django/views/generic/dates.py:349
 #: env/lib/python3.12/site-packages/django/views/generic/dates.py:380
 #, python-format
 msgid "No %(verbose_name_plural)s available"
-msgstr ""
+msgstr "Inga %(verbose_name_plural)s tillgängliga"
 
 #: env/lib/python3.12/site-packages/django/views/generic/dates.py:652
 #, python-format
@@ -2096,49 +2118,51 @@ msgid ""
 "Future %(verbose_name_plural)s not available because %(class_name)s."
 "allow_future is False."
 msgstr ""
+"Framtida %(verbose_name_plural)s är inte tillgängligt eftersom "
+"%(class_name)s.allow_future är False."
 
 #: env/lib/python3.12/site-packages/django/views/generic/dates.py:692
 #, python-format
 msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
-msgstr ""
+msgstr "Ogiltig datumsträng \"%(datestr)s\" givet format \"%(format)s\""
 
 #: env/lib/python3.12/site-packages/django/views/generic/detail.py:56
 #, python-format
 msgid "No %(verbose_name)s found matching the query"
-msgstr ""
+msgstr "Inga %(verbose_name)s hittades som matchar frågan"
 
 #: env/lib/python3.12/site-packages/django/views/generic/list.py:70
 msgid "Page is not “last”, nor can it be converted to an int."
-msgstr ""
+msgstr "Sidan är inte \"sista\" och kan inte heller konverteras till en int."
 
 #: env/lib/python3.12/site-packages/django/views/generic/list.py:77
 #, python-format
 msgid "Invalid page (%(page_number)s): %(message)s"
-msgstr ""
+msgstr "Invalid page (%(page_number)s): %(message)s"
 
 #: env/lib/python3.12/site-packages/django/views/generic/list.py:169
 #, python-format
 msgid "Empty list and “%(class_name)s.allow_empty” is False."
-msgstr ""
+msgstr "Tom lista och \"%(class_name)s.allow_empty\" är False."
 
 #: env/lib/python3.12/site-packages/django/views/static.py:38
 msgid "Directory indexes are not allowed here."
-msgstr ""
+msgstr "Katalogindex är inte tillåtna här."
 
 #: env/lib/python3.12/site-packages/django/views/static.py:40
 #, python-format
 msgid "“%(path)s” does not exist"
-msgstr ""
+msgstr "“%(path)s” does not exist"
 
 #: env/lib/python3.12/site-packages/django/views/static.py:79
 #, python-format
 msgid "Index of %(directory)s"
-msgstr ""
+msgstr "Index of %(directory)s"
 
 #: env/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:7
 #: env/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:220
 msgid "The install worked successfully! Congratulations!"
-msgstr ""
+msgstr "Installationen fungerade framgångsrikt! Grattis!"
 
 #: env/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:206
 #, python-format
@@ -2146,6 +2170,8 @@ msgid ""
 "View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
 "target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
 msgstr ""
+"Visa <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> för Django %(version)s"
 
 #: env/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:221
 #, python-format
@@ -2155,39 +2181,43 @@ msgid ""
 "rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
 "configured any URLs."
 msgstr ""
+"Du ser den här sidan eftersom <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"rel=\"noopener\">DEBUG=True</a> finns i din inställningsfil och du inte har "
+"konfigurerat några webbadresser."
 
 #: env/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:229
 msgid "Django Documentation"
-msgstr ""
+msgstr "Django dokumentation"
 
 #: env/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:230
 msgid "Topics, references, &amp; how-to’s"
-msgstr ""
+msgstr "Ämnen, referenser &amp; hur man gör"
 
 #: env/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:238
 msgid "Tutorial: A Polling App"
-msgstr ""
+msgstr "Handledning: En omröstningsapp"
 
 #: env/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:239
 msgid "Get started with Django"
-msgstr ""
+msgstr "Kom igång med Django"
 
 #: env/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:247
 msgid "Django Community"
-msgstr ""
+msgstr "Django-gemenskapen"
 
 #: env/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:248
 msgid "Connect, get help, or contribute"
-msgstr ""
+msgstr "Anslut, få hjälp eller bidra"
 
 #: env/lib/python3.12/site-packages/unfold/admin.py:45
 #: env/lib/python3.12/site-packages/unfold/templatetags/unfold_list.py:356
 msgid "Select record"
-msgstr ""
+msgstr "Välj post"
 
 #: env/lib/python3.12/site-packages/unfold/admin.py:205
 msgid "Select action"
-msgstr ""
+msgstr "Välj åtgärd"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/constance/templates/admin/constance/change_list.html:44
 #: env/lib/python3.12/site-packages/unfold/contrib/guardian/templates/admin/guardian/model/obj_perms_manage_group.html:24
@@ -2195,33 +2225,33 @@ msgstr ""
 #: env/lib/python3.12/site-packages/unfold/templates/admin/pagination.html:19
 #: env/lib/python3.12/site-packages/unfold/templates/admin/submit_line.html:9
 msgid "Save"
-msgstr ""
+msgstr "Spara"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/constance/templates/admin/constance/includes/results_list.html:10
 msgid "Collapse"
-msgstr ""
+msgstr "kollapsa"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/constance/templates/admin/constance/includes/results_list.html:19
 msgid "Name"
-msgstr ""
+msgstr "Jams"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/constance/templates/admin/constance/includes/results_list.html:20
 #: env/lib/python3.12/site-packages/unfold/contrib/filters/forms.py:178
 msgid "Value"
-msgstr ""
+msgstr "värde"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/constance/templates/admin/constance/includes/results_list.html:21
 msgid "Default"
-msgstr ""
+msgstr "Standard"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/constance/templates/admin/constance/includes/results_list.html:22
 #: env/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:59
 msgid "Code"
-msgstr ""
+msgstr "koda"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/constance/templates/admin/constance/includes/results_list.html:65
 msgid "Reset to default"
-msgstr ""
+msgstr "Återställ till standard"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/filters/admin/choice_filters.py:22
 #: env/lib/python3.12/site-packages/unfold/contrib/filters/admin/choice_filters.py:72
@@ -2229,7 +2259,7 @@ msgstr ""
 #: env/lib/python3.12/site-packages/unfold/contrib/filters/admin/dropdown_filters.py:23
 #: env/lib/python3.12/site-packages/unfold/contrib/filters/admin/mixins.py:47
 msgid "All"
-msgstr ""
+msgstr "Alla"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/filters/admin/choice_filters.py:42
 #: env/lib/python3.12/site-packages/unfold/contrib/filters/admin/choice_filters.py:110
@@ -2250,117 +2280,117 @@ msgstr ""
 #: env/lib/python3.12/site-packages/unfold/templates/admin/filter.html:5
 #, python-format
 msgid " By %(filter_title)s "
-msgstr ""
+msgstr "Av %(filter_title)s"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/filters/forms.py:207
 #: env/lib/python3.12/site-packages/unfold/contrib/filters/forms.py:252
 msgid "From"
-msgstr ""
+msgstr "Från"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/filters/forms.py:218
 #: env/lib/python3.12/site-packages/unfold/contrib/filters/forms.py:262
 msgid "To"
-msgstr ""
+msgstr "Till"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/filters/forms.py:286
 msgid "Date from"
-msgstr ""
+msgstr "Datum från"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/filters/forms.py:302
 msgid "Date to"
-msgstr ""
+msgstr "Dejta till"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/filters/templates/unfold/filters/filters_numeric_slider.html:21
 msgid "Not enough data."
-msgstr ""
+msgstr "Inte tillräckligt med data."
 
 #: env/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/array.html:30
 msgid "Add new item"
-msgstr ""
+msgstr "Lägg till nytt objekt"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:7
 msgid "Paragraph"
-msgstr ""
+msgstr "Stycke"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:11
 msgid "Underlined"
-msgstr ""
+msgstr "Understruken"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:15
 msgid "Bold"
-msgstr ""
+msgstr "Djärv"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:19
 msgid "Italic"
-msgstr ""
+msgstr "Kursiv"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:23
 msgid "Strike"
-msgstr ""
+msgstr "Strejk"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:27
 #: env/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:98
 msgid "Link"
-msgstr ""
+msgstr "Länk"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:35
 #: env/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:39
 #: env/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:43
 #: env/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:47
 msgid "Heading"
-msgstr ""
+msgstr "Rubrik"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:55
 msgid "Quote"
-msgstr ""
+msgstr "Citationstecken"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:63
 msgid "Unordered list"
-msgstr ""
+msgstr "oordnad lista"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:67
 msgid "Ordered list"
-msgstr ""
+msgstr "Beställd lista"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:71
 msgid "Indent increase"
-msgstr ""
+msgstr "Ökning av indrag"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:75
 msgid "Indent decrease"
-msgstr ""
+msgstr "Minska indrag"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:83
 msgid "Undo"
-msgstr ""
+msgstr "ångra"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:87
 msgid "Redo"
-msgstr ""
+msgstr "Göra om"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:95
 msgid "Enter an URL"
-msgstr ""
+msgstr "Ange en URL"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:102
 msgid "Unlink"
-msgstr ""
+msgstr "ta bort länken"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/guardian/templates/admin/guardian/model/change_form.html:8
 msgid "Object permissions"
-msgstr ""
+msgstr "Objektbehörigheter"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/guardian/templates/admin/guardian/model/obj_perms_manage_group.html:13
 #: env/lib/python3.12/site-packages/unfold/contrib/guardian/templates/admin/guardian/model/obj_perms_manage_user.html:14
 #: env/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:9
 #: env/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:43
 msgid "Object"
-msgstr ""
+msgstr "objekt"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/guardian/templates/admin/guardian/model/obj_perms_manage_group.html:16
 #: env/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/group_form.html:15
 msgid "Group"
-msgstr ""
+msgstr "grupp"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/guardian/templates/admin/guardian/model/obj_perms_manage_user.html:17
 #: env/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/group_form.html:33
@@ -2369,11 +2399,11 @@ msgstr ""
 #: env/lib/python3.12/site-packages/unfold/templates/admin/object_history.html:14
 #: env/lib/python3.12/site-packages/unfold/templates/admin/object_history.html:30
 msgid "User"
-msgstr ""
+msgstr "Användare"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/group_form.html:7
 msgid "Group permissions"
-msgstr ""
+msgstr "Gruppbehörigheter"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/group_form.html:25
 #: env/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/group_form.html:49
@@ -2382,33 +2412,33 @@ msgstr ""
 #: env/lib/python3.12/site-packages/unfold/templates/admin/object_history.html:18
 #: env/lib/python3.12/site-packages/unfold/templates/admin/object_history.html:34
 msgid "Action"
-msgstr ""
+msgstr "handling"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/group_form.html:51
 #: env/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/user_form.html:51
 msgid "Edit"
-msgstr ""
+msgstr "Redigera"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/group_form.html:68
 msgid "Manage group"
-msgstr ""
+msgstr "Hantera grupp"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/user_form.html:7
 msgid "User permissions"
-msgstr ""
+msgstr "Användarbehörigheter"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/user_form.html:68
 msgid "Manage user"
-msgstr ""
+msgstr "Hantera användare"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/change_form.html:9
 #: env/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/change_list_export_item.html:4
 msgid "Export"
-msgstr ""
+msgstr "Exportera"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/change_list_import_item.html:4
 msgid "Import"
-msgstr ""
+msgstr "Importera"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/export.html:18
 #, python-format
@@ -2425,77 +2455,81 @@ msgstr[1] ""
 
 #: env/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/export.html:36
 msgid "This exporter will export the following fields"
-msgstr ""
+msgstr "Denna exportör kommer att exportera följande fält"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/export.html:77
 #: env/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_form.html:21
 msgid "Submit"
-msgstr ""
+msgstr "Överlämna"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_confirm.html:10
 msgid ""
 "Below is a preview of data to be imported. If you are satisfied with the "
 "results, click 'Confirm import'"
 msgstr ""
+"Nedan finns en förhandsvisning av data som ska importeras. Om du är nöjd med "
+"resultatet klickar du på \"Bekräfta import\""
 
 #: env/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_confirm.html:15
 msgid "Confirm import"
-msgstr ""
+msgstr "Bekräfta import"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_errors.html:20
 msgid "Line number"
-msgstr ""
+msgstr "Radnummer"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_preview.html:22
 msgid "New"
-msgstr ""
+msgstr "Ny"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_preview.html:24
 msgid "Skipped"
-msgstr ""
+msgstr "hoppade över"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_preview.html:28
 msgid "Update"
-msgstr ""
+msgstr "Uppdatera"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_validation.html:6
 msgid "Some rows failed to validate"
-msgstr ""
+msgstr "Vissa rader kunde inte valideras"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_validation.html:10
 msgid ""
 "Please correct these errors in your data where possible, then reupload it "
 "using the form above."
 msgstr ""
+"Korrigera dessa fel i din data där det är möjligt och ladda sedan upp det "
+"igen med hjälp av formuläret ovan."
 
 #: env/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_validation.html:22
 #: env/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_validation.html:40
 msgid "Row"
-msgstr ""
+msgstr "Rad"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_validation.html:26
 #: env/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_validation.html:44
 msgid "Errors"
-msgstr ""
+msgstr "Fel"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_validation.html:70
 msgid "Non field specific"
-msgstr ""
+msgstr "Ej fältspecifik"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/resource_fields_list.html:6
 msgid "This exporter will export the following fields: "
-msgstr ""
+msgstr "Denna exportör kommer att exportera följande fält:"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/resource_fields_list.html:8
 msgid "This importer will import the following fields: "
-msgstr ""
+msgstr "Denna importör kommer att importera följande fält:"
 
 #. Translators: Model verbose name and instance representation,
 #. suitable to be an item in a list.
 #: env/lib/python3.12/site-packages/unfold/contrib/inlines/admin.py:102
 #, python-format
 msgid "%(class_name)s %(instance)s"
-msgstr ""
+msgstr "%(class_name)s %(instance)s"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/inlines/admin.py:114
 #, python-format
@@ -2503,12 +2537,16 @@ msgid ""
 "Deleting %(class_name)s %(instance)s would require deleting the following "
 "protected related objects: %(related_objects)s"
 msgstr ""
+"Deleting %(class_name)s %(instance)s would require deleting the following "
+"protected related objects: %(related_objects)s"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history.html:7
 msgid ""
 "Choose a date from the list below to revert to a previous version of this "
 "object"
 msgstr ""
+"Välj ett datum från listan nedan för att återgå till en tidigare version av "
+"detta objekt"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history.html:27
 #: env/lib/python3.12/site-packages/unfold/templates/admin/object_history.html:57
@@ -2519,64 +2557,66 @@ msgstr[1] ""
 
 #: env/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history.html:30
 msgid "This object doesn't have a change history."
-msgstr ""
+msgstr "Det här objektet har ingen ändringshistorik."
 
 #: env/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_form.html:16
 msgid ""
 "Press the 'Revert' button below to revert to this version of the object."
 msgstr ""
+"Tryck på knappen 'Återställ' nedan för att återgå till den här versionen av "
+"objektet."
 
 #: env/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_form.html:20
 msgid "Press the 'Change History' button below to edit the history."
-msgstr ""
+msgstr "Tryck på knappen \"Ändra historik\" nedan för att redigera historiken."
 
 #: env/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:19
 #: env/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:55
 #: env/lib/python3.12/site-packages/unfold/templates/admin/object_history.html:10
 #: env/lib/python3.12/site-packages/unfold/templates/admin/object_history.html:26
 msgid "Date/time"
-msgstr ""
+msgstr "Datum/tid"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:23
 #: env/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:59
 msgid "Comment"
-msgstr ""
+msgstr "Kommentar"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:27
 #: env/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:63
 msgid "Changed by"
-msgstr ""
+msgstr "Ändrad av"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:31
 #: env/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:77
 msgid "Change reason"
-msgstr ""
+msgstr "Ändra anledning"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:35
 #: env/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:81
 msgid "Changes"
-msgstr ""
+msgstr "Ändringar"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:73
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/submit_line.html:8
 msgid "Revert"
-msgstr ""
+msgstr "Återgå"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/submit_line.html:14
 msgid "Change History"
-msgstr ""
+msgstr "Ändringshistorik"
 
 #: env/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/submit_line.html:19
 #: env/lib/python3.12/site-packages/unfold/templates/admin/submit_line.html:53
 msgid "Close"
-msgstr ""
+msgstr "Nära"
 
 #: env/lib/python3.12/site-packages/unfold/forms.py:72
 msgid "Select action to run"
-msgstr ""
+msgstr "Välj åtgärd att köra"
 
 #: env/lib/python3.12/site-packages/unfold/forms.py:133
 msgid ""
@@ -2584,51 +2624,56 @@ msgid ""
 "password, but you can change the password using <a href=\"{}\" class=\"text-"
 "primary-600 dark:text-primary-500\">this form</a>."
 msgstr ""
+"Rålösenord lagras inte, så det finns inget sätt att se den här användarens "
+"lösenord, men du kan ändra lösenordet med <a href=\"{}\" class=\"text-"
+"primary-600 dark:text-primary-500\">det här formuläret</a>."
 
 #: env/lib/python3.12/site-packages/unfold/mixins/base_model_admin.py:57
 #: env/lib/python3.12/site-packages/unfold/mixins/base_model_admin.py:78
 msgid "Select value"
-msgstr ""
+msgstr "Välj värde"
 
 #: env/lib/python3.12/site-packages/unfold/mixins/dataset_model_admin.py:53
 msgid ""
 "Items must be selected in order to perform actions on them. No items have "
 "been changed."
 msgstr ""
+"Objekt måste väljas för att kunna utföra åtgärder på dem. Inga objekt har "
+"ändrats."
 
 #: env/lib/python3.12/site-packages/unfold/mixins/dataset_model_admin.py:66
 msgid "Dataset not found. No action performed."
-msgstr ""
+msgstr "Dataset hittades inte. Ingen åtgärd utförd."
 
 #: env/lib/python3.12/site-packages/unfold/mixins/nested_inlines_model_admin.py:31
 msgid "You can not create nested object without parent"
-msgstr ""
+msgstr "Du kan inte skapa kapslade objekt utan förälder"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/actions.html:23
 #: env/lib/python3.12/site-packages/unfold/templates/admin/dataset_actions.html:46
 msgid "Run the selected action"
-msgstr ""
+msgstr "Kör den valda åtgärden"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/actions.html:24
 #: env/lib/python3.12/site-packages/unfold/templates/admin/dataset_actions.html:49
 msgid "Run"
-msgstr ""
+msgstr "sikt"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/actions.html:44
 #: env/lib/python3.12/site-packages/unfold/templates/admin/dataset_actions.html:17
 msgid "Click here to select the objects across all pages"
-msgstr ""
+msgstr "Klicka här för att välja objekt på alla sidor"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/actions.html:45
 #: env/lib/python3.12/site-packages/unfold/templates/admin/dataset_actions.html:18
 #, python-format
 msgid "Select all %(total_count)s %(module_name)s"
-msgstr ""
+msgstr "Välj alla %(total_count)s %(module_name)s"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/actions.html:51
 #: env/lib/python3.12/site-packages/unfold/templates/admin/dataset_actions.html:24
 msgid "Clear selection"
-msgstr ""
+msgstr "Rensa val"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/app_index.html:5
 #: env/lib/python3.12/site-packages/unfold/templates/admin/base_site.html:3
@@ -2636,23 +2681,25 @@ msgstr ""
 #: env/lib/python3.12/site-packages/unfold/templates/admin/login.html:15
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/layouts/base.html:7
 msgid "Django site admin"
-msgstr ""
+msgstr "Django-webbplatsadministratör"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/app_list.html:12
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/app_list_default.html:9
 #, python-format
 msgid "Models in the %(name)s application"
-msgstr ""
+msgstr "Modeller i %(name)s-applikationen"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/app_list.html:48
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/app_list.html:91
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/app_list_default.html:59
 msgid "You don’t have permission to view or edit anything."
-msgstr ""
+msgstr "Du har inte behörighet att visa eller redigera någonting."
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/auth/user/add_form.html:5
 msgid "After you've created a user, you’ll be able to edit more user options."
 msgstr ""
+"När du har skapat en användare kommer du att kunna redigera fler "
+"användaralternativ."
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/auth/user/change_password.html:20
 #, python-format
@@ -2663,23 +2710,23 @@ msgstr ""
 #: env/lib/python3.12/site-packages/unfold/templates/registration/password_change_form.html:32
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/account_links.html:18
 msgid "Change password"
-msgstr ""
+msgstr "Byt lösenord"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/change_form_object_tools.html:6
 msgid "History"
-msgstr ""
+msgstr "Historia"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/change_form_object_tools.html:12
 msgid "View on site"
-msgstr ""
+msgstr "Se på plats"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/change_list.html:65
 msgid "Filters"
-msgstr ""
+msgstr "Filter"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/change_list_results.html:35
 msgid "Expand row"
-msgstr ""
+msgstr "Expandera raden"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/delete_confirmation.html:16
 #, python-format
@@ -2688,6 +2735,9 @@ msgid ""
 "related objects, but your account doesn't have permission to delete the "
 "following types of objects:"
 msgstr ""
+"Att ta bort %(object_name)s '%(escaped_object)s' skulle resultera i att "
+"relaterade objekt tas bort, men ditt konto har inte behörighet att ta bort "
+"följande typer av objekt:"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/delete_confirmation.html:32
 #, python-format
@@ -2695,6 +2745,8 @@ msgid ""
 "Deleting the %(object_name)s '%(escaped_object)s' would require deleting the "
 "following protected related objects:"
 msgstr ""
+"Att ta bort %(object_name)s '%(escaped_object)s' skulle kräva att följande "
+"skyddade relaterade objekt tas bort:"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/delete_confirmation.html:48
 #, python-format
@@ -2702,11 +2754,13 @@ msgid ""
 "Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? "
 "All of the following related items will be deleted:"
 msgstr ""
+"Är du säker på att du vill ta bort %(object_name)s \"%(escaped_object)s\"? "
+"Alla följande relaterade objekt kommer att raderas:"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/delete_confirmation.html:55
 #: env/lib/python3.12/site-packages/unfold/templates/admin/delete_selected_confirmation.html:49
 msgid "Objects"
-msgstr ""
+msgstr "föremål"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/delete_selected_confirmation.html:15
 #, python-format
@@ -2715,6 +2769,9 @@ msgid ""
 "objects, but your account doesn't have permission to delete the following "
 "types of objects:"
 msgstr ""
+"Att ta bort de valda %(objects_name)s skulle resultera i att relaterade "
+"objekt raderas, men ditt konto har inte behörighet att ta bort följande "
+"typer av objekt:"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/delete_selected_confirmation.html:28
 #, python-format
@@ -2722,6 +2779,8 @@ msgid ""
 "Deleting the selected %(objects_name)s would require deleting the following "
 "protected related objects:"
 msgstr ""
+"Att ta bort de valda %(objects_name)s skulle kräva att följande skyddade "
+"relaterade objekt tas bort:"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/delete_selected_confirmation.html:42
 #, python-format
@@ -2729,14 +2788,16 @@ msgid ""
 "Are you sure you want to delete the selected %(objects_name)s? All of the "
 "following objects and their related items will be deleted:"
 msgstr ""
+"Är du säker på att du vill ta bort de valda %(objects_name)s? Alla följande "
+"objekt och deras relaterade objekt kommer att raderas:"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/includes/object_delete_summary.html:5
 msgid "Summary"
-msgstr ""
+msgstr "Sammanfattning"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/login.html:15
 msgid "Welcome back to"
-msgstr ""
+msgstr "Välkommen tillbaka till"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/login.html:26
 #, python-format
@@ -2744,161 +2805,167 @@ msgid ""
 "You are authenticated as %(username)s, but are not authorized to access this "
 "page. Would you like to login to a different account?"
 msgstr ""
+"You are authenticated as %(username)s, but are not authorized to access this "
+"page. Would you like to login to a different account?"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/login.html:47
 msgid "Log in"
-msgstr ""
+msgstr "Inloggning"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/login.html:55
 msgid "Forgotten your password or username?"
-msgstr ""
+msgstr "Glömt ditt lösenord eller användarnamn?"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/object_history.html:60
 msgid ""
 "This object doesn’t have a change history. It probably wasn’t added via this "
 "admin site."
 msgstr ""
+"Det här objektet har ingen ändringshistorik. Det har förmodligen inte lagts "
+"till via denna adminwebbplats."
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/pagination.html:12
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/welcomemsg.html:25
 msgid "Show all"
-msgstr ""
+msgstr "Visa alla"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/search_form.html:18
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/command.html:24
 msgid "Type to search"
-msgstr ""
+msgstr "Skriv för att söka"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/submit_line.html:28
 msgid "Save and continue editing"
-msgstr ""
+msgstr "Spara och fortsätt redigera"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/submit_line.html:30
 msgid "Save and view"
-msgstr ""
+msgstr "Spara och visa"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/submit_line.html:37
 msgid "Save and add another"
-msgstr ""
+msgstr "Spara och lägg till en till"
 
 #: env/lib/python3.12/site-packages/unfold/templates/admin/submit_line.html:43
 msgid "Save as new"
-msgstr ""
+msgstr "Spara som ny"
 
 #: env/lib/python3.12/site-packages/unfold/templates/registration/logged_out.html:14
 msgid "You have been successfully logged out from the administration"
-msgstr ""
+msgstr "Du har loggats ut från administrationen"
 
 #: env/lib/python3.12/site-packages/unfold/templates/registration/logged_out.html:18
 msgid "Thanks for spending some quality time with the web site today."
-msgstr ""
+msgstr "Tack för att du spenderade lite kvalitetstid med webbplatsen idag."
 
 #: env/lib/python3.12/site-packages/unfold/templates/registration/logged_out.html:23
 msgid "Log in again"
-msgstr ""
+msgstr "Logga in igen"
 
 #: env/lib/python3.12/site-packages/unfold/templates/registration/password_change_done.html:8
 msgid "Your password was changed."
-msgstr ""
+msgstr "Ditt lösenord har ändrats."
 
 #: env/lib/python3.12/site-packages/unfold/templates/registration/password_change_form.html:19
 msgid ""
 "Please enter your old password, for security’s sake, and then enter your new "
 "password twice so we can verify you typed it in correctly."
 msgstr ""
+"Vänligen ange ditt gamla lösenord, för säkerhets skull, och ange sedan ditt "
+"nya lösenord två gånger så att vi kan verifiera att du skrev det korrekt."
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/components/table.html:93
 msgid "No data"
-msgstr ""
+msgstr "Dejtar inte"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/account_links.html:5
 msgid "View site"
-msgstr ""
+msgstr "Visa webbplats"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/account_links.html:28
 msgid "Log out"
-msgstr ""
+msgstr "Logga ut"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/actions_row.html:4
 msgid "More actions"
-msgstr ""
+msgstr "Fler åtgärder"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/add_link.html:5
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/add_link.html:8
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/empty_results.html:4
 #, python-format
 msgid "Add %(name)s"
-msgstr ""
+msgstr "Lägg till %(name)s"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/app_list.html:60
 msgid "All applications"
-msgstr ""
+msgstr "Alla applikationer"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/app_list_default.html:31
 msgid "Add"
-msgstr ""
+msgstr "Tillägga"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/app_list_default.html:38
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/edit_inline/inline_links.html:17
 msgid "View"
-msgstr ""
+msgstr "Se"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/boolean.html:4
 msgid "True"
-msgstr ""
+msgstr "sann"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/boolean.html:4
 msgid "False"
-msgstr ""
+msgstr "Falsk"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/change_list_filter_actions.html:7
 msgid "Apply Filters"
-msgstr ""
+msgstr "Använd filter"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/change_list_filter_actions.html:16
 msgid "Hide counts"
-msgstr ""
+msgstr "Dölj konton"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/change_list_filter_actions.html:20
 msgid "Show counts"
-msgstr ""
+msgstr "Visa räknas"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/change_list_filter_actions.html:27
 msgid "Clear all filters"
-msgstr ""
+msgstr "Rensa alla filter"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/change_list_headers.html:27
 msgid "Select all rows"
-msgstr ""
+msgstr "Välj alla rader"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/change_list_headers.html:41
 msgid "Toggle sorting"
-msgstr ""
+msgstr "Växla sortering"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/change_list_headers.html:49
 msgid "Remove from sorting"
-msgstr ""
+msgstr "Ta bort från sorteringen"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/change_list_headers.html:55
 #, python-format
 msgid "Sorting priority: %(priority_number)s"
-msgstr ""
+msgstr "Sorteringsprioritet: %(priority_number)s"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/command_history.html:7
 msgid "Recent searches"
-msgstr ""
+msgstr "Senaste sökningar"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/command_history.html:49
 msgid "No recent searches"
-msgstr ""
+msgstr "Inga senaste sökningar"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/command_results.html:44
 msgid "No results matching your query"
-msgstr ""
+msgstr "Inga resultat matchar din fråga"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/command_results.html:57
 msgid "Loading more results..."
-msgstr ""
+msgstr "Läser in fler resultat..."
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/command_results.html:62
 #, python-format
@@ -2915,62 +2982,64 @@ msgstr[1] ""
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/delete_submit_line.html:5
 msgid "No, take me back"
-msgstr ""
+msgstr "Nej, ta mig tillbaka"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/delete_submit_line.html:9
 msgid "Yes, I’m sure"
-msgstr ""
+msgstr "Ja, det är jag säker på"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/display_header.html:10
 msgid "Record picture"
-msgstr ""
+msgstr "Spela in bild"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/edit_inline/inline_delete_undo.html:5
 msgid "This item will be deleted."
-msgstr ""
+msgstr "Detta objekt kommer att raderas."
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/edit_inline/inline_delete_undo.html:8
 msgid "Click to cancel"
-msgstr ""
+msgstr "Klicka för att avbryta"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/edit_inline/tabular_delete.html:4
 msgid "Remove"
-msgstr ""
+msgstr "Ta bort"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/empty_results.html:14
 msgid "No results found"
-msgstr ""
+msgstr "Inga resultat hittades"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/empty_results.html:18
 msgid ""
 "This page yielded into no results. Create a new item or reset your filters."
 msgstr ""
+"Den här sidan gav inga resultat. Skapa ett nytt objekt eller återställ dina "
+"filter."
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/empty_results.html:32
 msgid "Reset filters"
-msgstr ""
+msgstr "Återställ filter"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/field_readonly_value_file.html:8
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/widgets/clearable_file_input.html:6
 msgid "Image preview"
-msgstr ""
+msgstr "Förhandsgranskning av bild"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/field_readonly_value_file.html:13
 msgid "Click to download"
-msgstr ""
+msgstr "Klicka för att ladda ner"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/header_back_button.html:7
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/header_back_button.html:15
 msgid "Go back"
-msgstr ""
+msgstr "gå tillbaka"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/history.html:9
 msgid "Recent actions"
-msgstr ""
+msgstr "Senaste åtgärder"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/history.html:28
 msgid "Unknown content"
-msgstr ""
+msgstr "Okänt innehåll"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/messages/errornote.html:5
 msgid "Please correct the error below."
@@ -2980,25 +3049,25 @@ msgstr[1] ""
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/pagination_infinite.html:5
 msgid "Previous"
-msgstr ""
+msgstr "Tidigare"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/pagination_infinite.html:9
 msgid "Next"
-msgstr ""
+msgstr "Nästa"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/search.html:10
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/search.html:40
 msgid "Search apps and models..."
-msgstr ""
+msgstr "Sök efter appar och modeller..."
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/search.html:41
 msgid "Filter navigation items"
-msgstr ""
+msgstr "Filtrera navigeringsobjekt"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/site_branding.html:3
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/site_branding.html:6
 msgid "Django administration"
-msgstr ""
+msgstr "Django administration"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/site_icon.html:7
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/site_icon.html:9
@@ -3007,30 +3076,30 @@ msgstr ""
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/site_logo.html:7
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/site_logo.html:9
 msgid "Home"
-msgstr ""
+msgstr "Hem"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/tab_items.html:16
 msgid "General"
-msgstr ""
+msgstr "Allmän"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/theme_switch.html:9
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/theme_switch_dropdown.html:16
 msgid "Light"
-msgstr ""
+msgstr "ljus"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/theme_switch.html:16
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/theme_switch_dropdown.html:23
 msgid "Dark"
-msgstr ""
+msgstr "mörk"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/theme_switch.html:23
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/theme_switch_dropdown.html:30
 msgid "System"
-msgstr ""
+msgstr "System"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/unauthenticated_header.html:6
 msgid "Return to site"
-msgstr ""
+msgstr "Återgå till webbplatsen"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/welcomemsg.html:25
 #, python-format
@@ -3042,54 +3111,63 @@ msgstr[1] ""
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/helpers/welcomemsg.html:25
 #, python-format
 msgid "%(full_result_count)s total"
-msgstr ""
+msgstr "%(full_result_count)s totalt"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/widgets/clearable_file_input.html:25
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/widgets/clearable_file_input_small.html:18
 msgid "Choose file to upload"
-msgstr ""
+msgstr "Välj fil att ladda upp"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/widgets/password_toggle.html:5
 msgid "Toggle password visibility"
-msgstr ""
+msgstr "Växla lösenordssynlighet"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/widgets/related_widget_wrapper.html:28
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/widgets/related_widget_wrapper.html:29
 #, python-format
 msgid "Change selected %(model)s"
-msgstr ""
+msgstr "Change selected %(model)s"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/widgets/related_widget_wrapper.html:34
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/widgets/related_widget_wrapper.html:35
 #, python-format
 msgid "Add another %(model)s"
-msgstr ""
+msgstr "Lägg till ytterligare %(model)s"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/widgets/related_widget_wrapper.html:40
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/widgets/related_widget_wrapper.html:41
 #, python-format
 msgid "View selected %(model)s"
-msgstr ""
+msgstr "View selected %(model)s"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/widgets/related_widget_wrapper.html:46
 #: env/lib/python3.12/site-packages/unfold/templates/unfold/widgets/related_widget_wrapper.html:47
 #, python-format
 msgid "Delete selected %(model)s"
-msgstr ""
+msgstr "Delete selected %(model)s"
 
 #: env/lib/python3.12/site-packages/unfold/templates/unfold_crispy/layout/table_inline_formset.html:65
 msgid "Add row"
-msgstr ""
+msgstr "Lägg till rad"
 
 #: env/lib/python3.12/site-packages/unfold/templatetags/unfold_list.py:128
 msgid "Select all objects on this page for an action"
-msgstr ""
+msgstr "Markera alla objekt på den här sidan för en åtgärd"
 
 #: env/lib/python3.12/site-packages/unfold/widgets.py:589
 #: env/lib/python3.12/site-packages/unfold/widgets.py:630
 msgid "Date"
-msgstr ""
+msgstr "datum"
 
 #: env/lib/python3.12/site-packages/unfold/widgets.py:990
 msgid "Select currency"
-msgstr ""
+msgstr "Välj valuta"
+
+#~ msgid "Swiss German"
+#~ msgstr "Schweizertyska"
+
+#~ msgid "Swiss French"
+#~ msgstr "Schweizisk franska"
+
+#~ msgid "Swiss Italian"
+#~ msgstr "Schweizisk italienska"

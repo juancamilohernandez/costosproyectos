@@ -1,29 +1,39 @@
+{% load i18n l10n %}
 <!DOCTYPE html>
 <html lang="{{ request.LANGUAGE_CODE|default:'en-us' }}">
 <head>
     <meta charset="UTF-8">
-    <title>Consolidado Financiero Avanzado - ERP</title>
+    <title>{% translate "Consolidado Financiero Avanzado - ERP" %}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
+
+<div class="container py-4"> 
+    
     <div class="d-flex justify-content-between align-items-center mb-5 bg-dark text-white p-3 rounded shadow">
         <div>
-            <h1 class="h3 mb-0">Sistema de Gestión Contable ABC</h1>
-            <small class="text-muted">Enfoque de Costos NIC 16 / NIIF 16 Completo</small>
+            <h1 class="h3 mb-0">{% translate "Sistema de Gestión Contable ABC" %}</h1>
+            <small class="text-muted">{% translate "Enfoque de Costos NIC 16 / NIIF 16 Completo" %}</small>
         </div>
         
         <div class="d-flex align-items-center gap-2">
-            <a href="/empleados/nuevo/" class="btn btn-primary btn-sm">👤 Gestionar Personal</a>
-            <a href="/proyectos/asignar/" class="btn btn-success btn-sm">⏱️ Prorratear Horas</a>
-            <a href="/facturas/nueva/" class="btn btn-danger btn-sm">🧾 Registrar Facturas</a>
-            <a href="/activos/nuevo/" class="btn btn-warning btn-sm fw-bold">📦 Control de Activos</a>
+            <a href="/empleados/nuevo/" class="btn btn-primary btn-sm">👤 {% translate "Gestionar Personal" %}</a>
+            <a href="/proyectos/asignar/" class="btn btn-success btn-sm">⏱️ {% translate "Prorratear Horas" %}</a>
+            <a href="/facturas/nueva/" class="btn btn-danger btn-sm">🧾 {% translate "Registrar Facturas" %}</a>
+            <a href="/activos/nuevo/" class="btn btn-warning btn-sm fw-bold">📦 {% translate "Control de Activos" %}</a>
             
+            {% if user.is_staff %}
+                <a href="{% url 'admin:index' %}" class="btn btn-outline-warning btn-sm fw-bold shadow-sm">
+                    ⚙️ {% translate "Panel Admin" %}
+                </a>
+            {% endif %}
+
             <div class="vr bg-white opacity-25 my-1" style="height: 24px;"></div>
 
             <form action="{% url 'logout' %}" method="POST" class="m-0">
                 {% csrf_token %}
                 <button type="submit" class="btn btn-outline-danger btn-sm fw-bold">
-                    Cerrar Sesión 🔒
+                    {% translate "Cerrar Sesión" %} 🔒
                 </button>
             </form>
         </div>
@@ -32,33 +42,35 @@
     <div class="row mb-5">
         <div class="col-md-3">
             <div class="card bg-white border-0 shadow-sm text-center p-3 rounded-3">
-                <div class="text-muted fw-bold small text-uppercase">Costo Operativo Total</div>
+                <div class="text-muted fw-bold small text-uppercase">{% translate "Costo Operativo Total" %}</div>
                 <div class="fs-3 fw-bold text-primary mt-2">${{ total_costo_operativo|floatformat:2 }}</div>
-                <small class="text-muted small" style="font-size: 0.75rem;">MOD: ${{ total_mod|floatformat:0 }} | Fac: ${{ total_facturas_costo|floatformat:0 }} | Depr: ${{ total_depreciacion_op|floatformat:0 }}</small>
+                <small class="text-muted small" style="font-size: 0.75rem;">
+                    {% translate "MOD" %}: ${{ total_mod|floatformat:0 }} | {% translate "Fac" %}: ${{ total_facturas_costo|floatformat:0 }} | {% translate "Depr" %}: ${{ total_depreciacion_op|floatformat:0 }}
+                </small>
             </div>
         </div>
 
         <div class="col-md-3">
             <div class="card bg-white border-0 shadow-sm text-center p-3 rounded-3">
-                <div class="text-muted fw-bold small text-uppercase">Absorbido por Proyectos</div>
+                <div class="text-muted fw-bold small text-uppercase">{% translate "Absorbido por Proyectos" %}</div>
                 <div class="fs-3 fw-bold text-success mt-2">${{ total_proyectos|floatformat:2 }}</div>
-                <small class="text-muted small">Justificado en proyectos activos</small>
+                <small class="text-muted small">{% translate "Justificado en proyectos activos" %}</small>
             </div>
         </div>
 
         <div class="col-md-3">
             <div class="card bg-white border-0 shadow-sm text-center p-3 rounded-3">
-                <div class="text-muted fw-bold small text-uppercase">Capacidad No Asignada</div>
+                <div class="text-muted fw-bold small text-uppercase">{% translate "Capacidad No Asignada" %}</div>
                 <div class="fs-3 fw-bold text-warning mt-2">${{ mano_obra_ociosa|floatformat:2 }}</div>
-                <small class="text-muted small">Costo latente fuera de proyectos</small>
+                <small class="text-muted small">{% translate "Costo latente fuera de proyectos" %}</small>
             </div>
         </div>
 
         <div class="col-md-3">
             <div class="card bg-white border-0 shadow-sm text-center p-3 rounded-3">
-                <div class="text-muted fw-bold small text-uppercase">Estructura Fija Total</div>
+                <div class="text-muted fw-bold small text-uppercase">{% translate "Estructura Fija Total" %}</div>
                 <div class="fs-3 fw-bold text-danger mt-2">${{ total_gastos_admin|floatformat:2 }}</div>
-                <small class="text-muted small">Admin, soporte y depreciación fija</small>
+                <small class="text-muted small">{% translate "Admin, soporte y depreciación fija" %}</small>
             </div>
         </div>
     </div>
@@ -66,17 +78,17 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card shadow-sm border-0">
-                <div class="card-header bg-secondary text-white fw-bold">🎯 Desglose de Absorción de Costos por Unidad de Negocio (ABC + NIC 16)</div>
+                <div class="card-header bg-secondary text-white fw-bold">🎯 {% translate "Desglose de Absorción de Costos por Unidad de Negocio (ABC + NIC 16)" %}</div>
                 <div class="card-body p-0">
                     <table class="table table-hover align-middle m-0">
                         <thead class="table-light">
                             <tr>
-                                <th>Unidad / Proyecto Estratégico</th>
-                                <th class="text-center">Horas</th>
-                                <th class="text-end">Costo Real Total</th>
-                                <th class="text-end">Presupuesto Techo</th>
-                                <th class="text-center" style="width: 25%;">Nivel de Consumo Presupuestal</th>
-                                <th class="text-center">Participación Global</th>
+                                <th>{% translate "Unidad / Proyecto Estratégico" %}</th>
+                                <th class="text-center">{% translate "Horas" %}</th>
+                                <th class="text-end">{% translate "Costo Real Total" %}</th>
+                                <th class="text-end">{% translate "Presupuesto Techo" %}</th>
+                                <th class="text-center" style="width: 25%;">{% translate "Nivel de Consumo Presupuestal" %}</th>
+                                <th class="text-center">{% translate "Participación Global" %}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -84,18 +96,22 @@
                             <tr>
                                 <td>
                                     <strong>{{ p.nombre }}</strong><br>
-                                    <small class="text-muted">{{ p.descripcion|default:"Sin descripción" }}</small>
+                                    <small class="text-muted">{{ p.descripcion|default:_("Sin descripción") }}</small>
                                     <br>
-                                    <small class="text-muted" style="font-size: 0.75rem;">Nómina: ${{ p.costo_nomina|floatformat:0 }} | Activos: ${{ p.costo_depreciacion|floatformat:0 }}</small>
+                                    <small class="text-muted" style="font-size: 0.75rem;">
+                                        {% translate "Nómina" %}: ${{ p.costo_nomina|floatformat:0 }} | {% translate "Activos" %}: ${{ p.costo_depreciacion|floatformat:0 }}
+                                    </small>
                                 </td>
-                                <td class="text-center"><span class="badge bg-light text-dark border">{{ p.horas }} hrs</span></td>
+                                <td class="text-center">
+                                    <span class="badge bg-light text-dark border">{{ p.horas }} {% translate "hrs" %}</span>
+                                </td>
                                 <td class="text-end fw-bold text-dark">${{ p.costo_real|floatformat:2 }}</td>
                                 
                                 <td class="text-end fw-bold text-primary">
                                     {% if p.presupuesto_total > 0 %}
                                         ${{ p.presupuesto_total|floatformat:2 }}
                                     {% else %}
-                                        <span class="text-muted" style="font-size: 0.85rem;">⚠️ Sin Presupuesto</span>
+                                        <span class="text-muted" style="font-size: 0.85rem;">⚠️ {% translate "Sin Presupuesto" %}</span>
                                     {% endif %}
                                 </td>
                                 
@@ -105,8 +121,8 @@
                                             <div class="progress w-100 me-2" style="height: 10px;">
                                                 <div class="progress-bar bg-{{ p.alerta_status }}" 
                                                     role="progressbar" 
-                                                    style="width: {{ p.porcentaje_consumo }}%;" 
-                                                    aria-valuenow="{{ p.porcentaje_consumo }}" 
+                                                    style="width: {{ p.porcentaje_consumo|unlocalize }}%;" 
+                                                    aria-valuenow="{{ p.porcentaje_consumo|unlocalize }}" 
                                                     aria-valuemin="0" 
                                                     aria-valuemax="100">
                                                 </div>
@@ -126,7 +142,7 @@
                             </tr>
                             {% empty %}
                             <tr>
-                                <td colspan="6" class="text-center text-muted p-4">No hay proyectos para evaluar absorción de costos.</td>
+                                <td colspan="6" class="text-center text-muted p-4">{% translate "No hay proyectos para evaluar absorción de costos." %}</td>
                             </tr>
                             {% endfor %}
                         </tbody>
@@ -137,5 +153,7 @@
     </div>
 
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

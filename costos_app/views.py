@@ -4,8 +4,9 @@ from django.contrib.auth.decorators import login_required
 from django.views.decorators.cache import never_cache
 from decimal import Decimal
 from django.db.models import Sum  # <--- 1. IMPORTAMOS EL SUMADOR DE DJANGO
-from .models import Empleado, Proyecto, AsignacionProyecto,FacturaFija,ActivoFijo
-from .forms import EmpleadoForm,AsignacionProyectoForm,ProyectoForm, FacturaFijaForm,ActivoFijoForm
+from django.utils.translation import get_language  # <--- IMPORTANTE PARA LA REDIRECCIÓN DE IDIOMAS
+from .models import Empleado, Proyecto, AsignacionProyecto, FacturaFija, ActivoFijo
+from .forms import EmpleadoForm, AsignacionProyectoForm, ProyectoForm, FacturaFijaForm, ActivoFijoForm
 
 
 @login_required
@@ -91,25 +92,20 @@ def asignar_proyecto(request):
     # =====================================================================
     # 📊 MATEMÁTICA DEL PRORRATEO REAL POR PROYECTO (COSTO ABC ACCUMULADO)
     # =====================================================================
-    # Iteramos sobre los proyectos y calculamos cuántas horas y cuánta plata llevan en total
     proyectos_lista = Proyecto.objects.all().order_by('-id')
     proyectos_con_costo = []
 
     for proyecto in proyectos_lista:
-        # Filtramos las asignaciones de este proyecto específico
         asignaciones_proyecto = AsignacionProyecto.objects.filter(proyecto=proyecto)
         
-        # Sumamos las horas totales y el costo total imputado usando el Sum de Django
         totales = asignaciones_proyecto.aggregate(
             total_horas=Sum('horas_dedicadas'),
             total_costo=Sum('costo_imputado_al_proyecto')
         )
         
-        # Si no hay horas registradas, Django devuelve None, así que los convertimos en 0
         horas_totales = totales['total_horas'] or 0
         costo_total_real = totales['total_costo'] or 0.0
 
-        # Metemos la información calculada en una lista para mandarla al HTML
         proyectos_con_costo.append({
             'id': proyecto.id,
             'nombre': proyecto.nombre,
@@ -118,13 +114,12 @@ def asignar_proyecto(request):
             'costo_total_real': costo_total_real,
         })
 
-    # Traemos también el historial de asignaciones individuales para la auditoría
     asignaciones_recientes = AsignacionProyecto.objects.all().select_related('empleado', 'proyecto').order_by('-id')
 
     return render(request, 'costos_app/asignar_proyecto.html', {
         'proyecto_form': proyecto_form,
         'asignacion_form': asignacion_form,
-        'proyectos_prorrateados': proyectos_con_costo,  # <--- Enviamos el prorrateo real
+        'proyectos_prorrateados': proyectos_con_costo,
         'asignaciones': asignaciones_recientes
     })
 
@@ -133,6 +128,17 @@ def asignar_proyecto(request):
 def dashboard_financiero(request):
     """Dashboard Ejecutivo de Margen de Contribución Total con Absorción de Depreciación (NIC 16)"""
     
+    # =====================================================================
+    # 🛡️ ESCUDO DE IDIOMA PARA REDIRECCIÓN POST-LOGIN
+    # =====================================================================
+    # Capturamos el código de idioma que guardó la cookie/sesión en el login (es, en, de, pl, etc.)
+    idioma_actual = get_language()
+    
+    # Si el usuario entra a '/dashboard/' a secas sin prefijo, lo obligamos a ir a la URL con idioma
+    if not request.path.startswith(f'/{idioma_actual}/'):
+        return redirect(f'/{idioma_actual}/dashboard/')
+    # =====================================================================
+
     # 1. MANO DE OBRA DIRECTA (Roles tipo COSTO)
     empleados_costo = Empleado.objects.filter(rol__tipo_contable='COSTO')
     total_mano_obra_directa = sum(e.costo_total_mes for e in empleados_costo)
@@ -166,7 +172,6 @@ def dashboard_financiero(request):
     total_costo_imputado_proyectos = 0
 
     for proyecto in proyectos_lista:
-        # Buscamos las asignaciones de este proyecto
         asignaciones = AsignacionProyecto.objects.filter(proyecto=proyecto).select_related('empleado')
         
         horas_totales_proyecto = 0
@@ -177,7 +182,6 @@ def dashboard_financiero(request):
             horas_totales_proyecto += asig.horas_dedicadas
             costo_nomina_proyecto += float(asig.costo_imputado_al_proyecto)
             
-            # Arrastrar depreciación de sus activos (Base 160 horas/mes)
             empleado = asig.empleado
             activos_empleado = empleado.activos.all()
             depreciacion_mensual_empleado = sum(act.depreciacion_mensual for act in activos_empleado)
@@ -185,26 +189,23 @@ def dashboard_financiero(request):
             proporcion_uso = float(asig.horas_dedicadas) / 160.0
             costo_depreciacion_proyecto += float(depreciacion_mensual_empleado) * proporcion_uso
 
-        # Costo total real ejecutado
         costo_total_proyecto = costo_nomina_proyecto + costo_depreciacion_proyecto
         total_costo_imputado_proyectos += costo_total_proyecto
 
-        # --- NUEVA LÓGICA: Recuperar Presupuesto Asignado (Módulo 3) ---
+        # --- Recuperar Presupuesto Asignado ---
         presupuesto_total = 0.0
         porcentaje_consumo = 0.0
-        alerta_status = 'success' # verde por defecto
+        alerta_status = 'success'
 
         if hasattr(proyecto, 'presupuesto'):
             presupuesto_total = float(proyecto.presupuesto.presupuesto_total)
             if presupuesto_total > 0:
                 porcentaje_consumo = (costo_total_proyecto / presupuesto_total) * 100
                 
-                # Definimos semáforo de riesgo financiero
                 if porcentaje_consumo >= 100:
-                    alerta_status = 'danger'  # Rojo: Sobregirado
+                    alerta_status = 'danger'
                 elif porcentaje_consumo >= 80:
-                    alerta_status = 'warning' # Amarillo: Zona de riesgo
-        # ----------------------------------------------------------------
+                    alerta_status = 'warning'
 
         participacion = 0.0
         if total_costo_operativo_global > 0:
@@ -223,7 +224,6 @@ def dashboard_financiero(request):
             'alerta_status': alerta_status                  
         })
 
-    # Capacidad ociosa de la bolsa operativa
     mano_obra_ociosa = max(0.0, float(total_costo_operativo_global) - total_costo_imputado_proyectos)
 
     return render(request, 'costos_app/dashboard.html', {
@@ -258,7 +258,6 @@ def registrar_factura(request):
     })
 
 
-
 @login_required
 @never_cache
 def registrar_activo(request):
@@ -272,7 +271,6 @@ def registrar_activo(request):
             messages.success(request, "¡Activo fijo registrado con éxito bajo políticas NIC 16 / NIIF 16!")
             return redirect('registrar_activo')
             
-    # Reemplaza la línea vieja por esta optimizada (evita consultas lentas en el bucle)
     activos = ActivoFijo.objects.all().select_related('empleado_asignado').order_by('-id')
     return render(request, 'costos_app/registrar_activo.html', {
         'form': form,

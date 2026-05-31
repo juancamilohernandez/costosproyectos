@@ -1,965 +1,975 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-28 19:43+0000\n"
+"POT-Creation-Date: 2026-05-28 19:41+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: costos_app/forms.py:12
-#, fuzzy
-#| msgid "Duración Máxima (Meses)"
 msgid "Duración del contrato (Meses)"
-msgstr "Maksimal varighed (Måneder)"
+msgstr "Maximum Duration (Months)"
 
 #: costos_app/forms.py:13
 msgid "Requerido si el contrato es a Término Fijo"
-msgstr "Påkrævet, hvis der er tale om en tidsbegrænset ansættelse"
+msgstr "Required if the contract is Fixed-Term"
 
 #: costos_app/models.py:10
 msgid "Nombre del País"
-msgstr "Landenavn"
+msgstr "Country Name"
 
 #: costos_app/models.py:11
 msgid "Código ISO (2 letras)"
-msgstr ""
-"ISO-kode (International Organisation for Standardisering - 2 bogstaver)"
+msgstr "ISO Code (International Organization for Standardization - 2 letters)"
 
 #: costos_app/models.py:12
 msgid "Tasa Patronal Estándar (%)"
-msgstr "Standard arbejdsgiverbidrag til social sikring (%)"
+msgstr "Standard Employer Social Security Contribution Rate (%)"
 
 #: costos_app/models.py:13
 msgid "Tasa Patronal Temporal (%)"
-msgstr "Midlertidigt arbejdsgiverbidrag til social sikring (%)"
+msgstr "Temporary Employer Social Security Contribution Rate (%)"
 
 #: costos_app/models.py:14
 msgid "Salario Mínimo"
-msgstr "Mindsteløn"
+msgstr "Minimum Wage"
 
 #: costos_app/models.py:17 costos_app/models.py:50 costos_app/models.py:108
 #: costos_app/models.py:124
 msgid "País"
-msgstr "Land"
+msgstr "Country"
 
 #: costos_app/models.py:18
 msgid "Países"
-msgstr "Lande"
+msgstr "Countries"
 
 #: costos_app/models.py:27
 msgid "Costo (Mano de Obra Directa / Operación)"
-msgstr "Omkostninger (Direkte lønomkostninger / Drift)"
+msgstr "Cost (Direct Labor / Operations)"
 
 #: costos_app/models.py:28
 msgid "Gasto (Administrativo / Ventas)"
-msgstr "Udgifter (Administration / Salg)"
+msgstr "Expense (Administrative / Sales)"
 
 #: costos_app/models.py:30
 msgid "Nombre del Cargo"
-msgstr "Stillingsbetegnelse"
+msgstr "Job Title Name"
 
 #: costos_app/models.py:31 costos_app/models.py:88
 #: costos_app/templates/costos_app/asignar_proyecto.html:73
 msgid "Descripción"
-msgstr "Beskrivelse"
+msgstr "Description"
 
 #: costos_app/models.py:32
 msgid "Tipo Contable"
-msgstr "Regnskabsmæssig klassifikation"
+msgstr "Accounting Classification Type"
 
 #: costos_app/models.py:35 costos_app/models.py:51
 msgid "Rol / Cargo"
-msgstr "Rolle / Stilling"
+msgstr "Role / Position"
 
 #: costos_app/models.py:36
 msgid "Roles / Cargos"
-msgstr "Roller / Stillinger"
+msgstr "Roles / Positions"
 
 #: costos_app/models.py:45 costos_app/models.py:127
 msgid "Término Indefinido"
-msgstr "Fastansættelse / Funktionærkontrakt"
+msgstr "Indefinite-Term Contract"
 
 #: costos_app/models.py:46 costos_app/models.py:128
 msgid "Término Fijo / Obra"
-msgstr "Tidsbegrænset ansættelse / Projektkontrakt"
+msgstr "Fixed-Term / Project-Based Contract"
 
 #: costos_app/models.py:49
 msgid "Nombre Completo"
-msgstr "Fulde navn"
+msgstr "Full Name"
 
 #: costos_app/models.py:52
 msgid "Salario Bruto Mensual"
-msgstr "Månedlig bruttoløn"
+msgstr "Monthly Gross Salary"
 
 #: costos_app/models.py:53 costos_app/models.py:131
 msgid "Tipo de Contrato"
-msgstr "Kontrakttype"
+msgstr "Contract Type"
 
 #: costos_app/models.py:54
 msgid "Fecha de Ingreso"
-msgstr "Ansættelsesdato"
+msgstr "Hire Date"
 
 #: costos_app/models.py:55
 msgid "Costo Seguridad Social Mes"
-msgstr "Månedlige sociale sikringsomkostninger"
+msgstr "Monthly Social Security Cost"
 
 #: costos_app/models.py:56
 msgid "Provisión Prestaciones Mes"
-msgstr "Månedlig hensættelse til medarbejderforpligtelser"
+msgstr "Monthly Employee Benefits Provision"
 
 #: costos_app/models.py:58
 msgid "Correo Corporativo"
-msgstr "Virksomheds-e-mailadresse"
+msgstr "Corporate Email Address"
 
 #: costos_app/models.py:61
 msgid "Correo oficial para notificaciones del ERP"
 msgstr ""
-"Officiel e-mailadresse til ERP-notifikationer (Enterprise Resource Planning)"
+"Official email address for Enterprise Resource Planning (ERP) notifications"
 
 #: costos_app/models.py:65
 #: costos_app/templates/costos_app/asignar_proyecto.html:108
 msgid "Empleado"
-msgstr "Medarbejder"
+msgstr "Employee"
 
 #: costos_app/models.py:66
 msgid "Empleados"
-msgstr "Medarbejdere"
+msgstr "Employees"
 
 #: costos_app/models.py:87
 #: costos_app/templates/costos_app/asignar_proyecto.html:72
 msgid "Nombre del Proyecto"
-msgstr "Projektnavn"
+msgstr "Project Name"
 
 #: costos_app/models.py:89
 msgid "Fecha de Inicio"
-msgstr "Startdato"
+msgstr "Start Date"
 
 #: costos_app/models.py:91
 msgid "kWh Estimados Mes"
-msgstr "Estimeret kilowatt-timer (kWh) pr. måned"
+msgstr "Estimated Kilowatt-Hours (kWh) per Month"
 
 #: costos_app/models.py:95
 msgid "Consumo proyectado de energía al mes en kWh"
-msgstr "Forventet månedligt energiforbrug i kilowatt-timer (kWh)"
+msgstr "Projected energy consumption per month in kilowatt-hours (kWh)"
 
 #: costos_app/models.py:99 costos_app/models.py:218 costos_app/models.py:282
 msgid "Proyecto"
-msgstr "Projekt"
+msgstr "Project"
 
 #: costos_app/models.py:100
 msgid "Proyectos"
-msgstr "Projekter"
+msgstr "Projects"
 
 #: costos_app/models.py:109
 #: costos_app/templates/costos_app/asignar_proyecto.html:111
 #: costos_app/templates/costos_app/registrar_factura.html:56
 msgid "Mes"
-msgstr "Måned"
+msgstr "Month"
 
 #: costos_app/models.py:110
 msgid "Año"
-msgstr "År"
+msgstr "Year"
 
 #: costos_app/models.py:111
 msgid "Total kWh Consumidos Real"
-msgstr "Faktisk samlet forbrug i kilowatt-timer (kWh)"
+msgstr "Total Actual Kilowatt-Hours (kWh) Consumed"
 
 #: costos_app/models.py:112
 msgid "Costo Total Recibo"
-msgstr "Samlede omkostninger på elregning"
+msgstr "Total Utility Bill Cost"
 
 #: costos_app/models.py:115
 msgid "Registro de Energía"
-msgstr "Energiregistrering"
+msgstr "Energy Consumption Record"
 
 #: costos_app/models.py:116
 msgid "Registros de Energía"
-msgstr "Energiregistreringer"
+msgstr "Energy Consumption Records"
 
 #: costos_app/models.py:134
 msgid "El tipo de contrato al que se le aplicará esta norma legal"
-msgstr "Den kontrakttype, som denne lovbestemmelse gælder for"
+msgstr "The contract type to which this statutory legal regulation will apply"
 
 #: costos_app/models.py:137
 msgid "Duración Máxima (Meses)"
-msgstr "Maksimal varighed (Måneder)"
+msgstr "Maximum Duration (Months)"
 
 #: costos_app/models.py:140
 msgid "Duración máxima permitida por ley. Dejar vacío si no aplica."
-msgstr "Lovbestemt maksimal varighed. Efterlad tom, hvis det ikke er relevant."
+msgstr ""
+"Maximum duration permitted by statutory law. Leave blank if not applicable."
 
 #: costos_app/models.py:143
 msgid "Periodo Prueba Máximo (Meses)"
-msgstr "Maksimal prøvetid (Måneder)"
+msgstr "Maximum Probationary Period (Months)"
 
 #: costos_app/models.py:145
 msgid "Meses máximos de prueba permitidos por la legislación local."
-msgstr ""
-"Maksimalt antal prøvetidsmåneder tilladt i henhold til lokal lovgivning."
+msgstr "Maximum probationary months permitted under local labor legislation."
 
 #: costos_app/models.py:148
 msgid "Porcentaje Máximo Nómina (%)"
-msgstr "Maksimal procentdel af den samlede lønsum (%)"
+msgstr "Maximum Payroll Allocation Percentage (%)"
 
 #: costos_app/models.py:153
 msgid "Límite de empleados con este contrato."
-msgstr "Maksimumsgrænse for antal medarbejdere på denne kontrakt."
+msgstr "Staffing cap for employees under this specific contract type."
 
 #: costos_app/models.py:156
 msgid "Observación Legal"
-msgstr "Juridisk bemærkning / Overensstemmelsesnotater"
+msgstr "Statutory Compliance Notes"
 
 #: costos_app/models.py:159
 msgid ""
 "Notas o textos legales adicionales sobre las condiciones de despido o "
 "preaviso."
 msgstr ""
-"Yderligere juridiske noter vedrørende opsigelsesbetingelser eller "
-"lovbestemte varsler."
+"Additional legal annotations or texts regarding termination clauses or "
+"mandatory notice periods."
 
 #: costos_app/models.py:163
 msgid "Política de Contratación"
-msgstr "Ansættelsespolitik"
+msgstr "Hiring Policy"
 
 #: costos_app/models.py:164
 msgid "Políticas de Contratación"
-msgstr "Ansættelsesretningslinjer"
+msgstr "Hiring Policies"
 
 #: costos_app/models.py:173
 msgid "Colaborador"
-msgstr "Medarbejder / Bidragyder"
+msgstr "Contributor / Corporate Member"
 
 #: costos_app/models.py:174
 msgid "Unidad de Negocio / Proyecto"
-msgstr "Forretningsenhed / Strategisk projekt"
+msgstr "Business Unit / Corporate Project"
 
 #: costos_app/models.py:175
 msgid "Horas Dedicadas en el Mes"
-msgstr "Arbejdstimer lagt i måneden"
+msgstr "Dedicated Hours Logged in the Month"
 
 #: costos_app/models.py:176
 msgid "Periodo Contable (Mes/Año)"
-msgstr "Regnskabsperiode (Måned/År)"
+msgstr "Accounting Period (Month/Year)"
 
 #: costos_app/models.py:183
 msgid "Responsable del Proyecto"
-msgstr "Projektansvarlig"
+msgstr "Project Owner / Person in Charge"
 
 #: costos_app/models.py:184
 msgid "El líder, director de TI o responsable principal de la ejecución"
 msgstr ""
-"Teamlederen, IT-direktøren (CIO) eller den hovedansvarlige for projektets "
-"eksekvering"
+"The team lead, Chief Information Officer (CIO / IT Director), or individual "
+"primary responsible for project execution"
 
 #: costos_app/models.py:192
 msgid "Jefe Inmediato"
-msgstr "Direkte leder"
+msgstr "Immediate Supervisor"
 
 #: costos_app/models.py:193
 msgid "Jefe directo del área o supervisor inmediato de la asignación"
-msgstr "Direkte afdelingsleder eller den nærmeste supervisor for tildelingen"
+msgstr ""
+"Direct department manager or immediate supervisor of this structural "
+"allocation"
 
 #: costos_app/models.py:195
 msgid "Costo Imputado al Proyecto"
-msgstr "Omkostninger allokeret til projektet"
+msgstr "Cost Allocated to Project"
 
 #: costos_app/models.py:198
 msgid "Asignación de Proyecto"
-msgstr "Projektallokering"
+msgstr "Project Resource Allocation"
 
 #: costos_app/models.py:199
 msgid "Asignaciones a Proyectos"
-msgstr "Projektallokeringer"
+msgstr "Project Resource Allocations"
 
 #: costos_app/models.py:208
 msgid "Costo Operativo (AWS, GitHub, Licencias core)"
 msgstr ""
-"Driftsomkostninger (Amazon Web Services (AWS) cloud-infrastruktur, GitHub "
-"Enterprise, Core-systemlicenser)"
+"Operational Cost (Amazon Web Services (AWS) Cloud Infrastructure, GitHub "
+"Enterprise, Core System Licenses)"
 
 #: costos_app/models.py:209
 msgid "Gasto Administrativo (Papelería, Arriendos)"
-msgstr "Administrative udgifter (Kontorartikler, Huslejeomkostninger)"
+msgstr "Administrative Expense (Office Supplies, Facility Leases)"
 
 #: costos_app/models.py:219
 msgid ""
 "Seleccione el proyecto si este costo/gasto es imputable directamente a él"
 msgstr ""
-"Vælg projektet, hvis denne omkostning/udgift kan henføres direkte til det"
+"Select the project if this specific cost/expense is directly billable to it"
 
 #: costos_app/models.py:221
 msgid "Proveedor o Concepto"
-msgstr "Leverandør eller Bogføringskoncept"
+msgstr "Vendor or Accounting Concept"
 
 #: costos_app/models.py:221
 msgid "Ej: AWS Server, Claro Internet"
-msgstr "f.eks. AWS Cloud-infrastrukturserver, Internetudbyder"
+msgstr "e.g., AWS Cloud Infrastructure Server, Broadband Internet Vendor"
 
 #: costos_app/models.py:222
 #: costos_app/templates/costos_app/registrar_factura.html:58
 msgid "Monto"
-msgstr "Beløb"
+msgstr "Amount"
 
 #: costos_app/models.py:223
 msgid "Mes/Año"
-msgstr "Måned/År"
+msgstr "Month/Year"
 
 #: costos_app/models.py:223
 msgid "Formato: AAAA-MM"
-msgstr "Format: ÅÅÅÅ-MM"
+msgstr "Format: YYYY-MM"
 
 #: costos_app/models.py:224
 msgid "Clasificación"
-msgstr "Klassifikation til bogføring"
+msgstr "Ledger Classification"
 
 #: costos_app/models.py:225
 msgid "Fecha de Registro"
-msgstr "Systemregistreringsdato"
+msgstr "System Entry Date"
 
 #: costos_app/models.py:228
 msgid "Factura Fija"
-msgstr "Fast faktura / Tilbagevendende faktura"
+msgstr "Fixed Invoice"
 
 #: costos_app/models.py:229
 msgid "Facturas y Costos Fijos"
-msgstr "Fakturaer og faste tilbagevendende omkostninger"
+msgstr "Invoices and Recurring Fixed Costs"
 
 #: costos_app/models.py:238
 msgid "Equipo de Cómputo y Tecnología (Computadores, Servidores)"
-msgstr "Computerhardware og IT-udstyr (Arbejdsstationer, Produktionsservere)"
+msgstr ""
+"Computer Hardware and Information Technology Equipment (Workstations, "
+"Production Servers)"
 
 #: costos_app/models.py:239
 msgid "Muebles y Enseres (Escritorios, Sillas)"
-msgstr "Kontorinventar (Ergonomiske skriveborde, Kontorstole)"
+msgstr "Furniture and Fixtures (Ergonomic Desks, Office Chairs)"
 
 #: costos_app/models.py:240
 msgid "Equipos de Comunicación (Teléfonos corporativos)"
-msgstr "Kommunikationsudstyr (Firmatelefoner)"
+msgstr "Telecommunication Equipment (Corporate Smart Devices)"
 
 #: costos_app/models.py:249
 msgid "Empleado Asignado"
-msgstr "Tildelt medarbejder"
+msgstr "Assigned Personnel"
 
 #: costos_app/models.py:250
 msgid "Empleado que tiene en su poder el activo para operar"
-msgstr "Medarbejderen, som har fået overdraget aktivet til rådighed"
+msgstr ""
+"The designated staff member who holds the corporate asset for operational "
+"activities"
 
 #: costos_app/models.py:252
 msgid "Nombre del Activo"
-msgstr "Aktivets navn"
+msgstr "Fixed Asset Name"
 
 #: costos_app/models.py:252
 msgid "Ej: MacBook Pro, Silla Ergonómica"
-msgstr "f.eks. Apple MacBook Pro, Ergonomisk kontorstol"
+msgstr "e.g., Apple MacBook Pro, Ergonomic Task Chair"
 
 #: costos_app/models.py:253
 msgid "Tipo de Activo"
-msgstr "Anlægsklasse"
+msgstr "Asset Class"
 
 #: costos_app/models.py:254
 msgid "Valor de Adquisición"
-msgstr "Anskaffelsesværdi"
+msgstr "Acquisition Value"
 
 #: costos_app/models.py:254
 msgid "Valor histórico de compra"
-msgstr "Historisk købspris"
+msgstr "Historical Purchase Price"
 
 #: costos_app/models.py:255
 msgid "Vida Útil (Meses)"
-msgstr "Brugstid (Måneder)"
+msgstr "Useful Economic Life (Months)"
 
 #: costos_app/models.py:255
 msgid "Vida útil estimada en meses"
-msgstr "Estimeret økonomisk brugstid i måneder"
+msgstr "Estimated asset useful life structural calculation in months"
 
 #: costos_app/models.py:256
 msgid "Fecha de Adquisición"
-msgstr "Anskaffelsesdato"
+msgstr "Acquisition Date"
 
 #: costos_app/models.py:256
 msgid "Fecha en la que se compró o inició el contrato"
-msgstr "Dato for køb eller start på leasingkontrakt"
+msgstr ""
+"Calendar date on which the purchase transaction occurred or the leasing "
+"contract took effect"
 
 #: costos_app/models.py:258
 msgid "¿Es financiado mediante Leasing? (NIIF 16)"
 msgstr ""
-"Er det finansieret via leasing? (Overensstemmende med IFRS 16 / "
-"International Financial Reporting Standards - Leasingkontrakter)"
+"Is this financed via a Lease Contract? (International Financial Reporting "
+"Standards - IFRS 16 Leases compliance)"
 
 #: costos_app/models.py:259
 msgid "Tasa Interés Mensual"
-msgstr "Månedlig rentesats"
+msgstr "Monthly Interest Rate"
 
 #: costos_app/models.py:259
 msgid "Tasa de interés mensual del leasing"
-msgstr "Den kontraktlige månedlige rentesats for leasingaftalen"
+msgstr ""
+"The applicable monthly contractual interest rate of the leasing structure"
 
 #: costos_app/models.py:260
 msgid "Canon Mensual"
-msgstr "Månedlig leasingydelse"
+msgstr "Monthly Lease Installment"
 
 #: costos_app/models.py:260
 msgid "El pago mensual fijo al banco"
-msgstr "Den faste månedlige betalingsforpligtelse til pengeinstituttet"
+msgstr ""
+"The recurring fixed monthly payment obligation due to the financial "
+"institution"
 
 #: costos_app/models.py:263
 msgid "Activo Fijo"
-msgstr "Anlægsaktiv"
+msgstr "Fixed Asset"
 
 #: costos_app/models.py:264
 msgid "Propiedad, Planta y Equipo"
-msgstr ""
-"Materielle anlægsaktiver (Grunde, bygninger, tekniske anlæg og maskiner)"
+msgstr "Property, Plant, and Equipment (PP&E)"
 
 #: costos_app/models.py:283
 msgid "Proyecto al que se le asigna este techo financiero"
-msgstr "Strategisk projekt, som dette finansielle loft tildeles"
+msgstr ""
+"Strategic project to which this specific financial ceiling budget cap is "
+"allocated"
 
 #: costos_app/models.py:285
 msgid "Límite de Costos Directos"
-msgstr "Budgetgrænse for direkte omkostninger"
+msgstr "Direct Costs Budget Limit"
 
 #: costos_app/models.py:286
 msgid "Límite de Gastos Indirectos"
-msgstr "Budgetgrænse for indirekte udgifter"
+msgstr "Indirect Expenses Budget Limit"
 
 #: costos_app/models.py:287
 msgid "Fecha de Aprobación"
-msgstr "Dato for budgetgodkendelse"
+msgstr "Budget Approval Date"
 
 #: costos_app/models.py:288
 msgid "Actualizado en"
-msgstr "Sidst opdateret den"
+msgstr "Last Updated On"
 
 #: costos_app/models.py:291
 msgid "Presupuesto de Proyecto"
-msgstr "Projektbudget"
+msgstr "Project Budget Allocation"
 
 #: costos_app/models.py:292
 msgid "Presupuestos de Proyectos"
-msgstr "Projektbudgetter"
+msgstr "Project Budget Records"
 
 #: costos_app/models.py:317
 msgid ""
 "🚨 ¡PRESUPUESTO ABSURDO! El costo real mínimo actual de este proyecto es "
 "mayor al techo asignado."
 msgstr ""
-"🚨 ABSURDT BUDGET! De nuværende minimale faktiske omkostninger for dette "
-"projekt overstiger det tildelte finansielle loft."
+"🚨 IRRATIONAL BUDGET! The minimum actual variance cost calculated for this "
+"project exceeds the allocated structural financial ceiling."
 
 #: costos_app/models.py:324 costosproyectos/settings.py:107
 msgid "English"
-msgstr "Engelsk"
+msgstr "English"
 
 #: costos_app/models.py:325
 msgid "Español"
-msgstr "Spansk"
+msgstr "Spanish"
 
 #: costos_app/models.py:326
 msgid "Eesti (Estonia)"
-msgstr "Estisk (Estland)"
+msgstr "Estonian (Estonia)"
 
 #: costos_app/models.py:327
 msgid "Suomi (Finlandia)"
-msgstr "Finsk (Finland)"
+msgstr "Finnish (Finland)"
 
 #: costos_app/models.py:328
 msgid "Lietuvių (Lituania)"
-msgstr "Litauisk (Litauen)"
+msgstr "Lithuanian (Lithuania)"
 
 #: costos_app/models.py:329
 msgid "Dansk (Danés)"
-msgstr "Dansk (Danmark)"
+msgstr "Danish (Denmark)"
 
 #: costos_app/models.py:332 costos_app/templates/costos_app/login.html:67
 msgid "Usuario"
-msgstr "Brugernavn"
+msgstr "Username"
 
 #: costos_app/models.py:334
 msgid "Idioma Preferido"
-msgstr "Foretrukket sprog"
+msgstr "Preferred System Language"
 
 #: costos_app/models.py:338
 msgid "Seleccione el idioma nativo para la interfaz del ERP"
 msgstr ""
-"Vælg det primære sprog til ERP-systemets brugerflade (Enterprise Resource "
-"Planning)"
+"Select the primary native localization language for the Enterprise Resource "
+"Planning (ERP) application interface"
 
 #: costos_app/models.py:342
 msgid "Perfil de Usuario"
-msgstr "Brugerprofil"
+msgstr "User Identity Profile"
 
 #: costos_app/models.py:343
 msgid "Perfiles de Usuarios"
-msgstr "Brugerprofiler"
+msgstr "User Identity Profiles"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:6
 msgid "Asignación de Costos ABC - Proyectos"
-msgstr ""
-"Aktivitetsbaseret omkostningsstyring (ABC-model - Activity-Based Costing) "
-"for projekter"
+msgstr "Activity-Based Costing (ABC) Model - Project Expense Allocations"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:14
 msgid "Dashboard de Proyectos & Costo ABC"
 msgstr ""
-"Business Intelligence Dashboard for Projekt- & Aktivitetsbaserede "
-"Omkostninger (ABC)"
+"Project Operations & Activity-Based Costing (ABC) Business Intelligence "
+"Dashboard"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:17
 #: costos_app/templates/costos_app/registrar_activo.html:18
 #: costos_app/templates/costos_app/registrar_empleado.html:20
 msgid "Ir Dashboard General"
-msgstr "Gå til hoved-dashboard"
+msgstr "Navigate to Master Executive Dashboard"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:33
 msgid "Registrar Nuevo Proyecto / Startup"
-msgstr "Registrer nyt strategisk projekt / startup-forretningsenhed"
+msgstr "Onboard New Strategic Project / Venture Startup Unit"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:40
 msgid "Guardar Proyecto"
-msgstr "Gem projekt i databasen"
+msgstr "Commit Project Entity to Database"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:48
 msgid "Distribuir Horas (Costo ABC)"
-msgstr "Fordel arbejdstimer (Aktivitetsbaseret omkostningsberegning - ABC)"
+msgstr "Apportion Operational Work Hours (Activity-Based Costing - ABC)"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:55
 #: costos_app/templates/costos_app/dashboard.html:21
 msgid "Prorratear Horas"
-msgstr "Fordel timer forholdsmæssigt (Pro-rata-allokering)"
+msgstr "Execute Pro-Rata Distribution of Logged Hours"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:65
 msgid "Prorrateo y Costo Real Total por Proyecto (NIIF Incluido)"
 msgstr ""
-"Forholdsmæssig fordeling & Faktiske samlede omkostninger pr. projekt "
-"(Overensstemmende med IFRS / International Financial Reporting Standards)"
+"Pro-Rata Overhead Allocations & Accumulated Total Actual Financial Costs per "
+"Project (IFRS / Regulatory Frameworks Compliant)"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:74
 msgid "Total Horas Invertidas"
-msgstr "Samlede brugte arbejdstimer"
+msgstr "Aggregated Invested Labor Hours"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:75
 msgid "Costo Real Acumulado"
-msgstr "Akkumulerede faktiske finansielle omkostninger"
+msgstr "Accumulated Actual Financial Cost"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:83
 #: costos_app/templates/costos_app/asignar_proyecto.html:120
 #: costos_app/templates/costos_app/dashboard.html:106
 msgid "hrs"
-msgstr "t."
+msgstr "hrs"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:89
 msgid "No hay proyectos registrados en el sistema."
-msgstr "Ingen projekter registreret i systemet."
+msgstr "Zero project records found in the database layer."
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:101
 msgid "Historial de Horas Imputadas por Empleado"
-msgstr "Historisk log over allokerede arbejdstimer pr. medarbejder"
+msgstr "Historical Audit Log of Labor Hours Allocated by Individual Employee"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:109
 msgid "Proyecto Target"
-msgstr "Målprojekt for allokeringen"
+msgstr "Target Allocation Project"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:110
 #: costos_app/templates/costos_app/dashboard.html:87
 msgid "Horas"
-msgstr "Arbejdstimer"
+msgstr "Logged Hours"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:112
 msgid "Costo Imputado"
-msgstr "Allokerede finansielle omkostninger"
+msgstr "Assigned Financial Cost"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:127
 msgid "No hay registros de horas."
-msgstr "Ingen tidsregistreringer fundet i logtabellerne."
+msgstr "Zero work hours logs found in the ledger tables."
 
 #: costos_app/templates/costos_app/dashboard.html:6
 msgid "Consolidado Financiero Avanzado - ERP"
 msgstr ""
-"Avanceret finansiel konsolidering - ERP-system (Enterprise Resource Planning)"
+"Advanced Financial Consolidation Engine - Enterprise Resource Planning (ERP)"
 
 #: costos_app/templates/costos_app/dashboard.html:15
 msgid "Sistema de Gestión Contable ABC"
-msgstr ""
-"Styringssystem til aktivitetsbaseret regnskab (Activity-Based Costing - ABC)"
+msgstr "Activity-Based Costing (ABC) Financial Management Framework"
 
 #: costos_app/templates/costos_app/dashboard.html:16
 msgid "Enfoque de Costos NIC 16 / NIIF 16 Completo"
 msgstr ""
-"Umfattende regnskabstilgang i henhold til IAS 16 (Materielle anlægsaktiver) "
-"& IFRS 16 (Leasingkontrakter)"
+"Comprehensive Regulatory Accounting Framework under IAS 16 (Property, Plant, "
+"and Equipment) & IFRS 16 (Leases) Principles"
 
 #: costos_app/templates/costos_app/dashboard.html:20
 msgid "Gestionar Personal"
-msgstr "Personaleadministration & HR-operationer"
+msgstr "Human Capital Operations Management"
 
 #: costos_app/templates/costos_app/dashboard.html:22
 msgid "Registrar Facturas"
-msgstr "Registrer kreditorfakturaer"
+msgstr "Process Accounts Payable & Invoices"
 
 #: costos_app/templates/costos_app/dashboard.html:23
 msgid "Control de Activos"
-msgstr "Aktivstyring og anlægsbogholderi"
+msgstr "Fixed Assets Registry and Auditing Control"
 
 #: costos_app/templates/costos_app/dashboard.html:27
 msgid "Panel Admin"
-msgstr "Systemadministratorpanel"
+msgstr "System Administrator Panel"
 
 #: costos_app/templates/costos_app/dashboard.html:36
 msgid "Cerrar Sesión"
-msgstr "Log af / Afslut session"
+msgstr "Terminate Secure Session / Log Out"
 
 #: costos_app/templates/costos_app/dashboard.html:45
 msgid "Costo Operativo Total"
-msgstr "Samlede driftsomkostninger (OpEx)"
+msgstr "Total Operating Cost"
 
 #: costos_app/templates/costos_app/dashboard.html:48
 msgid "MOD"
-msgstr "Direkte lønomkostninger (Mano de Obra Directa)"
+msgstr "Direct Labor Cost (DLC)"
 
 #: costos_app/templates/costos_app/dashboard.html:48
 msgid "Fac"
-msgstr "Fakturerede driftsomkostninger"
+msgstr "Invoiced Operational Operating Costs"
 
 #: costos_app/templates/costos_app/dashboard.html:48
 msgid "Depr"
-msgstr "Afskrivningsomkostninger for anlægsaktiver"
+msgstr "Asset Depreciation / Amortization Charges"
 
 #: costos_app/templates/costos_app/dashboard.html:55
 msgid "Absorbido por Proyectos"
-msgstr "Omkostninger absorberet af projektenheder"
+msgstr "Overhead Costs Absorbed by Project Entities"
 
 #: costos_app/templates/costos_app/dashboard.html:57
 msgid "Justificado en proyectos activos"
-msgstr "Verificeret og allokeret til aktive forretningsenheder"
+msgstr "Audited and justified against active running business units"
 
 #: costos_app/templates/costos_app/dashboard.html:63
 msgid "Capacidad No Asignada"
-msgstr "Ikke-allokeret ledig virksomhedskapacitet"
+msgstr "Unallocated Idle Corporate Capacity"
 
 #: costos_app/templates/costos_app/dashboard.html:65
 msgid "Costo latente fuera de proyectos"
-msgstr "Latente strukturdomkostninger uden for aktive projekter"
+msgstr "Latent corporate structural variance cost outside active ventures"
 
 #: costos_app/templates/costos_app/dashboard.html:71
 msgid "Estructura Fija Total"
-msgstr "Samlede faste virksomhedsstrukturkonti"
+msgstr "Total Corporate Fixed Cost Structure"
 
 #: costos_app/templates/costos_app/dashboard.html:73
 msgid "Admin, soporte y depreciación fija"
-msgstr "Generel administration, back-office support og faste afskrivninger"
+msgstr ""
+"General corporate administration, back-office support, and fixed asset "
+"depreciation lines"
 
 #: costos_app/templates/costos_app/dashboard.html:81
 msgid "Desglose de Absorción de Costos por Unidad de Negocio (ABC + NIC 16)"
 msgstr ""
-"Analytisk fordeling af omkostningsabsorption pr. forretningsenhed via "
-"aktivitetsbaseret regnskab (ABC) & IAS 16"
+"Analytical Cost Absorption Breakdown by Strategic Business Unit (SBU) via "
+"Activity-Based Costing & IAS 16 Frameworks"
 
 #: costos_app/templates/costos_app/dashboard.html:86
 msgid "Unidad / Proyecto Estratégico"
-msgstr "Strategisk forretningsområde / Operativt kerneprojekt"
+msgstr "Strategic Business Unit / Core Operational Project"
 
 #: costos_app/templates/costos_app/dashboard.html:88
 msgid "Costo Real Total"
-msgstr "Faktiske samlede omkostninger"
+msgstr "Total Actual Financial Cost"
 
 #: costos_app/templates/costos_app/dashboard.html:89
 msgid "Presupuesto Techo"
-msgstr "Maksimalt godkendt budgetloft"
+msgstr "Max Approved Financial Ceiling Budget"
 
 #: costos_app/templates/costos_app/dashboard.html:90
 msgid "Nivel de Consumo Presupuestal"
-msgstr "Budgetudnyttelsesgrad (Burn-rate)"
+msgstr "Budgetary Burn Rate Level"
 
 #: costos_app/templates/costos_app/dashboard.html:91
 msgid "Participación Global"
-msgstr "Global fordelingsandel"
+msgstr "Global Global Share Weighting"
 
 #: costos_app/templates/costos_app/dashboard.html:99
 msgid "Sin descripción"
-msgstr "Ingen beskrivelse tilgængelig"
+msgstr "No metadata description provided"
 
 #: costos_app/templates/costos_app/dashboard.html:102
 msgid "Nómina"
-msgstr "Lønafregning / Lønbogholderi"
+msgstr "Total Labor Compensation / Payroll Ledger"
 
 #: costos_app/templates/costos_app/dashboard.html:102
 msgid "Activos"
-msgstr "Aktiverede anlægskonti"
+msgstr "Capitalized Fixed Assets Block"
 
 #: costos_app/templates/costos_app/dashboard.html:114
 msgid "Sin Presupuesto"
-msgstr "Intet budgetloft tildelt"
+msgstr "Zero Approved Budget Cap"
 
 #: costos_app/templates/costos_app/dashboard.html:145
 msgid "No hay proyectos para evaluar absorción de costos."
-msgstr "Ingen aktive projekter til vurdering af omkostningsabsorption fundet."
+msgstr ""
+"Zero active project entities found to evaluate overhead financial absorption "
+"metrics."
 
 #: costos_app/templates/costos_app/login.html:7
 msgid "ERP Costos - Iniciar Sesión"
-msgstr "Konto-ERP platform - Log ind på sikker portal"
+msgstr "Financial Cost ERP Platform - Secure Portal Authorization"
 
 #: costos_app/templates/costos_app/login.html:53
 msgid "SISTEMA DE COSTOS"
-msgstr "STRATEGISKT SYSTEM TIL VIRKSOMHEDS-OMKOSTNINGSSTYRING"
+msgstr "STRATEGIC COST MANAGEMENT ENTERPRISE SYSTEM"
 
 #: costos_app/templates/costos_app/login.html:54
 msgid "Ingeniería Financiera & Control Legal"
-msgstr "Kvantitativ finansiel planlægning & Regulatorisk compliance-kontrol"
+msgstr ""
+"Corporate Quantitative Finance Engineering & Regulatory Legal Compliance "
+"Audit"
 
 #: costos_app/templates/costos_app/login.html:59
 msgid ""
 "Usuario o contraseña incorrectos. Por favor, verifica e intenta de nuevo."
 msgstr ""
-"Forkert brugernavn o adgangskode. Kontroller venligst dine loginoplysninger "
-"og prøv igen."
+"Invalid user identifiers or password credentials provided. Please re-"
+"authenticate and try again."
 
 #: costos_app/templates/costos_app/login.html:68
 msgid "Ej: admin"
-msgstr "f.eks. system_root_admin"
+msgstr "e.g., system_root_admin"
 
 #: costos_app/templates/costos_app/login.html:72
 msgid "Contraseña"
-msgstr "Kryptografisk adgangskode"
+msgstr "Cryptographic Password"
 
 #: costos_app/templates/costos_app/login.html:77
 msgid "Ingresar al Sistema"
-msgstr "Godkend og start systemsession"
+msgstr "Authenticate and Initialize Application Session"
 
 #: costos_app/templates/costos_app/login.html:85
 msgid "Desarrollado por Juan Camilo"
-msgstr "Arkitektonisk designet & udviklet af Juan Camilo"
+msgstr "Architected & Developed by Juan Camilo"
 
 #: costos_app/templates/costos_app/registrar_activo.html:6
 msgid "Control de Propiedad, Planta y Equipo"
-msgstr ""
-"Hovedbogskontrol for materielle anlægsaktiver (Property, Plant, and "
-"Equipment - PP&E)"
+msgstr "Property, Plant, and Equipment (PP&E) Asset Ledger Audit Control"
 
 #: costos_app/templates/costos_app/registrar_activo.html:14
 msgid "Control de Activos Fijos (NIC 16) y Arrendamientos (NIIF 16)"
 msgstr ""
-"Anlægsbogføring efter IAS 16 & Leasingkontrakter efter IFRS 16 standarder"
+"Fixed Assets Accounting Regulation under IAS 16 & Right-of-Use Asset Lease "
+"Optimization under IFRS 16 Standards"
 
 #: costos_app/templates/costos_app/registrar_activo.html:15
 msgid "Cálculo automatizado de depreciaciones y desgloses de Leasing"
 msgstr ""
-"Automatiseret anlægsafskrivning & beregning af kontraktlige leasing-"
-"afbetalingsplaner"
+"Automated Capital Asset Depreciation Amortization & Structural Lease "
+"Schedule Valuation Engine"
 
 #: costos_app/templates/costos_app/registrar_activo.html:34
 msgid "Registrar Alta de Activo"
-msgstr "Aktiver anlægsaktiv og optag i virksomhedsbalancen"
+msgstr "Capitalize and Recognize Asset on Corporate Balance Sheet"
 
 #: costos_app/templates/costos_app/registrar_activo.html:50
 msgid "¿Financiado con Leasing? (NIIF 16)"
-msgstr "Finansiering via leasingkontrakt? (Overensstemmende med IFRS 16)"
+msgstr ""
+"Is this financed via Third-Party Corporate Leasing? (IFRS 16 Standards "
+"Compliant)"
 
 #: costos_app/templates/costos_app/registrar_activo.html:60
 msgid "Activar e Incorporar Activo"
-msgstr "Bogfør anlægsaktiv og start den operative afskrivningscyklus"
+msgstr "Commit Asset and Initialize Operational Depreciation Cycle"
 
 #: costos_app/templates/costos_app/registrar_activo.html:70
 msgid "Inventario y Control de Amortización Mensual"
 msgstr ""
-"Fysisk aktivkartotek og månedlig kontrol af regnskabsmæssig afskrivning"
+"Physical Asset Master Ledger and Monthly Net Book Value Depreciation Controls"
 
 #: costos_app/templates/costos_app/registrar_activo.html:76
 msgid "Activo / Categoría"
-msgstr "Anlægsaktiv / Regnskabskategori"
+msgstr "Capital Asset Description / Accounting Category"
 
 #: costos_app/templates/costos_app/registrar_activo.html:77
 msgid "Responsable Asignado"
-msgstr "Tildelt aktiv-ansvarlig"
+msgstr "Designated Asset Custodian"
 
 #: costos_app/templates/costos_app/registrar_activo.html:78
 msgid "Costo Histórico"
-msgstr "Historiske anskaffelsesomkostninger"
+msgstr "Historical Purchase Cost"
 
 #: costos_app/templates/costos_app/registrar_activo.html:79
 msgid "Depreciación Mensual (Costo)"
-msgstr "Månedlig afskrivning (Direkte driftsomkostning i resultatopgørelsen)"
+msgstr "Monthly Depreciation P&L Direct Operating Cost"
 
 #: costos_app/templates/costos_app/registrar_activo.html:80
 msgid "Tratamiento NIIF 16"
-msgstr "Regnskabsmæssig metode efter IFRS 16 standarder"
+msgstr "IFRS 16 Financial Statement Structural Treatment Balance Sheet Method"
 
 #: costos_app/templates/costos_app/registrar_activo.html:81
 msgid "Interés Mensual (Gasto)"
-msgstr ""
-"Månedlig renteudgift fra leasing (Finansiel udgift i resultatopgørelsen)"
+msgstr "Monthly P&L Lease Interest Financing Expense"
 
 #: costos_app/templates/costos_app/registrar_activo.html:97
 msgid "En Bodega / Disponible"
-msgstr "På virksomhedslager / Status: Operationelt tilgængelig"
+msgstr "In Corporate Inventory Warehousing / Operational Availability Status"
 
 #: costos_app/templates/costos_app/registrar_activo.html:105
 msgid "Leasing Financiero"
-msgstr "Finansiel leasingaftale"
+msgstr "Capital Financing Lease Agreement"
 
 #: costos_app/templates/costos_app/registrar_activo.html:106
 msgid "Canon:"
-msgstr "Fast leasingafgift:"
+msgstr "Periodic Installment Due Amount:"
 
 #: costos_app/templates/costos_app/registrar_activo.html:108
 msgid "Compra Directa"
-msgstr "Direkte kontantkøb / Kontanttransaktion"
+msgstr "Direct Outright Purchase Transaction"
 
 #: costos_app/templates/costos_app/registrar_activo.html:122
 msgid "No hay activos registrados en el inventario."
-msgstr "Ingen registreringer fundet i anlægskartoteket."
+msgstr "Zero asset records found inside the capital assets register."
 
 #: costos_app/templates/costos_app/registrar_empleado.html:6
 msgid "Simulador de Costos - Registro de Empleados"
 msgstr ""
-"Personaleomkostningssimulator - Dataregistrering til medarbejder-onboarding"
+"Total Financial Compensation Modeling Simulator - Employee Onboarding Data "
+"Entry"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:14
 msgid "Usuario activo:"
-msgstr "Aktiv systembruger-identitet:"
+msgstr "Active System User Identity:"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:29
 msgid "Contratación Internacional"
-msgstr "Grænseoverskridende international rekruttering"
+msgstr "Cross-Border International Human Resources Sourcing"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:30
 msgid "Ingeniería de Costos & Parámetros Legales"
 msgstr ""
-"Kvantitativ personaleomkostningsberegning & International lovbestemt "
-"parametermatrix"
+"Quantitative Labor Cost Engineering & International Statutory Legal "
+"Parameters Matrix"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:69
 msgid "Calcular y Guardar en Postgres"
-msgstr "Kør finansielle algoritmer og gem poster i PostgreSQL-databasen"
+msgstr ""
+"Execute Financial Algorithms and Commit Records to PostgreSQL Datastore"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:80
 msgid "Últimos Registros Calculados"
-msgstr "Senest beregnede resultater af personaleomkostningsanalyser"
+msgstr "Most Recent Total Labor Cost Analytical Outputs"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:81
 msgid "Visualización de costo total de nómina (Moneda Local)"
 msgstr ""
-"Detaljeret resultatopgørelsesvisning af de samlede arbejdsgiveromkostninger "
-"(I lokal rapporteringsvaluta)"
+"Granular P&L view of total human resource fully burdened payroll liabilities "
+"(In Base Reporting Currency)"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:88
 msgid "Nombre"
-msgstr "Fulde navn"
+msgstr "Full Name"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:89
 msgid "Contrato"
-msgstr "Ansættelseskontrakt-klassifikation"
+msgstr "Employment Agreement Class"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:90
 msgid "Salario Bruto"
-msgstr "Bruttogrundløn"
+msgstr "Gross Base Compensation"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:91
 msgid "Seg. Social"
-msgstr "Lovpligtige arbejdsgiverbidrag til syge- & pensionsforsikring"
+msgstr "Statutory Employer Healthcare & Retirement Contributions"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:92
 msgid "Provisión NIIF"
-msgstr "Hensættelser til fratrædelsesgodtgørelse efter IFRS standarder"
+msgstr "IFRS Fully Burdened End-of-Service Accruals & Benefits Provisions"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:93
 msgid "Costo Total Real"
-msgstr ""
-"Samlede faktiske personaleomkostninger for arbejdsgiveren (Fully Burdened "
-"Labor Cost)"
+msgstr "Total Fully Burdened Labor Cost"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:108
 msgid "No hay empleados registrados."
-msgstr "Ingen personalefiler fundet i databasetabellerne."
+msgstr "Zero workforce personnel records found in database tables."
 
 #: costos_app/templates/costos_app/registrar_factura.html:6
 msgid "Registro de Facturas y Costos Fijos"
 msgstr ""
-"Registreringscenter - Kreditorfakturaer & Tilbagevendende faste indirekte "
-"omkostninger"
+"Processing Center - Accounts Payable Vendor Invoices & Recurring Fixed "
+"Overhead"
 
 #: costos_app/templates/costos_app/registrar_factura.html:13
 msgid "Control de Facturas y Costos Fijos (Distribución por Áreas)"
-msgstr "Fakturakontrol & Afdelingsspecifik omkostningsstedfordeling"
+msgstr ""
+"Accounts Payable Operations Ledger Control & Cross-Departmental Cost Center "
+"Allocations"
 
 #: costos_app/templates/costos_app/registrar_factura.html:15
 msgid "Ir al Dashboard"
-msgstr "Gå tilbage til det operative hoved-dashboard"
+msgstr "Return to Executive Operational Dashboard"
 
 #: costos_app/templates/costos_app/registrar_factura.html:31
 msgid "Ingresar Documento / Factura"
-msgstr "Registrer ny leverandørfaktura"
+msgstr "Process New Invoice Document Entry"
 
 #: costos_app/templates/costos_app/registrar_factura.html:38
 msgid "Registrar Concepto"
-msgstr "Gem bogføringslinje / Omkostningskoncept"
+msgstr "Commit Ledger Allocation Concept Line Item"
 
 #: costos_app/templates/costos_app/registrar_factura.html:48
 msgid "Historial de Egresos Fijos"
-msgstr "Historisk revisionsspor over faste strukturelle pengestrømme"
+msgstr "Historical Audit Trail of Non-Variable Structural Outflows"
 
 #: costos_app/templates/costos_app/registrar_factura.html:55
 msgid "Concepto / Proveedor"
-msgstr "Udgiftsklassifikationslinje / Handelsleverandør"
+msgstr "Expenditure Classification Line / Trade Vendor"
 
 #: costos_app/templates/costos_app/registrar_factura.html:57
 msgid "Clasificación Contable"
-msgstr "Finanskonto-klassifikation"
+msgstr "Chart of Accounts Ledger Classification"
 
 #: costos_app/templates/costos_app/registrar_factura.html:68
 msgid "Costo Operativo (Producción)"
-msgstr ""
-"Operationelle produktionsomkostninger (Produktionsafhængige omkostninger - "
-"COGS / Direct Production Cost)"
+msgstr "Operating Cost of Goods Sold (COGS / Direct Production Cost)"
 
 #: costos_app/templates/costos_app/registrar_factura.html:70
 msgid "Gasto Administrativo"
-msgstr ""
-"Generelle administrations- og salgsomkostninger (Resultatopgørelsesudgift - "
-"G&A)"
+msgstr "General and Administrative Operating Expense (G&A)"
 
 #: costos_app/templates/costos_app/registrar_factura.html:78
 msgid "No hay facturas fijos registrados."
-msgstr "Ingen faste kreditorfakturaer fundet i tabellerne."
+msgstr "Zero fixed vendor invoice items found inside historical tables."
 
 #: costosproyectos/settings.py:106
 msgid "Spanish"
-msgstr "Spansk"
+msgstr "Spanish"
 
 #: costosproyectos/settings.py:108
 msgid "Finnish"
-msgstr "Finsk"
+msgstr "Finnish"
 
 #: costosproyectos/settings.py:109
 msgid "Estonian"
-msgstr "Estisk"
+msgstr "Estonian"
 
 #: costosproyectos/settings.py:110
 msgid "Lithuanian"
-msgstr "Litauisk"
+msgstr "Lithuanian"
 
 #: costosproyectos/settings.py:111
 msgid "Latvian"
-msgstr "Lettisk"
+msgstr "Latvian"
 
 #: costosproyectos/settings.py:112
 msgid "Danish"
-msgstr "Dansk"
+msgstr "Danish"
 
 #: costosproyectos/settings.py:113
 msgid "German"
-msgstr "Tysk"
+msgstr "German"
 
 #: costosproyectos/settings.py:114
 msgid "Norwegian"
-msgstr "Norsk"
+msgstr "Norwegian"
 
 #: costosproyectos/settings.py:115
 msgid "Swedish"
-msgstr "Svensk"
+msgstr "Swedish"
 
 #: costosproyectos/settings.py:116
 msgid "Polish"
-msgstr "Polsk"
+msgstr "Polish"
 
 #: env/lib/python3.12/site-packages/django/contrib/messages/apps.py:15
 msgid "Messages"

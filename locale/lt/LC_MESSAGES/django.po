@@ -1,977 +1,954 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-28 19:43+0000\n"
+"POT-Creation-Date: 2026-05-28 19:35+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: costos_app/forms.py:12
-#, fuzzy
-#| msgid "Duración Máxima (Meses)"
 msgid "Duración del contrato (Meses)"
-msgstr "Maksimal varighed (Måneder)"
+msgstr "Maksimali trukmė (Mėnesiais)"
 
 #: costos_app/forms.py:13
 msgid "Requerido si el contrato es a Término Fijo"
-msgstr "Påkrævet, hvis der er tale om en tidsbegrænset ansættelse"
+msgstr "Būtina, jei sutartis yra terminuota"
 
 #: costos_app/models.py:10
 msgid "Nombre del País"
-msgstr "Landenavn"
+msgstr "Šalies pavadinimas"
 
 #: costos_app/models.py:11
 msgid "Código ISO (2 letras)"
-msgstr ""
-"ISO-kode (International Organisation for Standardisering - 2 bogstaver)"
+msgstr "ISO kodas (Tarptautinis standartizacijos kodas – 2 raidės)"
 
 #: costos_app/models.py:12
 msgid "Tasa Patronal Estándar (%)"
-msgstr "Standard arbejdsgiverbidrag til social sikring (%)"
+msgstr "Standartinis darbdavio mokesčių tarifas (%)"
 
 #: costos_app/models.py:13
 msgid "Tasa Patronal Temporal (%)"
-msgstr "Midlertidigt arbejdsgiverbidrag til social sikring (%)"
+msgstr "Laikinasis darbdavio mokesčių tarifas (%)"
 
 #: costos_app/models.py:14
 msgid "Salario Mínimo"
-msgstr "Mindsteløn"
+msgstr "Minimalus darbo užmokestis"
 
 #: costos_app/models.py:17 costos_app/models.py:50 costos_app/models.py:108
 #: costos_app/models.py:124
 msgid "País"
-msgstr "Land"
+msgstr "Šalis"
 
 #: costos_app/models.py:18
 msgid "Países"
-msgstr "Lande"
+msgstr "Šalys"
 
 #: costos_app/models.py:27
 msgid "Costo (Mano de Obra Directa / Operación)"
-msgstr "Omkostninger (Direkte lønomkostninger / Drift)"
+msgstr "Sąnaudos (Tiesioginė darbo jėga / Operacinė veikla)"
 
 #: costos_app/models.py:28
 msgid "Gasto (Administrativo / Ventas)"
-msgstr "Udgifter (Administration / Salg)"
+msgstr "Išlaidos (Administracinės / Pardavimų)"
 
 #: costos_app/models.py:30
 msgid "Nombre del Cargo"
-msgstr "Stillingsbetegnelse"
+msgstr "Pareigų pavadinimas"
 
 #: costos_app/models.py:31 costos_app/models.py:88
 #: costos_app/templates/costos_app/asignar_proyecto.html:73
 msgid "Descripción"
-msgstr "Beskrivelse"
+msgstr "Aprašymas"
 
 #: costos_app/models.py:32
 msgid "Tipo Contable"
-msgstr "Regnskabsmæssig klassifikation"
+msgstr "Apskaitos tipas"
 
 #: costos_app/models.py:35 costos_app/models.py:51
 msgid "Rol / Cargo"
-msgstr "Rolle / Stilling"
+msgstr "Rolė / Pareigos"
 
 #: costos_app/models.py:36
 msgid "Roles / Cargos"
-msgstr "Roller / Stillinger"
+msgstr "Rolės / Pareigos"
 
 #: costos_app/models.py:45 costos_app/models.py:127
 msgid "Término Indefinido"
-msgstr "Fastansættelse / Funktionærkontrakt"
+msgstr "Neterminuota sutartis"
 
 #: costos_app/models.py:46 costos_app/models.py:128
 msgid "Término Fijo / Obra"
-msgstr "Tidsbegrænset ansættelse / Projektkontrakt"
+msgstr "Terminuota arba tam tikro darbo sutartis"
 
 #: costos_app/models.py:49
 msgid "Nombre Completo"
-msgstr "Fulde navn"
+msgstr "Vardas ir pavardė"
 
 #: costos_app/models.py:52
 msgid "Salario Bruto Mensual"
-msgstr "Månedlig bruttoløn"
+msgstr "Mėnesinis bruto darbo užmokestis (Prieš mokesčius)"
 
 #: costos_app/models.py:53 costos_app/models.py:131
 msgid "Tipo de Contrato"
-msgstr "Kontrakttype"
+msgstr "Sutarties rūšis"
 
 #: costos_app/models.py:54
 msgid "Fecha de Ingreso"
-msgstr "Ansættelsesdato"
+msgstr "Įsidarbinimo data"
 
 #: costos_app/models.py:55
 msgid "Costo Seguridad Social Mes"
-msgstr "Månedlige sociale sikringsomkostninger"
+msgstr "Valstybinio socialinio draudimo įmokos per mėnesį"
 
 #: costos_app/models.py:56
 msgid "Provisión Prestaciones Mes"
-msgstr "Månedlig hensættelse til medarbejderforpligtelser"
+msgstr "Mėnesinių socialinių išmokų atidėjiniai"
 
 #: costos_app/models.py:58
 msgid "Correo Corporativo"
-msgstr "Virksomheds-e-mailadresse"
+msgstr "Įmonės el. paštas"
 
 #: costos_app/models.py:61
 msgid "Correo oficial para notificaciones del ERP"
-msgstr ""
-"Officiel e-mailadresse til ERP-notifikationer (Enterprise Resource Planning)"
+msgstr "Oficialus el. paštas verslo valdymo sistemos (ERP) pranešimams"
 
 #: costos_app/models.py:65
 #: costos_app/templates/costos_app/asignar_proyecto.html:108
 msgid "Empleado"
-msgstr "Medarbejder"
+msgstr "Darbuotojas"
 
 #: costos_app/models.py:66
 msgid "Empleados"
-msgstr "Medarbejdere"
+msgstr "Darbuotojai"
 
 #: costos_app/models.py:87
 #: costos_app/templates/costos_app/asignar_proyecto.html:72
 msgid "Nombre del Proyecto"
-msgstr "Projektnavn"
+msgstr "Projekto pavadinimas"
 
 #: costos_app/models.py:89
 msgid "Fecha de Inicio"
-msgstr "Startdato"
+msgstr "Pradžios data"
 
 #: costos_app/models.py:91
 msgid "kWh Estimados Mes"
-msgstr "Estimeret kilowatt-timer (kWh) pr. måned"
+msgstr ""
+"Planuojamas elektros energijos suvartojimas per mėnesį (Kilovatvalandėmis)"
 
 #: costos_app/models.py:95
 msgid "Consumo proyectado de energía al mes en kWh"
-msgstr "Forventet månedligt energiforbrug i kilowatt-timer (kWh)"
+msgstr ""
+"Prognozuojamas elektros energijos suvartojimas per mėnesį kilovatvalandėmis "
+"(kWh)"
 
 #: costos_app/models.py:99 costos_app/models.py:218 costos_app/models.py:282
 msgid "Proyecto"
-msgstr "Projekt"
+msgstr "Projektas"
 
 #: costos_app/models.py:100
 msgid "Proyectos"
-msgstr "Projekter"
+msgstr "Projektai"
 
 #: costos_app/models.py:109
 #: costos_app/templates/costos_app/asignar_proyecto.html:111
 #: costos_app/templates/costos_app/registrar_factura.html:56
 msgid "Mes"
-msgstr "Måned"
+msgstr "Mėnuo"
 
 #: costos_app/models.py:110
 msgid "Año"
-msgstr "År"
+msgstr "Metai"
 
 #: costos_app/models.py:111
 msgid "Total kWh Consumidos Real"
-msgstr "Faktisk samlet forbrug i kilowatt-timer (kWh)"
+msgstr ""
+"Faktinis bendras suvartotos elektros energijos kiekis kilovatvalandėmis (kWh)"
 
 #: costos_app/models.py:112
 msgid "Costo Total Recibo"
-msgstr "Samlede omkostninger på elregning"
+msgstr "Bendra sąskaitos suma"
 
 #: costos_app/models.py:115
 msgid "Registro de Energía"
-msgstr "Energiregistrering"
+msgstr "Elektros energijos apskaita"
 
 #: costos_app/models.py:116
 msgid "Registros de Energía"
-msgstr "Energiregistreringer"
+msgstr "Elektros energijos apskaitos duomenys"
 
 #: costos_app/models.py:134
 msgid "El tipo de contrato al que se le aplicará esta norma legal"
-msgstr "Den kontrakttype, som denne lovbestemmelse gælder for"
+msgstr "Sutarties rūšis, kuriai bus taikoma ši teisės norma"
 
 #: costos_app/models.py:137
 msgid "Duración Máxima (Meses)"
-msgstr "Maksimal varighed (Måneder)"
+msgstr "Maksimali trukmė (Mėnesiais)"
 
 #: costos_app/models.py:140
 msgid "Duración máxima permitida por ley. Dejar vacío si no aplica."
-msgstr "Lovbestemt maksimal varighed. Efterlad tom, hvis det ikke er relevant."
+msgstr "Teisiškai leidžiama maksimali trukmė. Palikti tuščią, jei netaikoma."
 
 #: costos_app/models.py:143
 msgid "Periodo Prueba Máximo (Meses)"
-msgstr "Maksimal prøvetid (Måneder)"
+msgstr "Maksimalus bandomasis laikotarpis (Mėnesiais)"
 
 #: costos_app/models.py:145
 msgid "Meses máximos de prueba permitidos por la legislación local."
 msgstr ""
-"Maksimalt antal prøvetidsmåneder tilladt i henhold til lokal lovgivning."
+"Vietos įstatymų leidžiamas maksimalus bandomasis laikotarpis mėnesiais."
 
 #: costos_app/models.py:148
 msgid "Porcentaje Máximo Nómina (%)"
-msgstr "Maksimal procentdel af den samlede lønsum (%)"
+msgstr "Maksimali darbo užmokesčio fondo procentinė dalis (%)"
 
 #: costos_app/models.py:153
 msgid "Límite de empleados con este contrato."
-msgstr "Maksimumsgrænse for antal medarbejdere på denne kontrakt."
+msgstr "Maksimalus darbuotojų skaičius su šia sutartimi."
 
 #: costos_app/models.py:156
 msgid "Observación Legal"
-msgstr "Juridisk bemærkning / Overensstemmelsesnotater"
+msgstr "Teisinės pastabos"
 
 #: costos_app/models.py:159
 msgid ""
 "Notas o textos legales adicionales sobre las condiciones de despido o "
 "preaviso."
 msgstr ""
-"Yderligere juridiske noter vedrørende opsigelsesbetingelser eller "
-"lovbestemte varsler."
+"Papildomi teisiniai tekstai ar pastabos apie atleidimo sąlygas ar įspėjimo "
+"terminus."
 
 #: costos_app/models.py:163
 msgid "Política de Contratación"
-msgstr "Ansættelsespolitik"
+msgstr "Įdarbinimo politika"
 
 #: costos_app/models.py:164
 msgid "Políticas de Contratación"
-msgstr "Ansættelsesretningslinjer"
+msgstr "Įdarbinimo politikos gairės"
 
 #: costos_app/models.py:173
 msgid "Colaborador"
-msgstr "Medarbejder / Bidragyder"
+msgstr "Bendraautoris / Darbuotojas"
 
 #: costos_app/models.py:174
 msgid "Unidad de Negocio / Proyecto"
-msgstr "Forretningsenhed / Strategisk projekt"
+msgstr "Verslo vienetas / Projektas"
 
 #: costos_app/models.py:175
 msgid "Horas Dedicadas en el Mes"
-msgstr "Arbejdstimer lagt i måneden"
+msgstr "Išdirbtos valandos per mėnesį"
 
 #: costos_app/models.py:176
 msgid "Periodo Contable (Mes/Año)"
-msgstr "Regnskabsperiode (Måned/År)"
+msgstr "Apskaitos laikotarpis (Mėnuo/Metai)"
 
 #: costos_app/models.py:183
 msgid "Responsable del Proyecto"
-msgstr "Projektansvarlig"
+msgstr "Projekto vadovas / Atsakingas asmuo"
 
 #: costos_app/models.py:184
 msgid "El líder, director de TI o responsable principal de la ejecución"
 msgstr ""
-"Teamlederen, IT-direktøren (CIO) eller den hovedansvarlige for projektets "
-"eksekvering"
+"Komandos vadovas, Informacinių technologijų (IT) direktorius arba "
+"pagrindinis už vykdymą atsakingas asmuo"
 
 #: costos_app/models.py:192
 msgid "Jefe Inmediato"
-msgstr "Direkte leder"
+msgstr "Tiesioginis vadovas"
 
 #: costos_app/models.py:193
 msgid "Jefe directo del área o supervisor inmediato de la asignación"
-msgstr "Direkte afdelingsleder eller den nærmeste supervisor for tildelingen"
+msgstr "Padalinio tiesioginis vadovas arba paskyrimo tiesioginis prižiūrėtojas"
 
 #: costos_app/models.py:195
 msgid "Costo Imputado al Proyecto"
-msgstr "Omkostninger allokeret til projektet"
+msgstr "Projektui priskirtos sąnaudos"
 
 #: costos_app/models.py:198
 msgid "Asignación de Proyecto"
-msgstr "Projektallokering"
+msgstr "Paskyrimas į projektą"
 
 #: costos_app/models.py:199
 msgid "Asignaciones a Proyectos"
-msgstr "Projektallokeringer"
+msgstr "Paskyrimai į projektus"
 
 #: costos_app/models.py:208
 msgid "Costo Operativo (AWS, GitHub, Licencias core)"
 msgstr ""
-"Driftsomkostninger (Amazon Web Services (AWS) cloud-infrastruktur, GitHub "
-"Enterprise, Core-systemlicenser)"
+"Operacinės sąnaudos („Amazon Web Services“ (AWS) debesų kompiuterija, "
+"„GitHub“, pagrindinės sistemos licencijos)"
 
 #: costos_app/models.py:209
 msgid "Gasto Administrativo (Papelería, Arriendos)"
-msgstr "Administrative udgifter (Kontorartikler, Huslejeomkostninger)"
+msgstr "Administracinės išlaidos (Kanceliarinės prekės, patalpų nuoma)"
 
 #: costos_app/models.py:219
 msgid ""
 "Seleccione el proyecto si este costo/gasto es imputable directamente a él"
 msgstr ""
-"Vælg projektet, hvis denne omkostning/udgift kan henføres direkte til det"
+"Pasirinkite projektą, jei šios sąnaudos/išlaidos yra tiesiogiai priskirtinos "
+"jam"
 
 #: costos_app/models.py:221
 msgid "Proveedor o Concepto"
-msgstr "Leverandør eller Bogføringskoncept"
+msgstr "Tiekėjas arba pagrindimas"
 
 #: costos_app/models.py:221
 msgid "Ej: AWS Server, Claro Internet"
-msgstr "f.eks. AWS Cloud-infrastrukturserver, Internetudbyder"
+msgstr "Pvz.: AWS („Amazon Web Services“) serveris, Interneto paslaugos"
 
 #: costos_app/models.py:222
 #: costos_app/templates/costos_app/registrar_factura.html:58
 msgid "Monto"
-msgstr "Beløb"
+msgstr "Suma"
 
 #: costos_app/models.py:223
 msgid "Mes/Año"
-msgstr "Måned/År"
+msgstr "Mėnuo/Metai"
 
 #: costos_app/models.py:223
 msgid "Formato: AAAA-MM"
-msgstr "Format: ÅÅÅÅ-MM"
+msgstr "Formatas: MMMM-MM"
 
 #: costos_app/models.py:224
 msgid "Clasificación"
-msgstr "Klassifikation til bogføring"
+msgstr "Klasifikacija"
 
 #: costos_app/models.py:225
 msgid "Fecha de Registro"
-msgstr "Systemregistreringsdato"
+msgstr "Registracijos data"
 
 #: costos_app/models.py:228
 msgid "Factura Fija"
-msgstr "Fast faktura / Tilbagevendende faktura"
+msgstr "Nuolatinė sąskaita-faktūra"
 
 #: costos_app/models.py:229
 msgid "Facturas y Costos Fijos"
-msgstr "Fakturaer og faste tilbagevendende omkostninger"
+msgstr "Sąskaitos-faktūros ir fiksuotosios sąnaudos"
 
 #: costos_app/models.py:238
 msgid "Equipo de Cómputo y Tecnología (Computadores, Servidores)"
-msgstr "Computerhardware og IT-udstyr (Arbejdsstationer, Produktionsservere)"
+msgstr "Kompiuterinė įranga ir technologijos (Kompiuteriai, serveriai)"
 
 #: costos_app/models.py:239
 msgid "Muebles y Enseres (Escritorios, Sillas)"
-msgstr "Kontorinventar (Ergonomiske skriveborde, Kontorstole)"
+msgstr "Baldai ir inventorius (Rašomieji stalai, kėdės)"
 
 #: costos_app/models.py:240
 msgid "Equipos de Comunicación (Teléfonos corporativos)"
-msgstr "Kommunikationsudstyr (Firmatelefoner)"
+msgstr "Ryšių įranga (Įmonės telefonai)"
 
 #: costos_app/models.py:249
 msgid "Empleado Asignado"
-msgstr "Tildelt medarbejder"
+msgstr "Priskirtas darbuotojas"
 
 #: costos_app/models.py:250
 msgid "Empleado que tiene en su poder el activo para operar"
-msgstr "Medarbejderen, som har fået overdraget aktivet til rådighed"
+msgstr "Darbuotojas, kuriam naudojei perduotas ilgalaikis turtas"
 
 #: costos_app/models.py:252
 msgid "Nombre del Activo"
-msgstr "Aktivets navn"
+msgstr "Ilgalaikio turto pavadinimas"
 
 #: costos_app/models.py:252
 msgid "Ej: MacBook Pro, Silla Ergonómica"
-msgstr "f.eks. Apple MacBook Pro, Ergonomisk kontorstol"
+msgstr "Pvz.: MacBook Pro kompiuteris, ergonominė kėdė"
 
 #: costos_app/models.py:253
 msgid "Tipo de Activo"
-msgstr "Anlægsklasse"
+msgstr "Ilgalaikio turto rūšis"
 
 #: costos_app/models.py:254
 msgid "Valor de Adquisición"
-msgstr "Anskaffelsesværdi"
+msgstr "Įsigijimo vertė"
 
 #: costos_app/models.py:254
 msgid "Valor histórico de compra"
-msgstr "Historisk købspris"
+msgstr "Istorinė įsigijimo vertė"
 
 #: costos_app/models.py:255
 msgid "Vida Útil (Meses)"
-msgstr "Brugstid (Måneder)"
+msgstr "Naudingos tarnavimo laikas (Mėnesiais)"
 
 #: costos_app/models.py:255
 msgid "Vida útil estimada en meses"
-msgstr "Estimeret økonomisk brugstid i måneder"
+msgstr "Prognozuojamas naudingo tarnavimo laikas mėnesiais"
 
 #: costos_app/models.py:256
 msgid "Fecha de Adquisición"
-msgstr "Anskaffelsesdato"
+msgstr "Įsigijimo data"
 
 #: costos_app/models.py:256
 msgid "Fecha en la que se compró o inició el contrato"
-msgstr "Dato for køb eller start på leasingkontrakt"
+msgstr "Data, kurią turtas buvo nupirktas arba įsigaliojo sutartis"
 
 #: costos_app/models.py:258
 msgid "¿Es financiado mediante Leasing? (NIIF 16)"
 msgstr ""
-"Er det finansieret via leasing? (Overensstemmende med IFRS 16 / "
-"International Financial Reporting Standards - Leasingkontrakter)"
+"Ar finansuojama lizingu? (Pagal 16-ąjį Tarptautinį finansinės atskaitomybės "
+"standartą – TFAS 16 Nuoma)"
 
 #: costos_app/models.py:259
 msgid "Tasa Interés Mensual"
-msgstr "Månedlig rentesats"
+msgstr "Mėnesio palūkanų norma"
 
 #: costos_app/models.py:259
 msgid "Tasa de interés mensual del leasing"
-msgstr "Den kontraktlige månedlige rentesats for leasingaftalen"
+msgstr "Lizingo mėnesio palūkanų norma"
 
 #: costos_app/models.py:260
 msgid "Canon Mensual"
-msgstr "Månedlig leasingydelse"
+msgstr "Mėnesinis nuomos mokestis"
 
 #: costos_app/models.py:260
 msgid "El pago mensual fijo al banco"
-msgstr "Den faste månedlige betalingsforpligtelse til pengeinstituttet"
+msgstr "Fiksuota įmoka bankui kiekvieną mėnesį"
 
 #: costos_app/models.py:263
 msgid "Activo Fijo"
-msgstr "Anlægsaktiv"
+msgstr "Ilgalaikis turtas"
 
 #: costos_app/models.py:264
 msgid "Propiedad, Planta y Equipo"
-msgstr ""
-"Materielle anlægsaktiver (Grunde, bygninger, tekniske anlæg og maskiner)"
+msgstr "Nekilnojamasis turtas, gamybos įrenginiai ir įranga"
 
 #: costos_app/models.py:283
 msgid "Proyecto al que se le asigna este techo financiero"
-msgstr "Strategisk projekt, som dette finansielle loft tildeles"
+msgstr "Projektas, kuriam priskiriama ši maksimali biudžeto riba"
 
 #: costos_app/models.py:285
 msgid "Límite de Costos Directos"
-msgstr "Budgetgrænse for direkte omkostninger"
+msgstr "Tiesioginių sąnaudų riba (Maksimali)"
 
 #: costos_app/models.py:286
 msgid "Límite de Gastos Indirectos"
-msgstr "Budgetgrænse for indirekte udgifter"
+msgstr "Netiesioginių išlaidų riba (Maksimali)"
 
 #: costos_app/models.py:287
 msgid "Fecha de Aprobación"
-msgstr "Dato for budgetgodkendelse"
+msgstr "Patvirtinimo data"
 
 #: costos_app/models.py:288
 msgid "Actualizado en"
-msgstr "Sidst opdateret den"
+msgstr "Atnaujinta šią dieną:"
 
 #: costos_app/models.py:291
 msgid "Presupuesto de Proyecto"
-msgstr "Projektbudget"
+msgstr "Projekto biudžetas"
 
 #: costos_app/models.py:292
 msgid "Presupuestos de Proyectos"
-msgstr "Projektbudgetter"
+msgstr "Projektų biudžetai"
 
 #: costos_app/models.py:317
 msgid ""
 "🚨 ¡PRESUPUESTO ABSURDO! El costo real mínimo actual de este proyecto es "
 "mayor al techo asignado."
 msgstr ""
-"🚨 ABSURDT BUDGET! De nuværende minimale faktiske omkostninger for dette "
-"projekt overstiger det tildelte finansielle loft."
+"🚨 ABSURDIŠKAS BIUDŽETAS! Šio projekto dabartinės minimalios faktinės "
+"sąnaudos viršija nustatytą ribą."
 
 #: costos_app/models.py:324 costosproyectos/settings.py:107
 msgid "English"
-msgstr "Engelsk"
+msgstr "Anglų kalba"
 
 #: costos_app/models.py:325
 msgid "Español"
-msgstr "Spansk"
+msgstr "Ispanų kalba"
 
 #: costos_app/models.py:326
 msgid "Eesti (Estonia)"
-msgstr "Estisk (Estland)"
+msgstr "Estų kalba (Estija)"
 
 #: costos_app/models.py:327
 msgid "Suomi (Finlandia)"
-msgstr "Finsk (Finland)"
+msgstr "Suomių kalba (Suomija)"
 
 #: costos_app/models.py:328
 msgid "Lietuvių (Lituania)"
-msgstr "Litauisk (Litauen)"
+msgstr "Lietuvių kalba (Lietuva)"
 
 #: costos_app/models.py:329
 msgid "Dansk (Danés)"
-msgstr "Dansk (Danmark)"
+msgstr "Danų kalba (Danija)"
 
 #: costos_app/models.py:332 costos_app/templates/costos_app/login.html:67
 msgid "Usuario"
-msgstr "Brugernavn"
+msgstr "Naudotojas"
 
 #: costos_app/models.py:334
 msgid "Idioma Preferido"
-msgstr "Foretrukket sprog"
+msgstr "Pageidaujama kalba"
 
 #: costos_app/models.py:338
 msgid "Seleccione el idioma nativo para la interfaz del ERP"
-msgstr ""
-"Vælg det primære sprog til ERP-systemets brugerflade (Enterprise Resource "
-"Planning)"
+msgstr "Pasirinkite pagrindinę kalbą verslo valdymo (ERP) sistemos sąsajai"
 
 #: costos_app/models.py:342
 msgid "Perfil de Usuario"
-msgstr "Brugerprofil"
+msgstr "Naudotojo profilis"
 
 #: costos_app/models.py:343
 msgid "Perfiles de Usuarios"
-msgstr "Brugerprofiler"
+msgstr "Naudotojų profiliai"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:6
 msgid "Asignación de Costos ABC - Proyectos"
-msgstr ""
-"Aktivitetsbaseret omkostningsstyring (ABC-model - Activity-Based Costing) "
-"for projekter"
+msgstr "Sąnaudų priskyrimas pagal veiklas (ABC metodas) – Projektai"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:14
 msgid "Dashboard de Proyectos & Costo ABC"
-msgstr ""
-"Business Intelligence Dashboard for Projekt- & Aktivitetsbaserede "
-"Omkostninger (ABC)"
+msgstr "Projektų suvestinė & Sąnaudos pagal veiklas (ABC metodas)"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:17
 #: costos_app/templates/costos_app/registrar_activo.html:18
 #: costos_app/templates/costos_app/registrar_empleado.html:20
 msgid "Ir Dashboard General"
-msgstr "Gå til hoved-dashboard"
+msgstr "Eiti į pagrindinę suvestinę"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:33
 msgid "Registrar Nuevo Proyecto / Startup"
-msgstr "Registrer nyt strategisk projekt / startup-forretningsenhed"
+msgstr "Registruoti naują projektą / startuolį („Startup“)"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:40
 msgid "Guardar Proyecto"
-msgstr "Gem projekt i databasen"
+msgstr "Išsaugoti projektą"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:48
 msgid "Distribuir Horas (Costo ABC)"
-msgstr "Fordel arbejdstimer (Aktivitetsbaseret omkostningsberegning - ABC)"
+msgstr "Paskirstyti valandas (Sąnaudos pagal veiklas – ABC metodas)"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:55
 #: costos_app/templates/costos_app/dashboard.html:21
 msgid "Prorratear Horas"
-msgstr "Fordel timer forholdsmæssigt (Pro-rata-allokering)"
+msgstr "Proporcingai paskirstyti išdirbtas valandas"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:65
 msgid "Prorrateo y Costo Real Total por Proyecto (NIIF Incluido)"
 msgstr ""
-"Forholdsmæssig fordeling & Faktiske samlede omkostninger pr. projekt "
-"(Overensstemmende med IFRS / International Financial Reporting Standards)"
+"Proporcingas paskirstymas ir bendros faktinės sąnaudos projektui (Įskaitant "
+"Tarptautinius finansinės atskaitomybės standartus – TFAS)"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:74
 msgid "Total Horas Invertidas"
-msgstr "Samlede brugte arbejdstimer"
+msgstr "Iš viso sugaišta valandų"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:75
 msgid "Costo Real Acumulado"
-msgstr "Akkumulerede faktiske finansielle omkostninger"
+msgstr "Sukauptos faktinės sąnaudos"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:83
 #: costos_app/templates/costos_app/asignar_proyecto.html:120
 #: costos_app/templates/costos_app/dashboard.html:106
 msgid "hrs"
-msgstr "t."
+msgstr "val."
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:89
 msgid "No hay proyectos registrados en el sistema."
-msgstr "Ingen projekter registreret i systemet."
+msgstr "Sistemoje nėra užregistruotų projektų."
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:101
 msgid "Historial de Horas Imputadas por Empleado"
-msgstr "Historisk log over allokerede arbejdstimer pr. medarbejder"
+msgstr "Darbuotojų užregistruotų ir priskirtų valandų istorija"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:109
 msgid "Proyecto Target"
-msgstr "Målprojekt for allokeringen"
+msgstr "Tikslinis projektas"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:110
 #: costos_app/templates/costos_app/dashboard.html:87
 msgid "Horas"
-msgstr "Arbejdstimer"
+msgstr "Valandos"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:112
 msgid "Costo Imputado"
-msgstr "Allokerede finansielle omkostninger"
+msgstr "Priskirtos sąnaudos"
 
 #: costos_app/templates/costos_app/asignar_proyecto.html:127
 msgid "No hay registros de horas."
-msgstr "Ingen tidsregistreringer fundet i logtabellerne."
+msgstr "Valandų apskaitos įrašų nėra."
 
 #: costos_app/templates/costos_app/dashboard.html:6
 msgid "Consolidado Financiero Avanzado - ERP"
-msgstr ""
-"Avanceret finansiel konsolidering - ERP-system (Enterprise Resource Planning)"
+msgstr "Išsami finansinė suvestinė – Verslo valdymo sistema (ERP)"
 
 #: costos_app/templates/costos_app/dashboard.html:15
 msgid "Sistema de Gestión Contable ABC"
-msgstr ""
-"Styringssystem til aktivitetsbaseret regnskab (Activity-Based Costing - ABC)"
+msgstr "Apskaitos valdymo sistema pagal veiklas (ABC metodas)"
 
 #: costos_app/templates/costos_app/dashboard.html:16
 msgid "Enfoque de Costos NIC 16 / NIIF 16 Completo"
 msgstr ""
-"Umfattende regnskabstilgang i henhold til IAS 16 (Materielle anlægsaktiver) "
-"& IFRS 16 (Leasingkontrakter)"
+"Pilnas sąnaudų vertinimas pagal TAS 16 (Ilgalaikis turtas) ir TFAS 16 (Nuoma)"
 
 #: costos_app/templates/costos_app/dashboard.html:20
 msgid "Gestionar Personal"
-msgstr "Personaleadministration & HR-operationer"
+msgstr "Valdyti personalą"
 
 #: costos_app/templates/costos_app/dashboard.html:22
 msgid "Registrar Facturas"
-msgstr "Registrer kreditorfakturaer"
+msgstr "Registruoti sąskaitas-faktūras"
 
 #: costos_app/templates/costos_app/dashboard.html:23
 msgid "Control de Activos"
-msgstr "Aktivstyring og anlægsbogholderi"
+msgstr "Ilgalaikio turto kontrolė"
 
 #: costos_app/templates/costos_app/dashboard.html:27
 msgid "Panel Admin"
-msgstr "Systemadministratorpanel"
+msgstr "Administratoriaus skydelis"
 
 #: costos_app/templates/costos_app/dashboard.html:36
 msgid "Cerrar Sesión"
-msgstr "Log af / Afslut session"
+msgstr "Atsijungti iš sistemos"
 
 #: costos_app/templates/costos_app/dashboard.html:45
 msgid "Costo Operativo Total"
-msgstr "Samlede driftsomkostninger (OpEx)"
+msgstr "Bendros operacinės sąnaudos"
 
 #: costos_app/templates/costos_app/dashboard.html:48
 msgid "MOD"
-msgstr "Direkte lønomkostninger (Mano de Obra Directa)"
+msgstr "Tiesioginės darbo jėgos sąnaudos"
 
 #: costos_app/templates/costos_app/dashboard.html:48
 msgid "Fac"
-msgstr "Fakturerede driftsomkostninger"
+msgstr "Sąskaitos"
 
 #: costos_app/templates/costos_app/dashboard.html:48
 msgid "Depr"
-msgstr "Afskrivningsomkostninger for anlægsaktiver"
+msgstr "Amortizacija / Nusidėvėjimas"
 
 #: costos_app/templates/costos_app/dashboard.html:55
 msgid "Absorbido por Proyectos"
-msgstr "Omkostninger absorberet af projektenheder"
+msgstr "Projektuose absorbuotos (Įskaitytos) sąnaudos"
 
 #: costos_app/templates/costos_app/dashboard.html:57
 msgid "Justificado en proyectos activos"
-msgstr "Verificeret og allokeret til aktive forretningsenheder"
+msgstr "Pateisinamos sąnaudos aktyviuose projektuose"
 
 #: costos_app/templates/costos_app/dashboard.html:63
 msgid "Capacidad No Asignada"
-msgstr "Ikke-allokeret ledig virksomhedskapacitet"
+msgstr "Nepriskirti pajėgumai (Laisvi resursai)"
 
 #: costos_app/templates/costos_app/dashboard.html:65
 msgid "Costo latente fuera de proyectos"
-msgstr "Latente strukturdomkostninger uden for aktive projekter"
+msgstr "Latentinės sąnaudos ne projektuose"
 
 #: costos_app/templates/costos_app/dashboard.html:71
 msgid "Estructura Fija Total"
-msgstr "Samlede faste virksomhedsstrukturkonti"
+msgstr "Bendra fiksuotoji struktūra"
 
 #: costos_app/templates/costos_app/dashboard.html:73
 msgid "Admin, soporte y depreciación fija"
-msgstr "Generel administration, back-office support og faste afskrivninger"
+msgstr "Administravimas, palaikymas ir fiksuotasis nusidėvėjimas"
 
 #: costos_app/templates/costos_app/dashboard.html:81
 msgid "Desglose de Absorción de Costos por Unidad de Negocio (ABC + NIC 16)"
 msgstr ""
-"Analytisk fordeling af omkostningsabsorption pr. forretningsenhed via "
-"aktivitetsbaseret regnskab (ABC) & IAS 16"
+"Sąnaudų absorbcijos paskirstymas pagal verslo vienetus (ABC metodas + TAS 16 "
+"standartas)"
 
 #: costos_app/templates/costos_app/dashboard.html:86
 msgid "Unidad / Proyecto Estratégico"
-msgstr "Strategisk forretningsområde / Operativt kerneprojekt"
+msgstr "Struktūrinis padalinys / Strateginis projektas"
 
 #: costos_app/templates/costos_app/dashboard.html:88
 msgid "Costo Real Total"
-msgstr "Faktiske samlede omkostninger"
+msgstr "Bendros faktinės sąnaudos"
 
 #: costos_app/templates/costos_app/dashboard.html:89
 msgid "Presupuesto Techo"
-msgstr "Maksimalt godkendt budgetloft"
+msgstr "Biudžeto riba (Maksimalus apribojimas)"
 
 #: costos_app/templates/costos_app/dashboard.html:90
 msgid "Nivel de Consumo Presupuestal"
-msgstr "Budgetudnyttelsesgrad (Burn-rate)"
+msgstr "Biudžeto sunaudojimo lygis"
 
 #: costos_app/templates/costos_app/dashboard.html:91
 msgid "Participación Global"
-msgstr "Global fordelingsandel"
+msgstr "Visuotinis dalyvavimas (Dalis)"
 
 #: costos_app/templates/costos_app/dashboard.html:99
 msgid "Sin descripción"
-msgstr "Ingen beskrivelse tilgængelig"
+msgstr "Be aprašymo"
 
 #: costos_app/templates/costos_app/dashboard.html:102
 msgid "Nómina"
-msgstr "Lønafregning / Lønbogholderi"
+msgstr "Darbo užmokesčio žiniaraštis"
 
 #: costos_app/templates/costos_app/dashboard.html:102
 msgid "Activos"
-msgstr "Aktiverede anlægskonti"
+msgstr "Turtas (Ilgalaikis turtas)"
 
 #: costos_app/templates/costos_app/dashboard.html:114
 msgid "Sin Presupuesto"
-msgstr "Intet budgetloft tildelt"
+msgstr "Be biudžeto"
 
 #: costos_app/templates/costos_app/dashboard.html:145
 msgid "No hay proyectos para evaluar absorción de costos."
-msgstr "Ingen aktive projekter til vurdering af omkostningsabsorption fundet."
+msgstr "Nėra projektų sąnaudų absorbcijai įvertinti."
 
 #: costos_app/templates/costos_app/login.html:7
 msgid "ERP Costos - Iniciar Sesión"
-msgstr "Konto-ERP platform - Log ind på sikker portal"
+msgstr "Išlaidų ERP (Verslo valdymo sistema) – Prisijungti"
 
 #: costos_app/templates/costos_app/login.html:53
 msgid "SISTEMA DE COSTOS"
-msgstr "STRATEGISKT SYSTEM TIL VIRKSOMHEDS-OMKOSTNINGSSTYRING"
+msgstr "SĄNAUDŲ APSKAITOS SISTEMA"
 
 #: costos_app/templates/costos_app/login.html:54
 msgid "Ingeniería Financiera & Control Legal"
-msgstr "Kvantitativ finansiel planlægning & Regulatorisk compliance-kontrol"
+msgstr "Finansų inžinerija & Teisinė kontrolė"
 
 #: costos_app/templates/costos_app/login.html:59
 msgid ""
 "Usuario o contraseña incorrectos. Por favor, verifica e intenta de nuevo."
 msgstr ""
-"Forkert brugernavn o adgangskode. Kontroller venligst dine loginoplysninger "
-"og prøv igen."
+"Neteisingas naudotojo vardas arba slaptažodis. Patikrinkite duomenis ir "
+"bandykite vėl."
 
 #: costos_app/templates/costos_app/login.html:68
 msgid "Ej: admin"
-msgstr "f.eks. system_root_admin"
+msgstr "Pvz.: admin"
 
 #: costos_app/templates/costos_app/login.html:72
 msgid "Contraseña"
-msgstr "Kryptografisk adgangskode"
+msgstr "Slaptažodis"
 
 #: costos_app/templates/costos_app/login.html:77
 msgid "Ingresar al Sistema"
-msgstr "Godkend og start systemsession"
+msgstr "Prisijungti prie sistemos"
 
 #: costos_app/templates/costos_app/login.html:85
 msgid "Desarrollado por Juan Camilo"
-msgstr "Arkitektonisk designet & udviklet af Juan Camilo"
+msgstr "Autorius: Chuanas Kamilo (Juan Camilo)"
 
 #: costos_app/templates/costos_app/registrar_activo.html:6
 msgid "Control de Propiedad, Planta y Equipo"
-msgstr ""
-"Hovedbogskontrol for materielle anlægsaktiver (Property, Plant, and "
-"Equipment - PP&E)"
+msgstr "Nekilnojamojo turto, gamybos įrenginių ir įrangos kontrolė"
 
 #: costos_app/templates/costos_app/registrar_activo.html:14
 msgid "Control de Activos Fijos (NIC 16) y Arrendamientos (NIIF 16)"
 msgstr ""
-"Anlægsbogføring efter IAS 16 & Leasingkontrakter efter IFRS 16 standarder"
+"Ilgalaikio turto kontrolė (TAS 16) ir Nuomos sutarčių kontrolė (TFAS 16)"
 
 #: costos_app/templates/costos_app/registrar_activo.html:15
 msgid "Cálculo automatizado de depreciaciones y desgloses de Leasing"
 msgstr ""
-"Automatiseret anlægsafskrivning & beregning af kontraktlige leasing-"
-"afbetalingsplaner"
+"Automatizuotas nusidėvėjimo amortizacijos skaičiavimas ir lizingo išskaidymo "
+"specifikacija"
 
 #: costos_app/templates/costos_app/registrar_activo.html:34
 msgid "Registrar Alta de Activo"
-msgstr "Aktiver anlægsaktiv og optag i virksomhedsbalancen"
+msgstr "Registruoti ilgalaikio turto aktyvavimą ir priėmimą eksploatacijai"
 
 #: costos_app/templates/costos_app/registrar_activo.html:50
 msgid "¿Financiado con Leasing? (NIIF 16)"
-msgstr "Finansiering via leasingkontrakt? (Overensstemmende med IFRS 16)"
+msgstr "Ar finansuojama lizingu? (Pagal TFAS 16 standartą)"
 
 #: costos_app/templates/costos_app/registrar_activo.html:60
 msgid "Activar e Incorporar Activo"
-msgstr "Bogfør anlægsaktiv og start den operative afskrivningscyklus"
+msgstr "Aktyvuoti ir įtraukti į apskaitą ilgalaikį turtą"
 
 #: costos_app/templates/costos_app/registrar_activo.html:70
 msgid "Inventario y Control de Amortización Mensual"
-msgstr ""
-"Fysisk aktivkartotek og månedlig kontrol af regnskabsmæssig afskrivning"
+msgstr "Inventorizacija ir mėnesinės nusidėvėjimo amortizacijos kontrolė"
 
 #: costos_app/templates/costos_app/registrar_activo.html:76
 msgid "Activo / Categoría"
-msgstr "Anlægsaktiv / Regnskabskategori"
+msgstr "Ilgalaikis turtas / Kategorija"
 
 #: costos_app/templates/costos_app/registrar_activo.html:77
 msgid "Responsable Asignado"
-msgstr "Tildelt aktiv-ansvarlig"
+msgstr "Paskirtas atsakingas asmuo"
 
 #: costos_app/templates/costos_app/registrar_activo.html:78
 msgid "Costo Histórico"
-msgstr "Historiske anskaffelsesomkostninger"
+msgstr "Pradinė istorinė įsigijimo vertė"
 
 #: costos_app/templates/costos_app/registrar_activo.html:79
 msgid "Depreciación Mensual (Costo)"
-msgstr "Månedlig afskrivning (Direkte driftsomkostning i resultatopgørelsen)"
+msgstr "Mėnesinis nusidėvėjimas (Sąnaudos)"
 
 #: costos_app/templates/costos_app/registrar_activo.html:80
 msgid "Tratamiento NIIF 16"
-msgstr "Regnskabsmæssig metode efter IFRS 16 standarder"
+msgstr "Apskaitos tvarkymas pagal TFAS 16 reikalavimus"
 
 #: costos_app/templates/costos_app/registrar_activo.html:81
 msgid "Interés Mensual (Gasto)"
-msgstr ""
-"Månedlig renteudgift fra leasing (Finansiel udgift i resultatopgørelsen)"
+msgstr "Mėnesinės palūkanų įmokos (Išlaidos)"
 
 #: costos_app/templates/costos_app/registrar_activo.html:97
 msgid "En Bodega / Disponible"
-msgstr "På virksomhedslager / Status: Operationelt tilgængelig"
+msgstr "Sandėlyje / Prieinama"
 
 #: costos_app/templates/costos_app/registrar_activo.html:105
 msgid "Leasing Financiero"
-msgstr "Finansiel leasingaftale"
+msgstr "Finansinis lizingas"
 
 #: costos_app/templates/costos_app/registrar_activo.html:106
 msgid "Canon:"
-msgstr "Fast leasingafgift:"
+msgstr "Mėnesinis nuomos mokestis:"
 
 #: costos_app/templates/costos_app/registrar_activo.html:108
 msgid "Compra Directa"
-msgstr "Direkte kontantkøb / Kontanttransaktion"
+msgstr "Tiesioginis pirkimas"
 
 #: costos_app/templates/costos_app/registrar_activo.html:122
 msgid "No hay activos registrados en el inventario."
-msgstr "Ingen registreringer fundet i anlægskartoteket."
+msgstr "Inventoriuje nėra užregistruoto ilgalaikio turto."
 
 #: costos_app/templates/costos_app/registrar_empleado.html:6
 msgid "Simulador de Costos - Registro de Empleados"
-msgstr ""
-"Personaleomkostningssimulator - Dataregistrering til medarbejder-onboarding"
+msgstr "Sąnaudų simuliatorius – Darbuotojų registracija"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:14
 msgid "Usuario activo:"
-msgstr "Aktiv systembruger-identitet:"
+msgstr "Aktyvus naudotojas:"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:29
 msgid "Contratación Internacional"
-msgstr "Grænseoverskridende international rekruttering"
+msgstr "Tarptautinis darbuotojų įdarbinimas"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:30
 msgid "Ingeniería de Costos & Parámetros Legales"
-msgstr ""
-"Kvantitativ personaleomkostningsberegning & International lovbestemt "
-"parametermatrix"
+msgstr "Sąnaudų inžinerija & Teisiniai parametrai"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:69
 msgid "Calcular y Guardar en Postgres"
-msgstr "Kør finansielle algoritmer og gem poster i PostgreSQL-databasen"
+msgstr "Apskaičiuoti ir išsaugoti „PostgreSQL“ duomenų bazėje"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:80
 msgid "Últimos Registros Calculados"
-msgstr "Senest beregnede resultater af personaleomkostningsanalyser"
+msgstr "Paskutiniai atlikti sąnaudų skaičiavimai"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:81
 msgid "Visualización de costo total de nómina (Moneda Local)"
 msgstr ""
-"Detaljeret resultatopgørelsesvisning af de samlede arbejdsgiveromkostninger "
-"(I lokal rapporteringsvaluta)"
+"Bendrųjų darbo užmokesčio fondo sąnaudų vizualizacija (Vietine valiuta)"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:88
 msgid "Nombre"
-msgstr "Fulde navn"
+msgstr "Vardas"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:89
 msgid "Contrato"
-msgstr "Ansættelseskontrakt-klassifikation"
+msgstr "Sutartis"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:90
 msgid "Salario Bruto"
-msgstr "Bruttogrundløn"
+msgstr "Bruto darbo užmokestis"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:91
 msgid "Seg. Social"
-msgstr "Lovpligtige arbejdsgiverbidrag til syge- & pensionsforsikring"
+msgstr "Socialinis draudimas"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:92
 msgid "Provisión NIIF"
-msgstr "Hensættelser til fratrædelsesgodtgørelse efter IFRS standarder"
+msgstr "Atidėjiniai pagal Tarptautinius standartus (TFAS)"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:93
 msgid "Costo Total Real"
-msgstr ""
-"Samlede faktiske personaleomkostninger for arbejdsgiveren (Fully Burdened "
-"Labor Cost)"
+msgstr "Bendros faktinės sąnaudos"
 
 #: costos_app/templates/costos_app/registrar_empleado.html:108
 msgid "No hay empleados registrados."
-msgstr "Ingen personalefiler fundet i databasetabellerne."
+msgstr "Nėra užregistruotų darbuotojų."
 
 #: costos_app/templates/costos_app/registrar_factura.html:6
 msgid "Registro de Facturas y Costos Fijos"
-msgstr ""
-"Registreringscenter - Kreditorfakturaer & Tilbagevendende faste indirekte "
-"omkostninger"
+msgstr "Sąskaitų-faktūrų ir fiksuotųjų sąnaudų registravimas"
 
 #: costos_app/templates/costos_app/registrar_factura.html:13
 msgid "Control de Facturas y Costos Fijos (Distribución por Áreas)"
-msgstr "Fakturakontrol & Afdelingsspecifik omkostningsstedfordeling"
+msgstr ""
+"Sąskaitų kontrolė ir fiksuotosios sąnaudos (Suskirstymas pagal struktūrinius "
+"padalinius)"
 
 #: costos_app/templates/costos_app/registrar_factura.html:15
 msgid "Ir al Dashboard"
-msgstr "Gå tilbage til det operative hoved-dashboard"
+msgstr "Eiti į suvestinę"
 
 #: costos_app/templates/costos_app/registrar_factura.html:31
 msgid "Ingresar Documento / Factura"
-msgstr "Registrer ny leverandørfaktura"
+msgstr "Įvesti dokumentą / sąskaitą-faktūrą"
 
 #: costos_app/templates/costos_app/registrar_factura.html:38
 msgid "Registrar Concepto"
-msgstr "Gem bogføringslinje / Omkostningskoncept"
+msgstr "Registruoti pagrindimą / straipsnį"
 
 #: costos_app/templates/costos_app/registrar_factura.html:48
 msgid "Historial de Egresos Fijos"
-msgstr "Historisk revisionsspor over faste strukturelle pengestrømme"
+msgstr "Fiksuotųjų išlaidų istorija"
 
 #: costos_app/templates/costos_app/registrar_factura.html:55
 msgid "Concepto / Proveedor"
-msgstr "Udgiftsklassifikationslinje / Handelsleverandør"
+msgstr "Pagrindimas / Tiekėjas"
 
 #: costos_app/templates/costos_app/registrar_factura.html:57
 msgid "Clasificación Contable"
-msgstr "Finanskonto-klassifikation"
+msgstr "Buhalterinė klasifikacija"
 
 #: costos_app/templates/costos_app/registrar_factura.html:68
 msgid "Costo Operativo (Producción)"
-msgstr ""
-"Operationelle produktionsomkostninger (Produktionsafhængige omkostninger - "
-"COGS / Direct Production Cost)"
+msgstr "Operacinės sąnaudos (Gamyba)"
 
 #: costos_app/templates/costos_app/registrar_factura.html:70
 msgid "Gasto Administrativo"
-msgstr ""
-"Generelle administrations- og salgsomkostninger (Resultatopgørelsesudgift - "
-"G&A)"
+msgstr "Administracinės išlaidos"
 
 #: costos_app/templates/costos_app/registrar_factura.html:78
 msgid "No hay facturas fijos registrados."
-msgstr "Ingen faste kreditorfakturaer fundet i tabellerne."
+msgstr "Nėra užregistruotų fiksuotųjų sąskaitų."
 
 #: costosproyectos/settings.py:106
 msgid "Spanish"
-msgstr "Spansk"
+msgstr "Ispanų kalba"
 
 #: costosproyectos/settings.py:108
 msgid "Finnish"
-msgstr "Finsk"
+msgstr "Suomių kalba"
 
 #: costosproyectos/settings.py:109
 msgid "Estonian"
-msgstr "Estisk"
+msgstr "Estų kalba"
 
 #: costosproyectos/settings.py:110
 msgid "Lithuanian"
-msgstr "Litauisk"
+msgstr "Lietuvių kalba"
 
 #: costosproyectos/settings.py:111
 msgid "Latvian"
-msgstr "Lettisk"
+msgstr "Latvių kalba"
 
 #: costosproyectos/settings.py:112
 msgid "Danish"
-msgstr "Dansk"
+msgstr "Danų kalba"
 
 #: costosproyectos/settings.py:113
 msgid "German"
-msgstr "Tysk"
+msgstr "Vokiečių kalba"
 
 #: costosproyectos/settings.py:114
 msgid "Norwegian"
-msgstr "Norsk"
+msgstr "Norvegų kalba"
 
 #: costosproyectos/settings.py:115
 msgid "Swedish"
-msgstr "Svensk"
+msgstr "Švedų kalba"
 
 #: costosproyectos/settings.py:116
 msgid "Polish"
-msgstr "Polsk"
+msgstr "Lenkų kalba"
 
 #: env/lib/python3.12/site-packages/django/contrib/messages/apps.py:15
 msgid "Messages"
-msgstr ""
+msgstr "Pranešimai"
 
 #: env/lib/python3.12/site-packages/django/contrib/sitemaps/apps.py:8
 msgid "Site Maps"
-msgstr ""
+msgstr "Svetainės medžiai"
 
 #: env/lib/python3.12/site-packages/django/contrib/staticfiles/apps.py:9
 msgid "Static Files"
-msgstr ""
+msgstr "Statiniai failai"
 
 #: env/lib/python3.12/site-packages/django/contrib/syndication/apps.py:7
 msgid "Syndication"
