@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',  # 1. Abre sesión primero
     'django.middleware.common.CommonMiddleware', 
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -149,3 +150,5 @@ UNFOLD = {
     # ❌ APAGADO TOTAL: Con esto obligamos a Unfold a saltarse la línea que fallaba con gettext.
     "SHOW_LANGUAGES": False, 
 }
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
