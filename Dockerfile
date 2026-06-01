@@ -27,5 +27,10 @@ COPY . /app/
 # 8. Exponemos el puerto 8000 que es donde corre Django por defecto
 EXPOSE 8000
 
-# 9. El comando para arrancar el servidor de Django en producción
+
+
+# Agregar esta línea para que compile los estilos automáticamente al desplegar
+RUN python manage.py collectstatic --noinput
+
+# Tu comando final para arrancar (Gunicorn o runserver)
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
