@@ -27,6 +27,7 @@ DEBUG = env.bool('DEBUG', default=False)
 
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://costosproyectos.onrender.com']
 
 # Application definition
 INSTALLED_APPS = [
