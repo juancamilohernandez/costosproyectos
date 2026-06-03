@@ -4,7 +4,7 @@ from django.dispatch import receiver
 from django.core.mail import send_mail
 from .models import FacturaFija, Empleado, AsignacionProyecto
 import logging
-
+from django.conf import settings
 # Configuramos un logger para registrar fallos en la consola de Render sin romper la app
 logger = logging.getLogger(__name__)
 
@@ -71,11 +71,12 @@ def alertar_desviacion_presupuestal_optima(sender, instance, created, **kwargs):
                 # Limpiar duplicados y correos vacíos
                 correos_finales = list(set([email for email in correos_objetivo if email]))
                 
-                # 3. Envío del Correo Seguro (Protección absoluta de la Interfaz)
+                # 3. Envío del Correo Seguro (Utilizando tu remitente autenticado de Gmail)
                 if correos_finales:
                     asunto = f"⚠️ [CONTROL DE PRESUPUESTO] Desviación Financiera - Proyecto: {proyecto.nombre}"
                     status = "LÍMITE EXCEDIDO 🚨" if porcentaje_consumo >= 100 else "ZONA CRÍTICA DE CONTROL ⚠️"
                     
+                    # (Tu mensaje ejecutivo se mantiene igual...)
                     mensaje = f"""
                     Atención Equipo de Control de Proyectos,
                     
@@ -105,10 +106,10 @@ def alertar_desviacion_presupuestal_optima(sender, instance, created, **kwargs):
                         send_mail(
                             subject=asunto,
                             message=mensaje,
-                            from_email='alertas-erp@tuempresa.com',
+                            from_email=settings.EMAIL_HOST_USER,  # <-- AQUÍ ESTÁ LA SOLUCIÓN: Usamos tu correo del .env
                             recipient_list=correos_finales,
-                            fail_silently=True,
+                            fail_silently=True,  # Protege la interfaz si el servidor de Gmail tarda en responder
                         )
                     except Exception as e:
-                        # Si falla el SMTP, el error queda registrado en consola pero NO traba la pantalla del usuario
-                        logger.error(f"Error asíncrono al intentar enviar correo en proyecto {proyecto.nombre}: {str(e)}")
+                        # Si algo falla en el proceso, se registra en la terminal pero la pantalla NO se congela
+                        logger.error(f"Error al enviar correo de alerta: {str(e)}")
