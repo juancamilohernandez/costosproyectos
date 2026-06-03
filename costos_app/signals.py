@@ -105,7 +105,7 @@ def alertar_desviacion_presupuestal_optima(sender, instance, created, **kwargs):
                         send_mail(
                             subject=asunto,
                             message=mensaje,
-                            from_email='alertas-erp@tuempresa.com',
+                            from_email="camilohnz78@gmail.com",
                             recipient_list=correos_finales,
                             fail_silently=True,
                         )
