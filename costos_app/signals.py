@@ -71,28 +71,11 @@ def alertar_desviacion_presupuestal_optima(sender, instance, created, **kwargs):
                 # Limpiar duplicados y correos vacíos
                 correos_finales = list(set([email for email in correos_objetivo if email]))
                 
-                # 3. Envío del Correo Seguro y Remitente Dinámico
+                # 3. Envío del Correo Seguro (Protección absoluta de la Interfaz)
                 if correos_finales:
                     asunto = f"⚠️ [CONTROL DE PRESUPUESTO] Desviación Financiera - Proyecto: {proyecto.nombre}"
                     status = "LÍMITE EXCEDIDO 🚨" if porcentaje_consumo >= 100 else "ZONA CRÍTICA DE CONTROL ⚠️"
                     
-                    # --- EXTRAER REMITENTE DINÁMICO DE LA BASE DE DATOS ---
-                    # Buscamos de forma segura el empleado que sea CEO para usar su correo como remitente
-                    ceo_remitente = Empleado.objects.filter(
-                        models.Q(rol__icontains='CEO')
-                    ).exclude(
-                        email_corporativo__isnull=True
-                    ).exclude(
-                        email_corporativo=''
-                    ).first()  # Tomamos el primero que encuentre
-                    
-                    # Si encontramos un CEO, usamos su correo. Si no, dejamos uno de respaldo seguro.
-                    if ceo_remitente:
-                        remitente_oficial = ceo_remitente.email_corporativo
-                    else:
-                        remitente_oficial = 'alertas-sistema@tuempresa.com' # Respaldo por si no hay CEO creado
-                    
-                    # (Tu mensaje ejecutivo se mantiene igual...)
                     mensaje = f"""
                     Atención Equipo de Control de Proyectos,
                     
@@ -122,9 +105,10 @@ def alertar_desviacion_presupuestal_optima(sender, instance, created, **kwargs):
                         send_mail(
                             subject=asunto,
                             message=mensaje,
-                            from_email=remitente_oficial,  # <-- Ahora es dinámico y real
+                            from_email='alertas-erp@tuempresa.com',
                             recipient_list=correos_finales,
                             fail_silently=True,
                         )
                     except Exception as e:
+                        # Si falla el SMTP, el error queda registrado en consola pero NO traba la pantalla del usuario
                         logger.error(f"Error asíncrono al intentar enviar correo en proyecto {proyecto.nombre}: {str(e)}")
