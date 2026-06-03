@@ -1,20 +1,40 @@
-from django.db import models  # <-- Importación crucial para usar las consultas Q e __icontains
+from django.db import models  # Importación crucial para usar las consultas Q e __icontains
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.core.mail import send_mail
 from .models import FacturaFija, Empleado, AsignacionProyecto
-import logging
 from django.conf import settings
+import threading  # <-- LIBRERÍA NATIVA DE PYTHON PARA CONCURRENCIA ASÍNCRONA
+import logging
 
 # Configuramos un logger para registrar fallos en la consola de Render sin romper la app
 logger = logging.getLogger(__name__)
+
+
+def enviar_alerta_email_async(asunto, mensaje, remitente, destinatarios):
+    """
+    Función trabajadora (Worker) ejecutada en un hilo secundario independiente.
+    Aísla la latencia y bloqueos de red del servidor SMTP de Gmail.
+    """
+    try:
+        send_mail(
+            subject=asunto,
+            message=mensaje,
+            from_email=remitente,
+            recipient_list=destinatarios,
+            fail_silently=True,  # Doble protección silenciosa ante fallos de conexión
+        )
+        logger.info(f"📧 [Threading] Alerta de presupuesto enviada con éxito a: {destinatarios}")
+    except Exception as e:
+        logger.error(f"❌ [Threading] Error crítico en el hilo de envío de correo SMTP: {str(e)}")
+
 
 @receiver(post_save, sender=FacturaFija)
 def alertar_desviacion_presupuestal_optima(sender, instance, created, **kwargs):
     """
     Motor Avanzado de Notificaciones Segmentadas: Envía alertas críticas 
     ÚNICAMENTE al ecosistema responsable del proyecto (Líder, Jefe, Analista y CEO).
-    Optimizado para evitar el bloqueo (lag) de la interfaz web.
+    Optimizado mediante hilos en paralelo para evitar latencia en el contenedor único web.
     """
     proyecto = getattr(instance, 'proyecto', None)
     
@@ -54,7 +74,6 @@ def alertar_desviacion_presupuestal_optima(sender, instance, created, **kwargs):
                         correos_objetivo.append(asig.jefe_inmediato.email_corporativo)
                 
                 # B. Filtro Corporativo Seguro (Optimizado a nivel Base de Datos - Case Insensitive)
-                # Filtra directamente en PostgreSQL sin importar mayúsculas o minúsculas (CEO, ceo, Ceo...)
                 empleados_clave = Empleado.objects.exclude(
                     email_corporativo__isnull=True
                 ).exclude(
@@ -72,12 +91,11 @@ def alertar_desviacion_presupuestal_optima(sender, instance, created, **kwargs):
                 # Limpiar duplicados y correos vacíos
                 correos_finales = list(set([email for email in correos_objetivo if email]))
                 
-                # 3. Envío del Correo Seguro (Utilizando tu remitente autenticado de Gmail)
+                # 3. Envío del Correo mediante Desacoplamiento de Hilos (Asíncrono)
                 if correos_finales:
                     asunto = f"⚠️ [CONTROL DE PRESUPUESTO] Desviación Financiera - Proyecto: {proyecto.nombre}"
                     status = "LÍMITE EXCEDIDO 🚨" if porcentaje_consumo >= 100 else "ZONA CRÍTICA DE CONTROL ⚠️"
                     
-                    # (Tu mensaje ejecutivo se mantiene igual...)
                     mensaje = f"""
                     Atención Equipo de Control de Proyectos,
                     
@@ -103,14 +121,11 @@ def alertar_desviacion_presupuestal_optima(sender, instance, created, **kwargs):
                     Sistemas de Información y Costos ABC.
                     """
                     
-                    try:
-                        send_mail(
-                            subject=asunto,
-                            message=mensaje,
-                            from_email=settings.EMAIL_HOST_USER,  # <-- AQUÍ ESTÁ LA SOLUCIÓN: Usamos tu correo del .env
-                            recipient_list=correos_finales,
-                            fail_silently=True,  # Protege la interfaz si el servidor de Gmail tarda en responder
-                        )
-                    except Exception as e:
-                        # Si algo falla en el proceso, se registra en la terminal pero la pantalla NO se congela
-                        logger.error(f"Error al enviar correo de alerta: {str(e)}")
+                    # CREACIÓN Y DELEGACIÓN DEL PROCESO AL HILO EN PARALELO
+                    hilo_email = threading.Thread(
+                        target=enviar_alerta_email_async,
+                        args=(asunto, mensaje, settings.EMAIL_HOST_USER, correos_finales)
+                    )
+                    
+                    # Arrancamos el hilo. Python continúa en paralelo y Django responde la vista al instante.
+                    hilo_email.start()
