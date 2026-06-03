@@ -1,13 +1,19 @@
+from django.db import models  # <-- Importación crucial para usar las consultas Q e __icontains
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.core.mail import send_mail
 from .models import FacturaFija, Empleado, AsignacionProyecto
+import logging
+
+# Configuramos un logger para registrar fallos en la consola de Render sin romper la app
+logger = logging.getLogger(__name__)
 
 @receiver(post_save, sender=FacturaFija)
 def alertar_desviacion_presupuestal_optima(sender, instance, created, **kwargs):
     """
     Motor Avanzado de Notificaciones Segmentadas: Envía alertas críticas 
     ÚNICAMENTE al ecosistema responsable del proyecto (Líder, Jefe, Analista y CEO).
+    Optimizado para evitar el bloqueo (lag) de la interfaz web.
     """
     proyecto = getattr(instance, 'proyecto', None)
     
@@ -41,27 +47,33 @@ def alertar_desviacion_presupuestal_optima(sender, instance, created, **kwargs):
                 
                 # A. Correos de la operación directa (Líder y Jefe inmediato asignados)
                 for asig in asignaciones:
-                    if asig.responsable_proyecto and hasattr(asig.responsable_proyecto, 'email_corporativo') and asig.responsable_proyecto.email_corporativo:
+                    if asig.responsable_proyecto and getattr(asig.responsable_proyecto, 'email_corporativo', None):
                         correos_objetivo.append(asig.responsable_proyecto.email_corporativo)
-                    if asig.jefe_inmediato and hasattr(asig.jefe_inmediato, 'email_corporativo') and asig.jefe_inmediato.email_corporativo:
+                    if asig.jefe_inmediato and getattr(asig.jefe_inmediato, 'email_corporativo', None):
                         correos_objetivo.append(asig.jefe_inmediato.email_corporativo)
                 
-                # B. Filtro Corporativo Seguro: Traemos los empleados y buscamos el rol de forma segura
-                todos_los_empleados = Empleado.objects.exclude(email_corporativo__isnull=True).exclude(email_corporativo='')
-                 
-                for emp in todos_los_empleados:
-                     # Convertimos el rol a texto string para que sirva tanto si es CharField como ForeignKey __str__
-                     rol_str = str(emp.rol).upper()
-                     if 'CEO' in rol_str or 'COSTOS' in rol_str or 'PRESUPUESTO' in rol_str or 'TI' in rol_str:
-                         correos_objetivo.append(emp.email_corporativo)
+                # B. Filtro Corporativo Seguro (Optimizado a nivel Base de Datos - Case Insensitive)
+                # Filtra directamente en PostgreSQL sin importar mayúsculas o minúsculas (CEO, ceo, Ceo...)
+                empleados_clave = Empleado.objects.exclude(
+                    email_corporativo__isnull=True
+                ).exclude(
+                    email_corporativo=''
+                ).filter(
+                    models.Q(rol__icontains='CEO') | 
+                    models.Q(rol__icontains='COSTOS') | 
+                    models.Q(rol__icontains='PRESUPUESTO') | 
+                    models.Q(rol__icontains='TI')
+                )
+                
+                for emp in empleados_clave:
+                    correos_objetivo.append(emp.email_corporativo)
                 
                 # Limpiar duplicados y correos vacíos
                 correos_finales = list(set([email for email in correos_objetivo if email]))
                 
-                # 3. Envío del Correo si hay destinatarios válidos
+                # 3. Envío del Correo Seguro (Protección absoluta de la Interfaz)
                 if correos_finales:
                     asunto = f"⚠️ [CONTROL DE PRESUPUESTO] Desviación Financiera - Proyecto: {proyecto.nombre}"
-                    
                     status = "LÍMITE EXCEDIDO 🚨" if porcentaje_consumo >= 100 else "ZONA CRÍTICA DE CONTROL ⚠️"
                     
                     mensaje = f"""
@@ -89,10 +101,14 @@ def alertar_desviacion_presupuestal_optima(sender, instance, created, **kwargs):
                     Sistemas de Información y Costos ABC.
                     """
                     
-                    send_mail(
-                        subject=asunto,
-                        message=mensaje,
-                        from_email='alertas-erp@tuempresa.com',
-                        recipient_list=correos_finales,
-                        fail_silently=True,
-                    )
+                    try:
+                        send_mail(
+                            subject=asunto,
+                            message=mensaje,
+                            from_email='alertas-erp@tuempresa.com',
+                            recipient_list=correos_finales,
+                            fail_silently=True,
+                        )
+                    except Exception as e:
+                        # Si falla el SMTP, el error queda registrado en consola pero NO traba la pantalla del usuario
+                        logger.error(f"Error asíncrono al intentar enviar correo en proyecto {proyecto.nombre}: {str(e)}")
