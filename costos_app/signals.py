@@ -5,6 +5,7 @@ from django.core.mail import send_mail
 from .models import FacturaFija, Empleado, AsignacionProyecto
 import logging
 from django.conf import settings
+
 # Configuramos un logger para registrar fallos en la consola de Render sin romper la app
 logger = logging.getLogger(__name__)
 
