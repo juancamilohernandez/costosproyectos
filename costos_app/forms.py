@@ -86,21 +86,30 @@ class AsignacionProyectoForm(forms.ModelForm):
         horas_dedicadas = cleaned_data.get('horas_dedicadas')
 
         if proyecto and empleado and horas_dedicadas:
-            # 1. Traer el presupuesto asignado al proyecto
+            # 1. Traer el presupuesto asignado al proyecto de forma segura
+            # Usamos la relación directa reverse o el atributo si existe
             try:
-                # Importaciones locales seguras dentro del método si es necesario
                 from decimal import Decimal
                 from django.db.models import Sum
                 from django.conf import settings
-                import threading  # <-- Traemos hilos al formulario
-                from django.core.exceptions import ObjectDoesNotExist
+                import threading
                 
-                presupuesto_obj = proyecto.presupuesto
+                # Para evitar fallos de ObjectDoesNotExist, usamos getattr seguro o filter.first()
+                presupuesto_obj = getattr(proyecto, 'presupuesto', None)
+                
+                if not presupuesto_obj:
+                    raise forms.ValidationError(
+                        f"🛑 CONTROL DE AUDITORÍA: El proyecto '{proyecto.nombre}' no tiene una tabla de "
+                        f"presupuesto asignada en el sistema. El CEO debe inicializar su presupuesto primero."
+                    )
+                
                 limite_mano_obra = Decimal(str(presupuesto_obj.limite_costos))
-            except ObjectDoesNotExist: # O PresupuestoProyecto.DoesNotExist según tus imports
+                
+            except Exception as e:
+                # Si falla cualquier lectura del presupuesto, levantamos el error visible en el formulario
                 raise forms.ValidationError(
-                    f"🛑 CONTROL DE AUDITORÍA: El proyecto '{proyecto.nombre}' no tiene una tabla de "
-                    f"presupuesto asignada en el sistema. El CEO debe inicializar su presupuesto primero."
+                    f"🛑 ERROR DE CONFIGURACIÓN: No se pudo verificar el presupuesto del proyecto. "
+                    f"Detalles técnicos: {str(e)}"
                 )
 
             # 2. Replicar la regla de tres para calcular el costo proyectado
@@ -115,7 +124,9 @@ class AsignacionProyectoForm(forms.ModelForm):
             totales = AsignacionProyecto.objects.filter(proyecto=proyecto).aggregate(
                 total_costo=Sum('costo_imputado_al_proyecto')
             )
-            costo_acumulado_actual = Decimal(str(totales['total_costo'] or 0.0))
+            
+            # Protección contra nulos convirtiendo estrictamente a Decimal
+            costo_acumulado_actual = Decimal(str(totales['total_costo'] or '0.0'))
 
             # 4. Evaluación del Techo Financiero (Hard Stop)
             if (costo_acumulado_actual + nuevo_costo_imputado) > limite_mano_obra:
@@ -130,7 +141,7 @@ class AsignacionProyectoForm(forms.ModelForm):
                     f"📊 DETALLES DE LA AUDITORÍA:\n"
                     f"• Proyecto: {proyecto.nombre}\n"
                     f"• Límite para Costos Directos: ${limite_mano_obra:,.2f}\n"
-                    f"• Costo histórico acumulado: ${costo_accumulado_actual:,.2f}\n"
+                    f"• Costo histórico acumulado: ${costo_acumulado_actual:,.2f}\n"
                     f"• Costo que se intentó cargar: ${nuevo_costo_imputado:,.2f}\n"
                     f"• Déficit proyectado evitado: ${(costo_acumulado_actual + nuevo_costo_imputado) - limite_mano_obra:,.2f}\n"
                     f"• Colaborador que generaba el costo: {empleado.nombre}\n\n"
@@ -146,14 +157,14 @@ class AsignacionProyectoForm(forms.ModelForm):
                         send_mail(
                             subject=asunto_correo,
                             message=cuerpo_mensaje,
-                            from_email=settings.EMAIL_HOST_USER,  # <-- Usamos tus credenciales seguras del .env
+                            from_email=settings.EMAIL_HOST_USER,
                             recipient_list=[email_ceo],
-                            fail_silently=True,  # <-- SI GMAIL TARDA, DJANGO NO SE DETIENE
+                            fail_silently=True,  # Si Gmail tarda, Django no se detiene
                         )
                     except Exception as mail_err:
                         print(f"❌ Falló el envío en segundo plano del formulario: {mail_err}")
 
-                # 🚀 DESPACHAMOS EL CORREO A UN HILO INDEPENDIENTE EN MILISEGUNDOS
+                # DESPACHAMOS EL CORREO A UN HILO INDEPENDIENTE EN MILISEGUNDOS
                 hilo_auditoria = threading.Thread(target=enviar_correo_formulario_async)
                 hilo_auditoria.start()
 
@@ -161,12 +172,10 @@ class AsignacionProyectoForm(forms.ModelForm):
                 raise forms.ValidationError(
                     f"🛑 BLOQUEO DE COSTOS: La asignación de horas supera el límite financiero del proyecto. "
                     f"Acumulado actual: ${costo_acumulado_actual:,.2f} | Nuevo costo a imputar: ${nuevo_costo_imputado:,.2f} | "
-                    f"Límite de Costos Directos permitido: ${limite_mano_obra:,.2f}. "
-                    f"Se ha enviado un informe automático de auditoría al correo de la Gerencia."
+                    f"Límite de Costos Directos permitido: ${limite_mano_obra:,.2f}."
                 )
 
         return cleaned_data
-
 
 class FacturaFijaForm(forms.ModelForm):
     class Meta:
