@@ -77,7 +77,7 @@ class AsignacionProyectoForm(forms.ModelForm):
             self.fields['empleado'].label_from_instance = lambda obj: f"{obj.nombre} - {obj.rol.nombre_cargo if obj.rol else 'Sin Cargo'}"
 
     # =====================================================================
-    # 🔒 CANDADO DE CONTROL PRESUPUESTAL EN TIEMPO REAL (HARD STOP) + EMAIL
+    # 🔒 CANDADO DE CONTROL PRESUPUESTAL EN TIEMPO REAL (HARD STOP) + EMAIL ASÍNCRONO
     # =====================================================================
     def clean(self):
         cleaned_data = super().clean()
@@ -86,18 +86,23 @@ class AsignacionProyectoForm(forms.ModelForm):
         horas_dedicadas = cleaned_data.get('horas_dedicadas')
 
         if proyecto and empleado and horas_dedicadas:
-            # 1. Traer el presupuesto asignado al proyecto (si existe)
+            # 1. Traer el presupuesto asignado al proyecto
             try:
+                # Importaciones locales seguras dentro del método si es necesario
+                from decimal import Decimal
+                from django.db.models import Sum
+                from django.conf import settings
+                import threading  # <-- Traemos hilos al formulario
+                
                 presupuesto_obj = proyecto.presupuesto
                 limite_mano_obra = Decimal(str(presupuesto_obj.limite_costos))
-            except PresupuestoProyecto.DoesNotExist:
-                # Si el CEO no le ha creado un objeto presupuesto en el admin, bloqueamos por seguridad
+            except ObjectDoesNotExist: # O PresupuestoProyecto.DoesNotExist según tus imports
                 raise forms.ValidationError(
                     f"🛑 CONTROL DE AUDITORÍA: El proyecto '{proyecto.nombre}' no tiene una tabla de "
                     f"presupuesto asignada en el sistema. El CEO debe inicializar su presupuesto primero."
                 )
 
-            # 2. Replicar la regla de tres de tu vista para ver el costo del nuevo registro
+            # 2. Replicar la regla de tres para calcular el costo proyectado
             costo_total_empleado = Decimal(str(empleado.costo_total_mes))
             horas_laborales_mes = Decimal('160.0')
             horas_nuevas = Decimal(str(horas_dedicadas))
@@ -105,7 +110,7 @@ class AsignacionProyectoForm(forms.ModelForm):
             valor_hora_real = costo_total_empleado / horas_laborales_mes
             nuevo_costo_imputado = valor_hora_real * horas_nuevas
 
-            # 3. Sumar cuánto dinero en mano de obra se ha gastado YA en este proyecto
+            # 3. Sumar el histórico real acumulado en la base de datos
             totales = AsignacionProyecto.objects.filter(proyecto=proyecto).aggregate(
                 total_costo=Sum('costo_imputado_al_proyecto')
             )
@@ -114,10 +119,8 @@ class AsignacionProyectoForm(forms.ModelForm):
             # 4. Evaluación del Techo Financiero (Hard Stop)
             if (costo_acumulado_actual + nuevo_costo_imputado) > limite_mano_obra:
                 
-                # --- LOGICA INTEGRADA: ENVÍO DEL CORREO DE ALERTA DE AUDITORÍA ---
-                # Modifica este correo por la dirección real donde el CEO recibe las alertas
+                # --- LOGICA INTEGRADA ASÍNCRONA: PREPARACIÓN DEL CORREO ---
                 email_ceo = "camilohnz78@gmail.com"
-                
                 asunto_correo = f"🚨 ALERTA FINANCIERA: Presupuesto Agotado en Proyecto - {proyecto.nombre}"
                 
                 cuerpo_mensaje = (
@@ -126,7 +129,7 @@ class AsignacionProyectoForm(forms.ModelForm):
                     f"📊 DETALLES DE LA AUDITORÍA:\n"
                     f"• Proyecto: {proyecto.nombre}\n"
                     f"• Límite para Costos Directos: ${limite_mano_obra:,.2f}\n"
-                    f"• Costo histórico acumulado: ${costo_acumulado_actual:,.2f}\n"
+                    f"• Costo histórico acumulado: ${costo_accumulado_actual:,.2f}\n"
                     f"• Costo que se intentó cargar: ${nuevo_costo_imputado:,.2f}\n"
                     f"• Déficit proyectado evitado: ${(costo_acumulado_actual + nuevo_costo_imputado) - limite_mano_obra:,.2f}\n"
                     f"• Colaborador que generaba el costo: {empleado.nombre}\n\n"
@@ -136,19 +139,24 @@ class AsignacionProyectoForm(forms.ModelForm):
                     f"Sistema Automático de Auditoría NIC 16 / NIIF 16"
                 )
 
-                try:
-                    send_mail(
-                        subject=asunto_correo,
-                        message=cuerpo_mensaje,
-                        from_email='camilohnz78@gmail.com',
-                        recipient_list=[email_ceo],
-                        fail_silently=False,
-                    )
-                except Exception as e:
-                    # Si el SMTP o el internet fallan en desarrollo, se registra en consola pero NO frena el bloqueo de seguridad
-                    print(f"⚠️ Alerta SMTP: No se pudo enviar el correo al CEO. Detalles: {e}")
+                # Definimos una función interna rápida para que corra en el fondo sin trabar el formulario
+                def enviar_correo_formulario_async():
+                    try:
+                        send_mail(
+                            subject=asunto_correo,
+                            message=cuerpo_mensaje,
+                            from_email=settings.EMAIL_HOST_USER,  # <-- Usamos tus credenciales seguras del .env
+                            recipient_list=[email_ceo],
+                            fail_silently=True,  # <-- SI GMAIL TARDA, DJANGO NO SE DETIENE
+                        )
+                    except Exception as mail_err:
+                        print(f"❌ Falló el envío en segundo plano del formulario: {mail_err}")
 
-                # Lanzamos la excepción para pintar el letrero rojo en la interfaz de usuario
+                # 🚀 DESPACHAMOS EL CORREO A UN HILO INDEPENDIENTE EN MILISEGUNDOS
+                hilo_auditoria = threading.Thread(target=enviar_correo_formulario_async)
+                hilo_auditoria.start()
+
+                # Lanzamos inmediatamente la excepción en la pantalla (Hard Stop visual instantáneo)
                 raise forms.ValidationError(
                     f"🛑 BLOQUEO DE COSTOS: La asignación de horas supera el límite financiero del proyecto. "
                     f"Acumulado actual: ${costo_acumulado_actual:,.2f} | Nuevo costo a imputar: ${nuevo_costo_imputado:,.2f} | "
