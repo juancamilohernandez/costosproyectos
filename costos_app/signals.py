@@ -4,7 +4,7 @@ from django.dispatch import receiver
 from django.core.mail import send_mail
 from .models import FacturaFija, Empleado, AsignacionProyecto
 from django.conf import settings
-import threading  # <-- LIBRERÍA NATIVA DE PYTHON PARA CONCURRENCIA ASÍNCRONA
+import threading  # LIBRERÍA NATIVA DE PYTHON PARA CONCURRENCIA ASÍNCRONA
 import logging
 
 # Configuramos un logger para registrar fallos en la consola de Render sin romper la app
@@ -29,13 +29,17 @@ def enviar_alerta_email_async(asunto, mensaje, remitente, destinatarios):
         logger.error(f"❌ [Threading] Error crítico en el hilo de envío de correo SMTP: {str(e)}")
 
 
+# 🔥 LA SOLUCIÓN: El decorador ahora escucha AMBOS modelos. 
+# Se activa al guardar una FacturaFija O al prorratear una AsignacionProyecto.
 @receiver(post_save, sender=FacturaFija)
+@receiver(post_save, sender=AsignacionProyecto)
 def alertar_desviacion_presupuestal_optima(sender, instance, created, **kwargs):
     """
     Motor Avanzado de Notificaciones Segmentadas: Envía alertas críticas 
     ÚNICAMENTE al ecosistema responsable del proyecto (Líder, Jefe, Analista y CEO).
-    Optimizado mediante hilos en paralelo para evitar latencia en el contenedor único web.
+    Se ejecuta dinámicamente al actualizar costos fijos o al prorratear mano de obra.
     """
+    # Identificamos el proyecto dinámicamente según el modelo que disparó la señal
     proyecto = getattr(instance, 'proyecto', None)
     
     if proyecto and hasattr(proyecto, 'presupuesto'):
@@ -96,10 +100,13 @@ def alertar_desviacion_presupuestal_optima(sender, instance, created, **kwargs):
                     asunto = f"⚠️ [CONTROL DE PRESUPUESTO] Desviación Financiera - Proyecto: {proyecto.nombre}"
                     status = "LÍMITE EXCEDIDO 🚨" if porcentaje_consumo >= 100 else "ZONA CRÍTICA DE CONTROL ⚠️"
                     
+                    # Identificamos el detonante en el cuerpo del correo para que sea más informativo
+                    detonante = "Prorrateo de Mano de Obra" if sender == AsignacionProyecto else "Registro de Factura Fija"
+                    
                     mensaje = f"""
                     Atención Equipo de Control de Proyectos,
                     
-                    El ERP ha detectado una desviación en los techos de gasto asignados. Las áreas no operativas (Jurídica, Marketing, Gestión Humana) han sido omitidas de esta alerta.
+                    El ERP ha detectado una desviación en los techos de gasto asignados mediante el proceso de: {detonante}.
                     
                     RESUMEN FINANCIERO EJECUTIVO:
                     --------------------------------------------------
@@ -109,11 +116,6 @@ def alertar_desviacion_presupuestal_optima(sender, instance, created, **kwargs):
                     Costo Imputado Acumulado: ${costo_real_total:,.2f}
                     Eficiencia de Consumo: {porcentaje_consumo:.2f}%
                     --------------------------------------------------
-                    
-                    IMPACTO DE LA ÚLTIMA FACTURA PROCESADA:
-                    Proveedor/Concepto: {instance.proveedor_o_concepto or 'Gasto Operativo'}
-                    Valor: ${instance.monto:,.2f}
-                    Clasificación Contable: {instance.get_clasificacion_display()}
                     
                     ACCIÓN REQUERIDA:
                     El Responsable Principal del Proyecto y el Analista de Presupuestos asignado deben conciliar las horas registradas y las facturas en el Dashboard de inmediato.
@@ -126,6 +128,4 @@ def alertar_desviacion_presupuestal_optima(sender, instance, created, **kwargs):
                         target=enviar_alerta_email_async,
                         args=(asunto, mensaje, settings.EMAIL_HOST_USER, correos_finales)
                     )
-                    
-                    # Arrancamos el hilo. Python continúa en paralelo y Django responde la vista al instante.
                     hilo_email.start()
