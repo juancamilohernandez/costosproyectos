@@ -93,6 +93,7 @@ class AsignacionProyectoForm(forms.ModelForm):
                 from django.db.models import Sum
                 from django.conf import settings
                 import threading  # <-- Traemos hilos al formulario
+                from django.core.exceptions import ObjectDoesNotExist
                 
                 presupuesto_obj = proyecto.presupuesto
                 limite_mano_obra = Decimal(str(presupuesto_obj.limite_costos))
